@@ -1,24 +1,24 @@
-#
+# 
 # Translators:
-# Theint Naing Yoon <yoon@phandeeyar.org>, 2016
-# Thet Aung <thetaung@phandeeyar.org>, 2016
+# Yoon, 2016-2017
+# thetaung2 <thetaung@phandeeyar.org>, 2017
+# thetaung2 <thetaung@phandeeyar.org>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: ODM ckanext-odm_laws\n"
 "POT-Creation-Date: 2016-12-06 15:34+0100\n"
-"PO-Revision-Date: 2016-12-06 15:34+0100\n"
-"Last-Translator: Alex Corbi <a.corbi@gmail.com>\n"
-"Language-Team: Burmese (http://www.transifex.com/open-development-mekong/odm-ckanext-odm_laws/"
-"language/my/)\n"
-"Language: my\n"
+"PO-Revision-Date: 2017-09-23 22:31+0000\n"
+"Last-Translator: thetaung2 <thetaung@phandeeyar.org>\n"
+"Language-Team: Burmese (http://www.transifex.com/open-development-mekong/odm-ckanext-odm_laws/language/my/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: my\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Poedit 1.8.7.1\n"
 "X-Poedit-Basepath: ../../../ckanext\n"
-"X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
 
 #: odm_laws/i18n/metadata_fields.php:3
 msgid "Document type"
@@ -94,7 +94,7 @@ msgstr "အသက်ဝင်သည့်ရက်စွဲ"
 
 #: odm_laws/i18n/metadata_fields.php:21
 msgid "Objective of the document"
-msgstr ""
+msgstr "စာတမ်း၏ ဓမ္မဓိဌာန်များ"
 
 #: odm_laws/i18n/metadata_fields.php:22
 msgid "Previous legal document"
@@ -106,15 +106,15 @@ msgstr "ပြောင်းလဲမှု၏ မှတ်စုတိုမ�
 
 #: odm_laws/i18n/metadata_fields.php:24
 msgid "Parent document"
-msgstr ""
+msgstr "မိခင် စာတမ်း"
 
 #: odm_laws/i18n/metadata_fields.php:25
 msgid "Child document"
-msgstr ""
+msgstr "တဆင့် စာတမ်း"
 
 #: odm_laws/i18n/metadata_fields.php:26
 msgid "Associated Document"
-msgstr "ဆက်နွှယ်မှုရှိသည့် စာတမ်းများ"
+msgstr "ဆက်နွယ်မှုရှိသည့် စာတမ်းများ"
 
 #: odm_laws/i18n/metadata_fields.php:27
 msgid "Publication reference"
@@ -178,231 +178,86 @@ msgstr "ပုံစံ"
 
 #: odm_laws/lib/odm_laws_helper.py:27
 msgid ""
-"Thank you for uploading this item. Instructions about vetting system available on https://wiki."
-"opendevelopmentmekong.net/partners:content_review#instructions_for_default_issue_on_law_records"
-msgstr ""
-"ဤအကြောင်းအရာကို တင်ပေးသည့်အတွက်ကျေးဇူးတင်ပါတယ်။ လေ့လာစီစစ်ခြင်းစနစ်အတွက် လမ်းညွှန်ကို https://wiki.opendevelopmentmekong."
-"net/partners:content_review#instructions_for_default_issue_on_law_records တွင်ကြည့်ရှုနိုင်သည်။"
+"Thank you for uploading this item. Instructions about vetting system "
+"available on "
+"https://wiki.opendevelopmentmekong.net/partners:content_review#instructions_for_default_issue_on_law_records"
+msgstr "ဤအကြောင်းအရာကို တင်ပေးသည့်အတွက်ကျေးဇူးတင်ပါတယ်။ လေ့လာစီစစ်ခြင်းစနစ်အတွက် လမ်းညွှန်ကို https://wiki.opendevelopmentmekong.net/partners:content_review#instructions_for_default_issue_on_law_records တွင်ကြည့်ရှုနိုင်သည်။"
 
 #: odm_laws/templates/header.html:5 odm_laws/templates/package/base.html:5
-#: odm_laws/templates/package/base.html:15 odm_laws/templates/package/base.html:18
-#: odm_laws/templates/package/search.html:5 odm_laws/templates/package/search.html:13
+#: odm_laws/templates/package/base.html:15
+#: odm_laws/templates/package/base.html:18
+#: odm_laws/templates/package/search.html:5
+#: odm_laws/templates/package/search.html:13
 msgid "Laws"
-msgstr ""
+msgstr "ဥပဒေများ"
 
-#: odm_laws/templates/package/base.html:19 odm_laws/templates/package/new.html:5
+#: odm_laws/templates/package/base.html:19
+#: odm_laws/templates/package/new.html:5
 #: odm_laws/templates/package/snippets/new_package_breadcrumb.html:5
 #: odm_laws/templates/package/snippets/stages.html:7
 #: odm_laws/templates/package/snippets/stages.html:9
 msgid "Create Law"
-msgstr ""
+msgstr "ဥပဒေမှတ်တမ်းတစ်ခု ဖန်တီးမည်"
 
 #: odm_laws/templates/package/base_form_page.html:7
 msgid "What are Laws?"
-msgstr ""
+msgstr "ဥပဒေတွေ ဆိုတာဘာလဲ"
 
 #: odm_laws/templates/package/edit_base.html:5
 msgid "View Law"
-msgstr ""
+msgstr "ဥပဒေများကိုကြည့်ရှုမည်"
 
 #: odm_laws/templates/package/new_package_form.html:8
 msgid "Update Law"
-msgstr ""
+msgstr "ဥပဒေများကို update လုပ်မည်"
 
 #: odm_laws/templates/package/read_base.html:6
 msgid "Manage"
-msgstr ""
+msgstr "စီမံခန့်ခွဲမည်"
 
 #: odm_laws/templates/package/read_base.html:15
 #: odm_laws/templates/package/snippets/new_package_breadcrumb.html:4
 msgid "Law"
-msgstr ""
+msgstr "ဥပဒေ"
 
 #: odm_laws/templates/package/read_base.html:16
 msgid "Activity Stream"
-msgstr ""
+msgstr "လှုပ်ရှားမှုလမ်းကြောင်း"
 
 #: odm_laws/templates/package/read_base.html:17
 msgid "Related"
-msgstr ""
+msgstr "ဆက်နွှယ်မှုရှိသော"
 
 #: odm_laws/templates/package/read_base.html:30
 msgid "Document preview"
-msgstr ""
+msgstr "စာတမ်းအစမ်းကြည့်ရှုမှု"
 
 #: odm_laws/templates/package/search.html:23
 msgid "Add Law"
-msgstr ""
+msgstr "ဥပဒေထည့်သွင်းမည်"
 
 #: odm_laws/templates/package/snippets/package_form.html:5
 msgid "Are you sure you want to delete this dataset?"
-msgstr ""
+msgstr "ဤ dataset ကိုသင်ဖျက်လိုသည်မှာ သေချာပါသလား။"
 
 #: odm_laws/templates/package/snippets/package_form.html:6
 msgid "Delete"
-msgstr ""
+msgstr "ဖျက်မည်"
 
 #: odm_laws/templates/package/snippets/search_form.html:4
 msgid "Search Laws..."
-msgstr ""
+msgstr "ဥပဒေများရှာဖွေမည်"
 
 #: odm_laws/templates/package/snippets/stages.html:14
 #: odm_laws/templates/package/snippets/stages.html:18
 #: odm_laws/templates/package/snippets/stages.html:20
 msgid "Add data"
-msgstr ""
+msgstr "Data ထည့်သွင်းမည်"
 
 #: odm_laws/templates/snippets/search_form.html:6
 msgid "Search laws..."
-msgstr ""
+msgstr "ဥပဒေများရှာဖွေမည်"
 
 #: odm_laws/templates/snippets/search_form.html:12
 msgid "Submit"
-msgstr ""
-
-#~ msgid "Anukret/Sub-Decree"
-#~ msgstr "တရားရုံးအမိန့်ခွဲ"
-
-#~ msgid "Chbab/Law/Kram"
-#~ msgstr "ဥပဒေ"
-
-#~ msgid "Constitution of Cambodia"
-#~ msgstr "ကမ္ဘောဒီးယားနိုင်ငံ၏ ဖွဲ့စည်းပုံ အခြေခံဥပဒေ"
-
-#~ msgid "International Treaties/Agreements"
-#~ msgstr "နိုင်ငံတကာသဘောတူညီချက်များ"
-
-#~ msgid "Kech Sonya/Contract/Agreement"
-#~ msgstr "သဘောတူညီချက်"
-
-#~ msgid "Kolkar Nenom/Guidelines"
-#~ msgstr "လမ်းကြောင်းပေးခြင်း"
-
-#~ msgid "Kolnyobay/Policy"
-#~ msgstr "မူဝါဒ"
-
-#~ msgid "Likhet/Letter"
-#~ msgstr "စာ"
-
-#~ msgid "Prakas/Joint-Prakas/Proclamation"
-#~ msgstr "ထုတ်ပြန်ချက်"
-
-#~ msgid "Preah Reach Kram/Royal Kram"
-#~ msgstr "Preah Reach Kram/Royal Kram"
-
-#~ msgid "Sarachor/Circular"
-#~ msgstr "Sarachor/Circular"
-
-#~ msgid "Sechkdei Chhun  Damneoung/Notice/Announcement"
-#~ msgstr "သတိပေးချက်/ကြေငြာချက်"
-
-#~ msgid "Sechkdei Nenum/Instruction"
-#~ msgstr "ညွှန်ကြားချက်"
-
-#~ msgid "Sechkdei Preang Chbab/Draft Laws & Regulations"
-#~ msgstr "ဥပဒေကြမ်း နှင့် လုပ်ထုံးလုပ်နည်းများ"
-
-#~ msgid "Sechkdei Samrech/Decision"
-#~ msgstr "ဆုံးဖြတ်ချက်"
-
-#~ msgid "Others"
-#~ msgstr "အခြား"
-
-#~ msgid "Burmese"
-#~ msgstr "ဗမာဘာသာစကား"
-
-#~ msgid "English"
-#~ msgstr "အင်္ဂလိပ်ဘာသာစကား"
-
-#~ msgid "Khmer"
-#~ msgstr "ခမာဘာသာစကား"
-
-#~ msgid "Lao"
-#~ msgstr "လာအိုဘာသာစကား"
-
-#~ msgid "Thai"
-#~ msgstr "ထိုင်းဘာသာစကား"
-
-#~ msgid "Vietnamese"
-#~ msgstr "ဗီယက်နမ်ဘာသာစကား"
-
-#~ msgid "Chinese"
-#~ msgstr "တရုတ်ဘာသာစကား"
-
-#~ msgid "French"
-#~ msgstr "ပြင်သစ်ဘာသာစကား"
-
-#~ msgid "German"
-#~ msgstr "ဂျာမန်ဘာသာစကား"
-
-#~ msgid "Japanese"
-#~ msgstr "ဂျပန်ဘာသာစကား"
-
-#~ msgid "Korean"
-#~ msgstr "ကိုရီးယားဘာသာစကား"
-
-#~ msgid "Other"
-#~ msgstr "အခြား"
-
-#~ msgid "Global"
-#~ msgstr "ကမ္ဘာတစ်ဝှမ်း"
-
-#~ msgid "ASEAN"
-#~ msgstr "အာဆီယံ"
-
-#~ msgid "Greater Mekong Subregion (GMS)"
-#~ msgstr "Greater Mekong Subregion (GMS)"
-
-#~ msgid "Lower Mekong Basin"
-#~ msgstr "Lower Mekong Basin"
-
-#~ msgid "Lower Mekong countries"
-#~ msgstr "မဲခေါင်အောက်ပိုင်းနိုင်ငံများ"
-
-#~ msgid "Cambodia"
-#~ msgstr "ကမ္ဘောဒီးယား"
-
-#~ msgid "Vietnam"
-#~ msgstr "ဗီယက်နမ်"
-
-#~ msgid "Laos"
-#~ msgstr "လာအို "
-
-#~ msgid "Thailand"
-#~ msgstr "ထိုင်း"
-
-#~ msgid "Myanmar"
-#~ msgstr "မြန်မာ"
-
-#~ msgid "Unspecified"
-#~ msgstr "တိကျစွာသတ်မှတ်ထားခြင်းမရှိသော"
-
-#~ msgid "Draft"
-#~ msgstr "အကြမ်း"
-
-#~ msgid "Adopted"
-#~ msgstr "မွေးစားခြင်း"
-
-#~ msgid "Signed"
-#~ msgstr "လက်မှတ်ရေးထိုးခြင်း"
-
-#~ msgid "Application date"
-#~ msgstr "အသုံးပြုသည့်ရက်စွဲ"
-
-#~ msgid "Relationship to other legal docs"
-#~ msgstr "အခြား ဥပဒေရေးရာစာတမ်းများနှင့် ဆက်နွှယ်မှု"
-
-#~ msgid "Child of"
-#~ msgstr "Child of"
-
-#~ msgid "Parent of"
-#~ msgstr "Parent of"
-
-#~ msgid "Technical assistance for drafting"
-#~ msgstr "အကြမ်းဆွဲခြင်းအတွက် နည်းပညာဆိုင်ရာ အထောက်အပံ့"
-
-#~ msgid "Agency providing technical assistance"
-#~ msgstr "နည်းပညာအထောက်အပံ့ပေးနေသည့် အေဂျင်စီ"
-
-#~ msgid "Technical assistance funding agency"
-#~ msgstr "နည်းပညာအထောက်အပံ့ပေးရန် ငွေကြေးထောက်ပံ့ပေးသော အေဂျင်စီ"
+msgstr "တင်မည်"
