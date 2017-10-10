@@ -1,6 +1,11 @@
 {% block package_metadata_fields_odm_document_type %}
 	<div class="control-group">
-		<label class="control-label" for="field-{{ field.field_name }}">{{ h.scheming_language_text(field.label) }}</label>
+		<label class="control-label" for="field-{{ field.field_name }}">
+			{% if field.required == 'true' %}
+				<span title="This field is required" class="control-required">*</span>
+			{% endif %}
+			{{ h.scheming_language_text(field.label) }}
+		</label>
 		<div class="controls control-full">
 			<select id="field-{{ field.field_name }}"
 				name="{{ h.scheming_language_text(field.field_name) }}"
