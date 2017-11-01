@@ -21,6 +21,7 @@
 
 {% block secondary_content %}
 
+{#
 	{% if dataset_type == 'laws_record' and c.userobj %}
 		{% set missing_laws = h.odm_laws_validate_fields(pkg) %}
 		{% if missing_laws["package"] or missing_laws["resources"] %}
@@ -33,6 +34,7 @@
 			{% endblock %}
 		{% endif %}
 	{% endif %}
+#}
 
 	{% if dataset_type == 'laws_record' %}
 		{% block odm_laws_pdf_thumbnail %}
