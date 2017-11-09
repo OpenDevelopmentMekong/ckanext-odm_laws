@@ -27,7 +27,7 @@ def _create_or_update_pdf_thumbnail(context,pkg_dict_or_resource):
   if ".pdf" != file_extension.lower() or pkg_dict_or_resource['name'] == "PDF Thumbnail":
    return
 
-	enabled_pdf_preview = config.get("ckan.odm_nav_concept.generate_pdf_preview", False) == "true"
+  enabled_pdf_preview = config.get("ckan.odm_nav_concept.generate_pdf_preview", False) == "true"
   if enabled_pdf_preview:
 
     try:
