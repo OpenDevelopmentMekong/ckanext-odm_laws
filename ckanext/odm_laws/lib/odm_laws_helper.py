@@ -8,7 +8,6 @@ import os
 import logging
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
-from genshi.template.text import NewTextTemplate
 from ckan.lib.base import render
 
 DEBUG = True
@@ -30,7 +29,7 @@ def create_default_issue_laws_record(pkg_info):
 			't0': toolkit._("Thank you for uploading this item. Instructions about vetting system available on https://wiki.opendevelopmentmekong.net/partners:content_review#instructions_for_default_issue_on_law_records")
 		}
 
-		issue_message = render('messages/default_issue_laws_record.txt',extra_vars=extra_vars,loader_class=NewTextTemplate)
+		issue_message = render('messages/default_issue_laws_record.txt',extra_vars=extra_vars)
 
 		params = {'title':'User Laws record Upload Checklist','description':issue_message,'dataset_id':pkg_info['id']}
 		toolkit.get_action('issue_create')(data_dict=params)
