@@ -116,8 +116,7 @@ class OdmLawsPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
     if dataset_type == 'laws_record':
       log.debug('after_create: %s', pkg_dict_or_resource['name'])
 
-      #review_system = config.get("ckanext.issues.review_system", False) == "true"
-      review_system = True
+      review_system = toolkit.asbool(config.get("ckanext.issues.review_system", False))
       if review_system:
         if 'type' in pkg_dict_or_resource:
           odm_laws_helper.create_default_issue_laws_record(pkg_dict_or_resource)
