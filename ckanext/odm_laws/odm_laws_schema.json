@@ -140,7 +140,7 @@
 		"required": "true",
 		"validate": "true",
 		"label": "Organization",
-		"preset": "dataset_organization"
+		"preset": "odm_organization"
 	}, {
 		"field_name": "license_id",
 		"required": "true",
