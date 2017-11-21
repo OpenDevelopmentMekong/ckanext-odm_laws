@@ -8,8 +8,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ODM ckanext-odm_laws\n"
-"POT-Creation-Date: 2016-12-06 15:34+0100\n"
-"PO-Revision-Date: 2016-12-06 15:34+0100\n"
+"POT-Creation-Date: 2017-11-21 09:52+0100\n"
+"PO-Revision-Date: 2017-11-21 09:52+0100\n"
 "Last-Translator: Huy Eng Heng <huyeng_heng@yahoo.com>\n"
 "Language-Team: Khmer (http://www.transifex.com/open-development-mekong/odm-"
 "ckanext-odm_laws/language/km/)\n"
@@ -135,11 +135,11 @@ msgstr "ទំនាក់ទំនង"
 msgid "Drafting agency"
 msgstr "ទីភ្នាក់ងារធ្វើសេចក្តីព្រាង"
 
-#: odm_laws/i18n/metadata_fields.php:31
+#: odm_laws/i18n/metadata_fields.php:31 odm_laws/i18n/metadata_fields.php:44
 msgid "Yes"
 msgstr "មាន"
 
-#: odm_laws/i18n/metadata_fields.php:32
+#: odm_laws/i18n/metadata_fields.php:32 odm_laws/i18n/metadata_fields.php:45
 msgid "No"
 msgstr "មិនមាន"
 
@@ -179,7 +179,31 @@ msgstr "ឈ្មោះ"
 msgid "Format"
 msgstr "ទ្រង់ទ្រាយ"
 
-#: odm_laws/lib/odm_laws_helper.py:27
+#: odm_laws/i18n/metadata_fields.php:42
+msgid "Province(s)"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:43
+msgid "Formal type of document"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:46
+msgid "Unclear copyright"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:47
+msgid "To be determined"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:48
+msgid "Keywords"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:49
+msgid "Date modified"
+msgstr ""
+
+#: odm_laws/lib/odm_laws_helper.py:30
 msgid ""
 "Thank you for uploading this item. Instructions about vetting system "
 "available on https://wiki.opendevelopmentmekong.net/partners:"
@@ -234,7 +258,15 @@ msgstr ""
 msgid "Related"
 msgstr ""
 
-#: odm_laws/templates/package/read_base.html:30
+#: odm_laws/templates/package/read_base.html:29
+msgid "Record metadata not complete!!"
+msgstr ""
+
+#: odm_laws/templates/package/read_base.html:31
+msgid "This law record is missing some mandatory fields, please complete:"
+msgstr ""
+
+#: odm_laws/templates/package/read_base.html:43
 msgid "Document preview"
 msgstr ""
 

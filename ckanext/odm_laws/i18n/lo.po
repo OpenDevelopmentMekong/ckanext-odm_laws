@@ -1,22 +1,23 @@
-# 
+#
 # Translators:
 # Noudsavanh Pheungsavanh <co@laolandinfo.org>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: ODM ckanext-odm_laws\n"
-"POT-Creation-Date: 2016-12-06 15:34+0100\n"
-"PO-Revision-Date: 2017-11-20 15:07+0000\n"
+"POT-Creation-Date: 2017-11-21 09:52+0100\n"
+"PO-Revision-Date: 2017-11-21 09:52+0100\n"
 "Last-Translator: Noudsavanh Pheungsavanh <co@laolandinfo.org>\n"
-"Language-Team: Lao (http://www.transifex.com/open-development-mekong/odm-ckanext-odm_laws/language/lo/)\n"
+"Language-Team: Lao (http://www.transifex.com/open-development-mekong/odm-ckanext-"
+"odm_laws/language/lo/)\n"
+"Language: lo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: lo\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Poedit 1.8.7.1\n"
 "X-Poedit-Basepath: ../../../ckanext\n"
-"X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
 
 #: odm_laws/i18n/metadata_fields.php:3
 msgid "Document type"
@@ -130,11 +131,11 @@ msgstr "ຂໍ້ມູນຕິດຕໍ່"
 msgid "Drafting agency"
 msgstr "ໜ່ວຍງານຮ່າງກົດໝາຍ"
 
-#: odm_laws/i18n/metadata_fields.php:31
+#: odm_laws/i18n/metadata_fields.php:31 odm_laws/i18n/metadata_fields.php:44
 msgid "Yes"
 msgstr "ແມ່ນ"
 
-#: odm_laws/i18n/metadata_fields.php:32
+#: odm_laws/i18n/metadata_fields.php:32 odm_laws/i18n/metadata_fields.php:45
 msgid "No"
 msgstr "ບໍ່ແມ່ນ"
 
@@ -174,23 +175,47 @@ msgstr "ຊື່"
 msgid "Format"
 msgstr "ຮູບແບບ"
 
-#: odm_laws/lib/odm_laws_helper.py:27
+#: odm_laws/i18n/metadata_fields.php:42
+msgid "Province(s)"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:43
+msgid "Formal type of document"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:46
+msgid "Unclear copyright"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:47
+msgid "To be determined"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:48
+msgid "Keywords"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:49
+msgid "Date modified"
+msgstr ""
+
+#: odm_laws/lib/odm_laws_helper.py:30
 msgid ""
-"Thank you for uploading this item. Instructions about vetting system "
-"available on "
-"https://wiki.opendevelopmentmekong.net/partners:content_review#instructions_for_default_issue_on_law_records"
-msgstr "ຂອບໃຈຫຼາຍໆສຳລັບການລົງເອກະສານຊຸດນີ້. ທ່ານສາມາດເຂົ້າເບິ່ງຄຳແນະນຳເພື່ອ ກວບສອບຄວາມຖືກຕ້ອງຂອງຂໍ້ມູນຊຸດນີ້ຕາມລີ້ງຂ້າງລຸ່ມ: https://wiki.opendevelopmentmekong.net/partners:content_review#instructions_for_default_issue_on_law_records"
+"Thank you for uploading this item. Instructions about vetting system available on "
+"https://wiki.opendevelopmentmekong.net/partners:"
+"content_review#instructions_for_default_issue_on_law_records"
+msgstr ""
+"ຂອບໃຈຫຼາຍໆສຳລັບການລົງເອກະສານຊຸດນີ້. ທ່ານສາມາດເຂົ້າເບິ່ງຄຳແນະນຳເພື່ອ "
+"ກວບສອບຄວາມຖືກຕ້ອງຂອງຂໍ້ມູນຊຸດນີ້ຕາມລີ້ງຂ້າງລຸ່ມ: https://wiki.opendevelopmentmekong.net/partners:"
+"content_review#instructions_for_default_issue_on_law_records"
 
 #: odm_laws/templates/header.html:5 odm_laws/templates/package/base.html:5
-#: odm_laws/templates/package/base.html:15
-#: odm_laws/templates/package/base.html:18
-#: odm_laws/templates/package/search.html:5
-#: odm_laws/templates/package/search.html:13
+#: odm_laws/templates/package/base.html:15 odm_laws/templates/package/base.html:18
+#: odm_laws/templates/package/search.html:5 odm_laws/templates/package/search.html:13
 msgid "Laws"
 msgstr "ກົດໝາຍຕ່າງໆ"
 
-#: odm_laws/templates/package/base.html:19
-#: odm_laws/templates/package/new.html:5
+#: odm_laws/templates/package/base.html:19 odm_laws/templates/package/new.html:5
 #: odm_laws/templates/package/snippets/new_package_breadcrumb.html:5
 #: odm_laws/templates/package/snippets/stages.html:7
 #: odm_laws/templates/package/snippets/stages.html:9
@@ -226,7 +251,15 @@ msgstr "ກິດຈະກຳເຄື່ອນໄຫວລ່າສຸດ"
 msgid "Related"
 msgstr "ກ່ຽວຂ້ອງ"
 
-#: odm_laws/templates/package/read_base.html:30
+#: odm_laws/templates/package/read_base.html:29
+msgid "Record metadata not complete!!"
+msgstr ""
+
+#: odm_laws/templates/package/read_base.html:31
+msgid "This law record is missing some mandatory fields, please complete:"
+msgstr ""
+
+#: odm_laws/templates/package/read_base.html:43
 msgid "Document preview"
 msgstr "ກວດເບິ່ງເອກະສານຄືນ "
 

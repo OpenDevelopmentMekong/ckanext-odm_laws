@@ -39,4 +39,12 @@ echo _('Maintainer');
 echo _('Maintainer email');
 echo _('Name');
 echo _('Format');
+echo _('Province(s)');
+echo _('Formal type of document');
+echo _('Yes');
+echo _('No');
+echo _('Unclear copyright');
+echo _('To be determined');
+echo _('Keywords');
+echo _('Date modified');
 ?>

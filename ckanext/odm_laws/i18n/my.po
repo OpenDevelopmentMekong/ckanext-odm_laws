@@ -1,4 +1,4 @@
-# 
+#
 # Translators:
 # Yoon, 2016-2017
 # thetaung2 <thetaung@phandeeyar.org>, 2017
@@ -6,19 +6,20 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ODM ckanext-odm_laws\n"
-"POT-Creation-Date: 2016-12-06 15:34+0100\n"
-"PO-Revision-Date: 2017-09-23 22:31+0000\n"
+"POT-Creation-Date: 2017-11-21 09:52+0100\n"
+"PO-Revision-Date: 2017-11-21 09:52+0100\n"
 "Last-Translator: thetaung2 <thetaung@phandeeyar.org>\n"
-"Language-Team: Burmese (http://www.transifex.com/open-development-mekong/odm-ckanext-odm_laws/language/my/)\n"
+"Language-Team: Burmese (http://www.transifex.com/open-development-mekong/odm-ckanext-odm_laws/"
+"language/my/)\n"
+"Language: my\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: my\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Poedit 1.8.7.1\n"
 "X-Poedit-Basepath: ../../../ckanext\n"
-"X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
 
 #: odm_laws/i18n/metadata_fields.php:3
 msgid "Document type"
@@ -132,11 +133,11 @@ msgstr "ဆက်သွယ်ရန်"
 msgid "Drafting agency"
 msgstr "အကြမ်းဆွဲသည့် အေဂျင်စီများ"
 
-#: odm_laws/i18n/metadata_fields.php:31
+#: odm_laws/i18n/metadata_fields.php:31 odm_laws/i18n/metadata_fields.php:44
 msgid "Yes"
 msgstr "ရှိပါသည်"
 
-#: odm_laws/i18n/metadata_fields.php:32
+#: odm_laws/i18n/metadata_fields.php:32 odm_laws/i18n/metadata_fields.php:45
 msgid "No"
 msgstr "မရှိသေးပါ"
 
@@ -176,23 +177,45 @@ msgstr "အမည်"
 msgid "Format"
 msgstr "ပုံစံ"
 
-#: odm_laws/lib/odm_laws_helper.py:27
+#: odm_laws/i18n/metadata_fields.php:42
+msgid "Province(s)"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:43
+msgid "Formal type of document"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:46
+msgid "Unclear copyright"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:47
+msgid "To be determined"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:48
+msgid "Keywords"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:49
+msgid "Date modified"
+msgstr ""
+
+#: odm_laws/lib/odm_laws_helper.py:30
 msgid ""
-"Thank you for uploading this item. Instructions about vetting system "
-"available on "
-"https://wiki.opendevelopmentmekong.net/partners:content_review#instructions_for_default_issue_on_law_records"
-msgstr "ဤအကြောင်းအရာကို တင်ပေးသည့်အတွက်ကျေးဇူးတင်ပါတယ်။ လေ့လာစီစစ်ခြင်းစနစ်အတွက် လမ်းညွှန်ကို https://wiki.opendevelopmentmekong.net/partners:content_review#instructions_for_default_issue_on_law_records တွင်ကြည့်ရှုနိုင်သည်။"
+"Thank you for uploading this item. Instructions about vetting system available on https://wiki."
+"opendevelopmentmekong.net/partners:content_review#instructions_for_default_issue_on_law_records"
+msgstr ""
+"ဤအကြောင်းအရာကို တင်ပေးသည့်အတွက်ကျေးဇူးတင်ပါတယ်။ လေ့လာစီစစ်ခြင်းစနစ်အတွက် လမ်းညွှန်ကို https://wiki.opendevelopmentmekong."
+"net/partners:content_review#instructions_for_default_issue_on_law_records တွင်ကြည့်ရှုနိုင်သည်။"
 
 #: odm_laws/templates/header.html:5 odm_laws/templates/package/base.html:5
-#: odm_laws/templates/package/base.html:15
-#: odm_laws/templates/package/base.html:18
-#: odm_laws/templates/package/search.html:5
-#: odm_laws/templates/package/search.html:13
+#: odm_laws/templates/package/base.html:15 odm_laws/templates/package/base.html:18
+#: odm_laws/templates/package/search.html:5 odm_laws/templates/package/search.html:13
 msgid "Laws"
 msgstr "ဥပဒေများ"
 
-#: odm_laws/templates/package/base.html:19
-#: odm_laws/templates/package/new.html:5
+#: odm_laws/templates/package/base.html:19 odm_laws/templates/package/new.html:5
 #: odm_laws/templates/package/snippets/new_package_breadcrumb.html:5
 #: odm_laws/templates/package/snippets/stages.html:7
 #: odm_laws/templates/package/snippets/stages.html:9
@@ -228,7 +251,15 @@ msgstr "လှုပ်ရှားမှုလမ်းကြောင်း"
 msgid "Related"
 msgstr "ဆက်နွှယ်မှုရှိသော"
 
-#: odm_laws/templates/package/read_base.html:30
+#: odm_laws/templates/package/read_base.html:29
+msgid "Record metadata not complete!!"
+msgstr ""
+
+#: odm_laws/templates/package/read_base.html:31
+msgid "This law record is missing some mandatory fields, please complete:"
+msgstr ""
+
+#: odm_laws/templates/package/read_base.html:43
 msgid "Document preview"
 msgstr "စာတမ်းအစမ်းကြည့်ရှုမှု"
 
