@@ -1,185 +1,185 @@
-#
+# 
 # Translators:
+# Noudsavanh Pheungsavanh <co@laolandinfo.org>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: ODM ckanext-odm_laws\n"
 "POT-Creation-Date: 2016-12-06 15:34+0100\n"
-"PO-Revision-Date: 2016-12-06 15:34+0100\n"
-"Last-Translator: Alex Corbi <a.corbi@gmail.com>\n"
-"Language-Team: Lao (http://www.transifex.com/open-development-mekong/odm-"
-"ckanext-odm_laws/language/lo/)\n"
-"Language: lo\n"
+"PO-Revision-Date: 2017-11-20 15:07+0000\n"
+"Last-Translator: Noudsavanh Pheungsavanh <co@laolandinfo.org>\n"
+"Language-Team: Lao (http://www.transifex.com/open-development-mekong/odm-ckanext-odm_laws/language/lo/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: lo\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Poedit 1.8.7.1\n"
 "X-Poedit-Basepath: ../../../ckanext\n"
-"X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
 
 #: odm_laws/i18n/metadata_fields.php:3
 msgid "Document type"
-msgstr ""
+msgstr "ປະເພດເອກະສານ"
 
 #: odm_laws/i18n/metadata_fields.php:4
 msgid "Document reference #"
-msgstr ""
+msgstr "ເອກະສານອ້າງອີງ #"
 
 #: odm_laws/i18n/metadata_fields.php:5
 msgid "Language"
-msgstr ""
+msgstr "ພາສາ"
 
 #: odm_laws/i18n/metadata_fields.php:6
 msgid "Formal full title"
-msgstr ""
+msgstr "ຊື່ທາງການ"
 
 #: odm_laws/i18n/metadata_fields.php:7
 msgid "URL"
-msgstr ""
+msgstr "ທີ່ຢູ່ຂອງເວັບໄຊ້"
 
 #: odm_laws/i18n/metadata_fields.php:8
 msgid "Alternative/short title"
-msgstr ""
+msgstr "ຊື່ອື່ນ/ຊື່ຫຍໍ້"
 
 #: odm_laws/i18n/metadata_fields.php:9
 msgid "Topics"
-msgstr ""
+msgstr "ຫົວຂໍ້"
 
 #: odm_laws/i18n/metadata_fields.php:10
 msgid "Short summary"
-msgstr ""
+msgstr "ສັງລວມໂດຍຫຍໍ້"
 
 #: odm_laws/i18n/metadata_fields.php:11
 msgid "Primary policy reference point"
-msgstr ""
+msgstr "ຈຸດອ້າງອີງຈາກນະໂຍບາຍ"
 
 #: odm_laws/i18n/metadata_fields.php:12
 msgid "Geographic area (spatial range)"
-msgstr ""
+msgstr "ພື້ນທີ່ພູມມິສາດ (ລະດັບຄວາມກວ້າງຂອງພື້ນທີ່)"
 
 #: odm_laws/i18n/metadata_fields.php:13
 msgid "Organization"
-msgstr ""
+msgstr "ອົງການຈັດຕັ້ງ"
 
 #: odm_laws/i18n/metadata_fields.php:14
 msgid "License"
-msgstr ""
+msgstr "ການອະນຸມັດ"
 
 #: odm_laws/i18n/metadata_fields.php:15
 msgid "Copyright"
-msgstr ""
+msgstr "ລິດຂະສິດ"
 
 #: odm_laws/i18n/metadata_fields.php:16
 msgid "Access and use constraints"
-msgstr ""
+msgstr "ຂໍ້ຈຳກັດ ການເຂົ້າເຖິງ ແລະ ການນຳໃຊ້ງານ"
 
 #: odm_laws/i18n/metadata_fields.php:17
 msgid "Status"
-msgstr ""
+msgstr "ສະຖານະ "
 
 #: odm_laws/i18n/metadata_fields.php:18
 msgid "Version date (of draft)"
-msgstr ""
+msgstr "ວັນທີ ສ້າງຮູບແບບຊຸດຂໍ້ມູນ (ສະບັບຮ່າງ)"
 
 #: odm_laws/i18n/metadata_fields.php:19
 msgid "Adoption date/Promulgation date/Signing"
-msgstr ""
+msgstr "ວັນທີ ຮັບຮອງເອົາ /ບັງຄັບໃຊ້ /ເຊັນຮັບຮອງ   "
 
 #: odm_laws/i18n/metadata_fields.php:20
 msgid "Effective date"
-msgstr ""
+msgstr "ວັນທີມີຜົນບັງຄັບໃຊ້"
 
 #: odm_laws/i18n/metadata_fields.php:21
 msgid "Objective of the document"
-msgstr ""
+msgstr "ຈຸດປະສົງຂອງເອກະສານ"
 
 #: odm_laws/i18n/metadata_fields.php:22
 msgid "Previous legal document"
-msgstr ""
+msgstr "ເອກະສານທາງນິຕິກຳສະບັບກ່ອນ"
 
 #: odm_laws/i18n/metadata_fields.php:23
 msgid "Short notes of change"
-msgstr ""
+msgstr "ໝາຍເຫດ ກ່ຽວກັບການປ່ຽນແປງ"
 
 #: odm_laws/i18n/metadata_fields.php:24
 msgid "Parent document"
-msgstr ""
+msgstr "ກົດໝາຍຫຼັກ"
 
 #: odm_laws/i18n/metadata_fields.php:25
 msgid "Child document"
-msgstr ""
+msgstr "ກົດໝາຍ ສຳຮອງ"
 
 #: odm_laws/i18n/metadata_fields.php:26
 msgid "Associated Document"
-msgstr ""
+msgstr "ເອກະສານທີ່ກ່ຽວຂ້ອງ"
 
 #: odm_laws/i18n/metadata_fields.php:27
 msgid "Publication reference"
-msgstr ""
+msgstr "ກົດໝາຍເຜີຍແຜ່ທີ່ກ່ຽວຂ້ອງ"
 
 #: odm_laws/i18n/metadata_fields.php:28
 msgid "Links to source"
-msgstr ""
+msgstr "ລີ້ງເພື້່ອໄປຫາແຫຼ່ງຂໍ້ມູນ"
 
 #: odm_laws/i18n/metadata_fields.php:29
 msgid "Contact"
-msgstr ""
+msgstr "ຂໍ້ມູນຕິດຕໍ່"
 
 #: odm_laws/i18n/metadata_fields.php:30
 msgid "Drafting agency"
-msgstr ""
+msgstr "ໜ່ວຍງານຮ່າງກົດໝາຍ"
 
 #: odm_laws/i18n/metadata_fields.php:31
 msgid "Yes"
-msgstr ""
+msgstr "ແມ່ນ"
 
 #: odm_laws/i18n/metadata_fields.php:32
 msgid "No"
-msgstr ""
+msgstr "ບໍ່ແມ່ນ"
 
 #: odm_laws/i18n/metadata_fields.php:33
 msgid "Unknown"
-msgstr ""
+msgstr "ບໍ່ຮູ້"
 
 #: odm_laws/i18n/metadata_fields.php:34
 msgid "Issuing agency/parties"
-msgstr ""
+msgstr "ໜ່ວຍງານ ຫຼື ພາກສ່ວນ ອອກກົດໝາຍ"
 
 #: odm_laws/i18n/metadata_fields.php:35
 msgid "Implementing agencies"
-msgstr ""
+msgstr "ໜ່ວຍງານດຳເນີນປະຕິບັດກົດໝາຍ"
 
 #: odm_laws/i18n/metadata_fields.php:36
 msgid "Notes"
-msgstr ""
+msgstr "ໝາຍເຫດ"
 
 #: odm_laws/i18n/metadata_fields.php:37
 msgid "Legacy reference document"
-msgstr ""
+msgstr "ເອກະສານອ້າງອີງສະເພາະ"
 
 #: odm_laws/i18n/metadata_fields.php:38
 msgid "Maintainer"
-msgstr ""
+msgstr "ຜູ້ດູແລລະບົບ"
 
 #: odm_laws/i18n/metadata_fields.php:39
 msgid "Maintainer email"
-msgstr ""
+msgstr "ອີເມລຂອງຜູ້ດູແລລະບົບ"
 
 #: odm_laws/i18n/metadata_fields.php:40
 msgid "Name"
-msgstr ""
+msgstr "ຊື່"
 
 #: odm_laws/i18n/metadata_fields.php:41
 msgid "Format"
-msgstr ""
+msgstr "ຮູບແບບ"
 
 #: odm_laws/lib/odm_laws_helper.py:27
 msgid ""
 "Thank you for uploading this item. Instructions about vetting system "
-"available on https://wiki.opendevelopmentmekong.net/partners:"
-"content_review#instructions_for_default_issue_on_law_records"
-msgstr ""
+"available on "
+"https://wiki.opendevelopmentmekong.net/partners:content_review#instructions_for_default_issue_on_law_records"
+msgstr "ຂອບໃຈຫຼາຍໆສຳລັບການລົງເອກະສານຊຸດນີ້. ທ່ານສາມາດເຂົ້າເບິ່ງຄຳແນະນຳເພື່ອ ກວບສອບຄວາມຖືກຕ້ອງຂອງຂໍ້ມູນຊຸດນີ້ຕາມລີ້ງຂ້າງລຸ່ມ: https://wiki.opendevelopmentmekong.net/partners:content_review#instructions_for_default_issue_on_law_records"
 
 #: odm_laws/templates/header.html:5 odm_laws/templates/package/base.html:5
 #: odm_laws/templates/package/base.html:15
@@ -187,7 +187,7 @@ msgstr ""
 #: odm_laws/templates/package/search.html:5
 #: odm_laws/templates/package/search.html:13
 msgid "Laws"
-msgstr ""
+msgstr "ກົດໝາຍຕ່າງໆ"
 
 #: odm_laws/templates/package/base.html:19
 #: odm_laws/templates/package/new.html:5
@@ -195,67 +195,67 @@ msgstr ""
 #: odm_laws/templates/package/snippets/stages.html:7
 #: odm_laws/templates/package/snippets/stages.html:9
 msgid "Create Law"
-msgstr ""
+msgstr "ສ້າງ ເອກະສານກົດໝາຍ"
 
 #: odm_laws/templates/package/base_form_page.html:7
 msgid "What are Laws?"
-msgstr ""
+msgstr "ມີກົດໝາຍຫຍັງແດ່?"
 
 #: odm_laws/templates/package/edit_base.html:5
 msgid "View Law"
-msgstr ""
+msgstr "ເບິ່ງກົດໝາຍ"
 
 #: odm_laws/templates/package/new_package_form.html:8
 msgid "Update Law"
-msgstr ""
+msgstr "ປັບປຸງກົດໝາຍ"
 
 #: odm_laws/templates/package/read_base.html:6
 msgid "Manage"
-msgstr ""
+msgstr "ການຈັດການ"
 
 #: odm_laws/templates/package/read_base.html:15
 #: odm_laws/templates/package/snippets/new_package_breadcrumb.html:4
 msgid "Law"
-msgstr ""
+msgstr "ກົດໝາຍ"
 
 #: odm_laws/templates/package/read_base.html:16
 msgid "Activity Stream"
-msgstr ""
+msgstr "ກິດຈະກຳເຄື່ອນໄຫວລ່າສຸດ"
 
 #: odm_laws/templates/package/read_base.html:17
 msgid "Related"
-msgstr ""
+msgstr "ກ່ຽວຂ້ອງ"
 
 #: odm_laws/templates/package/read_base.html:30
 msgid "Document preview"
-msgstr ""
+msgstr "ກວດເບິ່ງເອກະສານຄືນ "
 
 #: odm_laws/templates/package/search.html:23
 msgid "Add Law"
-msgstr ""
+msgstr "ເພີ່ມ ເອກະສານກົດໝາຍ"
 
 #: odm_laws/templates/package/snippets/package_form.html:5
 msgid "Are you sure you want to delete this dataset?"
-msgstr ""
+msgstr "ເຈົ້າໝັ້ນໃຈບໍວ່າຈະລົບລ້າງຂໍ້ມູນຊຸດນີ້?"
 
 #: odm_laws/templates/package/snippets/package_form.html:6
 msgid "Delete"
-msgstr ""
+msgstr "ລົບລ້າງ"
 
 #: odm_laws/templates/package/snippets/search_form.html:4
 msgid "Search Laws..."
-msgstr ""
+msgstr "ຄົ້ນຫາກົດໝາຍ"
 
 #: odm_laws/templates/package/snippets/stages.html:14
 #: odm_laws/templates/package/snippets/stages.html:18
 #: odm_laws/templates/package/snippets/stages.html:20
 msgid "Add data"
-msgstr ""
+msgstr "ເພີ່ມຂໍ້ມູນ"
 
 #: odm_laws/templates/snippets/search_form.html:6
 msgid "Search laws..."
-msgstr ""
+msgstr "ຄົ້ນຫາກົດໝາຍ"
 
 #: odm_laws/templates/snippets/search_form.html:12
 msgid "Submit"
-msgstr ""
+msgstr "ສົ່ງ"
