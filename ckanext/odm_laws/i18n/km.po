@@ -8,8 +8,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ODM ckanext-odm_laws\n"
-"POT-Creation-Date: 2017-11-21 09:52+0100\n"
-"PO-Revision-Date: 2017-11-21 09:52+0100\n"
+"POT-Creation-Date: 2017-11-21 11:11+0100\n"
+"PO-Revision-Date: 2017-11-21 11:11+0100\n"
 "Last-Translator: Huy Eng Heng <huyeng_heng@yahoo.com>\n"
 "Language-Team: Khmer (http://www.transifex.com/open-development-mekong/odm-"
 "ckanext-odm_laws/language/km/)\n"
@@ -203,15 +203,156 @@ msgstr ""
 msgid "Date modified"
 msgstr ""
 
-#: odm_laws/lib/odm_laws_helper.py:30
+#: odm_laws/i18n/metadata_fields.php:50
 msgid ""
-"Thank you for uploading this item. Instructions about vetting system "
-"available on https://wiki.opendevelopmentmekong.net/partners:"
-"content_review#instructions_for_default_issue_on_law_records"
+"The geographic area that the dataset is relevant to (i.e. Cambodia, Laos)."
 msgstr ""
-"សូមអរគុណសម្រាប់ការផ្ទុកឡើង។ សេចក្តីណែនាំបន្ថែអំពីការប្រើប្រាស់អាចរកបាននៅលើ\n"
-"https://wiki.opendevelopmentmekong.net/partners:"
-"content_review#instructions_for_default_issue_on_law_records"
+
+#: odm_laws/i18n/metadata_fields.php:51
+msgid "The province(s) this dataset relates to"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:52
+msgid ""
+"The legal reference document number as used by the internal governing agency."
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:53
+msgid ""
+"The jurisdictional agency responsible for drafting and issuing the (law) "
+"legal document."
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:54
+msgid ""
+"The jurisdictional agency responsible for the enforcing and implementing the "
+"(law) legal document."
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:55
+msgid "Language(s) of the dataset, including resources within dataset."
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:56
+msgid ""
+"Full title of document. Please do not repeat the document type or number in "
+"this field."
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:57
+msgid "eg. my-dataset"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:58
+msgid "Commonly used label, e.g. Cambodia Labor Law."
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:59 odm_laws/i18n/metadata_fields.php:61
+msgid "e.g. economy, mental health, government"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:60 odm_laws/i18n/metadata_fields.php:62
+msgid ""
+"Describe general purpose and scope, preamble will often provide a useful "
+"statement of objective."
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:63
+msgid ""
+"References are generally in the preamble or opening sections of a legal "
+"authority as the legitimacy of the document is derived from the source it "
+"references."
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:64
+msgid ""
+"A few sentences describing legal considerations for people who access the "
+"website and/or use its contents."
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:65
+msgid "Current operational state of the legal document."
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:66
+msgid "The version date of when the law was drafted."
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:67
+msgid "The date the law was officially authorised."
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:68
+msgid "Date the law is to take effect."
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:69
+msgid "Does this law replace, amend or supplement previous law?"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:70
+msgid "A short statement describing what changed."
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:71
+msgid "The law that directly supersedes this law"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:72
+msgid "The law that directly precedes this law"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:73
+msgid ""
+"Any other supporting documents or references that relate to this law; i.e. "
+"reports, policy briefs etc."
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:74
+msgid ""
+"The official gazette or other official promulgation of policy, referencing "
+"issue #, date and page"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:75
+msgid "Official URLs where the document is made available."
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:76
+msgid ""
+"Contact information for the individual or organization that is responsible "
+"for or most knowledgeable about the document."
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:77
+msgid "Any additional notes regarding this document."
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:78
+msgid "e.g Tong_Min_Group_Engineering__21.06.2011.pdf"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:79 odm_laws/i18n/metadata_fields.php:80
+msgid "Date a new version or update of the dataset was uploaded."
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:81
+msgid ""
+"INTERNAL USE ONLY: Enter keywords for improving the discoverability of this "
+"record via search"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:82
+msgid "eg. January 2011 Gold Prices"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:83
+msgid "Some useful notes about the data"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:84
+msgid "Language(s) of the resource."
+msgstr ""
 
 #: odm_laws/templates/header.html:5 odm_laws/templates/package/base.html:5
 #: odm_laws/templates/package/base.html:15
@@ -254,10 +395,6 @@ msgstr ""
 msgid "Activity Stream"
 msgstr ""
 
-#: odm_laws/templates/package/read_base.html:17
-msgid "Related"
-msgstr ""
-
 #: odm_laws/templates/package/read_base.html:29
 msgid "Record metadata not complete!!"
 msgstr ""
@@ -266,7 +403,7 @@ msgstr ""
 msgid "This law record is missing some mandatory fields, please complete:"
 msgstr ""
 
-#: odm_laws/templates/package/read_base.html:43
+#: odm_laws/templates/package/read_base.html:44
 msgid "Document preview"
 msgstr ""
 
@@ -299,6 +436,15 @@ msgstr ""
 #: odm_laws/templates/snippets/search_form.html:12
 msgid "Submit"
 msgstr ""
+
+#~ msgid ""
+#~ "Thank you for uploading this item. Instructions about vetting system "
+#~ "available on https://wiki.opendevelopmentmekong.net/partners:"
+#~ "content_review#instructions_for_default_issue_on_law_records"
+#~ msgstr ""
+#~ "សូមអរគុណសម្រាប់ការផ្ទុកឡើង។ សេចក្តីណែនាំបន្ថែអំពីការប្រើប្រាស់អាចរកបាននៅលើ\n"
+#~ "https://wiki.opendevelopmentmekong.net/partners:"
+#~ "content_review#instructions_for_default_issue_on_law_records"
 
 #~ msgid "Anukret/Sub-Decree"
 #~ msgstr "អនុ​ក្រឹត្យ "

@@ -360,6 +360,5 @@
 		"validate": "true",
 		"label": "Resource's languages",
 		"form_placeholder": "Language(s) of the resource."
-
 	}]
 }
