@@ -1,0 +1,44 @@
+<?php
+// This template allows translation tools such as POEDIT to detect automatically the metadata labels to translate
+echo _('Action Plan');
+echo _('Agreements');
+echo _('Amendments');
+echo _('ASEAN Agreements');
+echo _('Bilateral Agreements');
+echo _('Bilateral Treaty');
+echo _('By-Laws');
+echo _('Circular');
+echo _('Code');
+echo _('Constitution');
+echo _('Contracts');
+echo _('Customary law');
+echo _('Decision');
+echo _('Decree');
+echo _('Directive');
+echo _('Draft');
+echo _('Guideline');
+echo _('Instruction');
+echo _('International Treaty');
+echo _('Joint circular');
+echo _('Law');
+echo _('Letter');
+echo _('Notice');
+echo _('Notification');
+echo _('Order');
+echo _('Ordinance');
+echo _('other');
+echo _('Policy');
+echo _('Proclamation');
+echo _('Regional Agreements');
+echo _('Regulation');
+echo _('Resolution');
+echo _('Royal decree');
+echo _('Rule');
+echo _('Strategic Plan');
+echo _('Strategy');
+echo _('Sub-decree');
+echo _('Trade Agreements');
+echo _('Triangualar Agreement');
+echo _('UN Charters');
+echo _('Village Regulation');
+?>
