@@ -14,7 +14,7 @@
 				placeholder="{{ _(h.scheming_language_text(field.form_placeholder)) }}"
 				class="odm_spatial_range-specific">
 				{% for issuing_agency in h.odm_dataset_get_resource_from_datatable(h.odm_dataset_get_resource_id_for_field('odm_laws_issuing_agency_parties')) %}
-					<option {{"selected " if issuing_agency['id'] in data[field.field_name] }} data-country_codes="{{ issuing_agency['country_codes'] }}" value="{{ issuing_agency['id'] }}">{{ issuing_agency['name'] }}</option>
+					<option {{"selected " if issuing_agency['id'] in data[field.field_name] }} data-country_codes="{{ issuing_agency['country_codes'] }}" value="{{ issuing_agency['id'] }}">{{ _(issuing_agency['name']) }}</option>
 				{% endfor %}
 			</select>
 		</div>

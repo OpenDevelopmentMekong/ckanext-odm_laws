@@ -8,8 +8,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ODM ckanext-odm_laws\n"
-"POT-Creation-Date: 2016-12-06 15:34+0100\n"
-"PO-Revision-Date: 2016-12-06 15:34+0100\n"
+"POT-Creation-Date: 2017-12-04 12:36+0100\n"
+"PO-Revision-Date: 2017-12-04 12:36+0100\n"
 "Last-Translator: Huy Eng Heng <huyeng_heng@yahoo.com>\n"
 "Language-Team: Khmer (http://www.transifex.com/open-development-mekong/odm-"
 "ckanext-odm_laws/language/km/)\n"
@@ -135,11 +135,11 @@ msgstr "ទំនាក់ទំនង"
 msgid "Drafting agency"
 msgstr "ទីភ្នាក់ងារធ្វើសេចក្តីព្រាង"
 
-#: odm_laws/i18n/metadata_fields.php:31
+#: odm_laws/i18n/metadata_fields.php:31 odm_laws/i18n/metadata_fields.php:44
 msgid "Yes"
 msgstr "មាន"
 
-#: odm_laws/i18n/metadata_fields.php:32
+#: odm_laws/i18n/metadata_fields.php:32 odm_laws/i18n/metadata_fields.php:45
 msgid "No"
 msgstr "មិនមាន"
 
@@ -179,15 +179,1118 @@ msgstr "ឈ្មោះ"
 msgid "Format"
 msgstr "ទ្រង់ទ្រាយ"
 
-#: odm_laws/lib/odm_laws_helper.py:27
-msgid ""
-"Thank you for uploading this item. Instructions about vetting system "
-"available on https://wiki.opendevelopmentmekong.net/partners:"
-"content_review#instructions_for_default_issue_on_law_records"
+#: odm_laws/i18n/metadata_fields.php:42
+msgid "Province(s)"
 msgstr ""
-"សូមអរគុណសម្រាប់ការផ្ទុកឡើង។ សេចក្តីណែនាំបន្ថែអំពីការប្រើប្រាស់អាចរកបាននៅលើ\n"
-"https://wiki.opendevelopmentmekong.net/partners:"
-"content_review#instructions_for_default_issue_on_law_records"
+
+#: odm_laws/i18n/metadata_fields.php:43
+msgid "Formal type of document"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:46
+msgid "Unclear copyright"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:47
+msgid "To be determined"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:48
+msgid "Keywords"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:49
+msgid "Date modified"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:50
+msgid ""
+"The geographic area that the dataset is relevant to (i.e. Cambodia, Laos)."
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:51
+msgid "The province(s) this dataset relates to"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:52
+msgid ""
+"The legal reference document number as used by the internal governing agency."
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:53
+msgid ""
+"The jurisdictional agency responsible for drafting and issuing the (law) "
+"legal document."
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:54
+msgid ""
+"The jurisdictional agency responsible for the enforcing and implementing the "
+"(law) legal document."
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:55
+msgid "Language(s) of the dataset, including resources within dataset."
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:56
+msgid ""
+"Full title of document. Please do not repeat the document type or number in "
+"this field."
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:57
+msgid "eg. my-dataset"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:58
+msgid "Commonly used label, e.g. Cambodia Labor Law."
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:59 odm_laws/i18n/metadata_fields.php:61
+msgid "e.g. economy, mental health, government"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:60 odm_laws/i18n/metadata_fields.php:62
+msgid ""
+"Describe general purpose and scope, preamble will often provide a useful "
+"statement of objective."
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:63
+msgid ""
+"References are generally in the preamble or opening sections of a legal "
+"authority as the legitimacy of the document is derived from the source it "
+"references."
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:64
+msgid ""
+"A few sentences describing legal considerations for people who access the "
+"website and/or use its contents."
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:65
+msgid "Current operational state of the legal document."
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:66
+msgid "The version date of when the law was drafted."
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:67
+msgid "The date the law was officially authorised."
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:68
+msgid "Date the law is to take effect."
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:69
+msgid "Does this law replace, amend or supplement previous law?"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:70
+msgid "A short statement describing what changed."
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:71
+msgid "The law that directly supersedes this law"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:72
+msgid "The law that directly precedes this law"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:73
+msgid ""
+"Any other supporting documents or references that relate to this law; i.e. "
+"reports, policy briefs etc."
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:74
+msgid ""
+"The official gazette or other official promulgation of policy, referencing "
+"issue #, date and page"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:75
+msgid "Official URLs where the document is made available."
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:76
+msgid ""
+"Contact information for the individual or organization that is responsible "
+"for or most knowledgeable about the document."
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:77
+msgid "Any additional notes regarding this document."
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:78
+msgid "e.g Tong_Min_Group_Engineering__21.06.2011.pdf"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:79 odm_laws/i18n/metadata_fields.php:80
+msgid "Date a new version or update of the dataset was uploaded."
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:81
+msgid ""
+"INTERNAL USE ONLY: Enter keywords for improving the discoverability of this "
+"record via search"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:82
+msgid "eg. January 2011 Gold Prices"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:83
+msgid "Some useful notes about the data"
+msgstr ""
+
+#: odm_laws/i18n/metadata_fields.php:84
+msgid "Language(s) of the resource."
+msgstr ""
+
+#: odm_laws/i18n/odm_document_type.php:3
+msgid "Action Plan"
+msgstr ""
+
+#: odm_laws/i18n/odm_document_type.php:4
+msgid "Agreements"
+msgstr ""
+
+#: odm_laws/i18n/odm_document_type.php:5
+msgid "Amendments"
+msgstr ""
+
+#: odm_laws/i18n/odm_document_type.php:6
+msgid "ASEAN Agreements"
+msgstr ""
+
+#: odm_laws/i18n/odm_document_type.php:7
+msgid "Bilateral Agreements"
+msgstr ""
+
+#: odm_laws/i18n/odm_document_type.php:8
+msgid "Bilateral Treaty"
+msgstr ""
+
+#: odm_laws/i18n/odm_document_type.php:9
+msgid "By-Laws"
+msgstr ""
+
+#: odm_laws/i18n/odm_document_type.php:10
+msgid "Circular"
+msgstr ""
+
+#: odm_laws/i18n/odm_document_type.php:11
+msgid "Code"
+msgstr ""
+
+#: odm_laws/i18n/odm_document_type.php:12
+msgid "Constitution"
+msgstr ""
+
+#: odm_laws/i18n/odm_document_type.php:13
+msgid "Contracts"
+msgstr ""
+
+#: odm_laws/i18n/odm_document_type.php:14
+msgid "Customary law"
+msgstr ""
+
+#: odm_laws/i18n/odm_document_type.php:15
+msgid "Decision"
+msgstr ""
+
+#: odm_laws/i18n/odm_document_type.php:16
+msgid "Decree"
+msgstr ""
+
+#: odm_laws/i18n/odm_document_type.php:17
+msgid "Directive"
+msgstr ""
+
+#: odm_laws/i18n/odm_document_type.php:18 odm_laws/i18n/odm_laws_status.php:8
+msgid "Draft"
+msgstr "សេចក្តីព្រាង"
+
+#: odm_laws/i18n/odm_document_type.php:19
+msgid "Guideline"
+msgstr ""
+
+#: odm_laws/i18n/odm_document_type.php:20
+msgid "Instruction"
+msgstr ""
+
+#: odm_laws/i18n/odm_document_type.php:21
+msgid "International Treaty"
+msgstr ""
+
+#: odm_laws/i18n/odm_document_type.php:22
+msgid "Joint circular"
+msgstr ""
+
+#: odm_laws/i18n/odm_document_type.php:23
+#: odm_laws/templates/package/read_base.html:15
+#: odm_laws/templates/package/snippets/new_package_breadcrumb.html:4
+msgid "Law"
+msgstr ""
+
+#: odm_laws/i18n/odm_document_type.php:24
+msgid "Letter"
+msgstr ""
+
+#: odm_laws/i18n/odm_document_type.php:25
+msgid "Notice"
+msgstr ""
+
+#: odm_laws/i18n/odm_document_type.php:26
+msgid "Notification"
+msgstr ""
+
+#: odm_laws/i18n/odm_document_type.php:27
+msgid "Order"
+msgstr ""
+
+#: odm_laws/i18n/odm_document_type.php:28
+msgid "Ordinance"
+msgstr ""
+
+#: odm_laws/i18n/odm_document_type.php:29
+msgid "other"
+msgstr ""
+
+#: odm_laws/i18n/odm_document_type.php:30
+msgid "Policy"
+msgstr ""
+
+#: odm_laws/i18n/odm_document_type.php:31
+msgid "Proclamation"
+msgstr ""
+
+#: odm_laws/i18n/odm_document_type.php:32
+msgid "Regional Agreements"
+msgstr ""
+
+#: odm_laws/i18n/odm_document_type.php:33
+msgid "Regulation"
+msgstr ""
+
+#: odm_laws/i18n/odm_document_type.php:34
+msgid "Resolution"
+msgstr ""
+
+#: odm_laws/i18n/odm_document_type.php:35
+msgid "Royal decree"
+msgstr ""
+
+#: odm_laws/i18n/odm_document_type.php:36
+msgid "Rule"
+msgstr ""
+
+#: odm_laws/i18n/odm_document_type.php:37
+msgid "Strategic Plan"
+msgstr ""
+
+#: odm_laws/i18n/odm_document_type.php:38
+msgid "Strategy"
+msgstr ""
+
+#: odm_laws/i18n/odm_document_type.php:39
+msgid "Sub-decree"
+msgstr ""
+
+#: odm_laws/i18n/odm_document_type.php:40
+msgid "Trade Agreements"
+msgstr ""
+
+#: odm_laws/i18n/odm_document_type.php:41
+msgid "Triangualar Agreement"
+msgstr ""
+
+#: odm_laws/i18n/odm_document_type.php:42
+msgid "UN Charters"
+msgstr ""
+
+#: odm_laws/i18n/odm_document_type.php:43
+msgid "Village Regulation"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:3
+#: odm_laws/i18n/odm_issuing_agencies.php:76
+msgid "Prime Minister"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:4
+msgid "Minister in charge of the Office of the Council of Ministers"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:5
+msgid "Minister of Interior"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:6
+msgid "Minister of Land Management Urban Planning and Construction"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:7
+msgid "Minister of Economy and Finance"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:8
+#: odm_laws/i18n/odm_implementing_agencies.php:15
+msgid "Minister of Environment"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:9
+msgid "Minister of Agriculture Forestry and Fisheries"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:10
+msgid "Minister of Civil Service"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:11
+msgid "Minister of Cult and Religion"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:12
+msgid "Minister of Culture and Fine Arts"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:13
+#: odm_laws/i18n/odm_implementing_agencies.php:66
+#: odm_laws/i18n/odm_issuing_agencies.php:30
+msgid "Ministry of Commerce"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:14
+msgid "Minister of Education Youth and Sport"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:16
+msgid "Minister of Foreign Affairs and International Cooperation"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:17
+msgid "Minister of Health"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:18
+msgid "Minister of Industry and Handicrafts"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:19
+msgid "Minister of Information"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:20
+msgid "Minister of Justice"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:21
+msgid "Minister of Labour and Vocational Training"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:22
+#: odm_laws/i18n/odm_issuing_agencies.php:49
+msgid "Ministry of Land Management, Urban Planning and Construction"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:23
+msgid "Minister of Mines and Energy"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:24
+msgid "Minister of National Defense"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:25
+msgid "Minister of National Assembly-Senate Relations and Inspection"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:26
+msgid "Minister of Planning"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:27
+msgid "Minister of Posts and Telecommunication"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:28
+msgid "Minister of Public Works and Transport"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:29
+msgid "Minister of Social Affairs Veterans and Youth Rehabilitation"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:30
+msgid "Minister of Tourism"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:31
+msgid "Minister of Water Resources and Meteorology"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:32
+msgid "Minister of Women’s Affairs"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:33
+msgid "Secretary of State of Civil Aviation"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:34
+msgid "Secretary of State"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:35
+msgid "Municipal-Provincial Governor/Council"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:36
+msgid "City Governor/Council"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:37
+msgid "District Governor/Council"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:38
+msgid "Commune Governor/Council"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:39
+msgid ""
+"Inter-Ministerial Committee for Assessment Measurement and Evaluation of the "
+"Economic Land Concessions"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:40
+msgid "Royal Government of the Kingdom of Cambodia"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:41
+msgid "Secretary General"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:42
+msgid "General Inspector"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:43
+msgid "Forestry Administration"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:44
+msgid "Council for Development of Cambodia"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:45
+#: odm_laws/i18n/odm_issuing_agencies.php:16
+msgid "Electricity Authority of Cambodia"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:46
+msgid "Cabinet"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:47
+msgid "National Authority for Land Dispute Resolution"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:48
+#: odm_laws/i18n/odm_issuing_agencies.php:14
+msgid "Council of Ministers"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:49
+msgid "Company Director"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:50
+msgid "Apsara Authority"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:51
+msgid "Phnom Penh Capital Hall"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:52
+msgid "Ministry of President’s Office"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:53
+#: odm_laws/i18n/odm_issuing_agencies.php:40
+msgid "Ministry of Home Affairs"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:54
+msgid "Ministry of Defence"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:55
+msgid "Ministry of Border Affairs"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:56
+msgid "Ministry of Office of the State Counsellor"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:57
+msgid "Ministry of Information"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:58
+msgid "Ministry of Religious Affairs and Culture"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:59
+msgid "Ministry of Agriculture, Livestock and Irrigation"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:60
+msgid "Ministry of Transport and Communications"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:61
+msgid "Ministry of Natural Resources and Environmental Conservation"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:62
+msgid "Ministry of Electricity and Energy"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:63
+#: odm_laws/i18n/odm_issuing_agencies.php:38
+msgid "Ministry of Foreign Affairs"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:64
+msgid "Ministry of Labour, Immigration and Population"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:65
+msgid "Ministry of Industry"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:67
+msgid "Ministry of Education"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:68
+msgid "Ministry of Health and Sports"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:69
+msgid "Ministry of Planning and Finance"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:70
+#: odm_laws/i18n/odm_issuing_agencies.php:31
+msgid "Ministry of Construction"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:71
+msgid "Ministry of Social Welfare, Relief and Resettlement"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:72
+msgid "Ministry of Hotels and Tourism"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:73
+msgid "Office of the Auditor General of the Union"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:74
+msgid "Union Attorney General's Office"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:75
+msgid "Ministry of Ethnic Affairs"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:76
+msgid "Central Bank of Myanmar"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:77
+msgid "Union Election Committee"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:78
+msgid "Constitutional Tribunal of the Union of Myanmar"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:79
+msgid "Union Supreme Court"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:80
+msgid "Anti-corruption commission"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:81
+msgid "Yangon City Development Committee"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:82
+msgid "Naypyidaw Council"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:83
+msgid "Naypyidaw Development Committee"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:84
+msgid "Union Government Office"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:85
+msgid "Union Parliament Office"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:86
+msgid "Union Human Resource Office"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:87
+msgid "The Union of Myanmar"
+msgstr ""
+
+#: odm_laws/i18n/odm_implementing_agencies.php:88
+msgid "The State Peace and Development Council"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:3
+msgid "Attapeu Province"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:4
+msgid "Bank of the Lao PDR"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:5
+msgid "Bokeo Province"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:6
+msgid "Central Party's Office"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:7
+msgid "Champasak Province"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:8
+msgid "City Council"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:9
+msgid "Committee for Ethnic Affairs"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:10
+msgid "Commune Council"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:11
+msgid "Congress between National Assembly and Senate"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:12
+msgid "Constituent Assembly"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:13
+msgid "Constitutional Council"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:15
+msgid "District Council"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:17
+msgid "Government Inspectorate"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:18
+msgid "Government Office"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:19
+msgid "Huaphan Province"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:20
+msgid "Khammuan Province"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:21
+msgid "King, of the Kingdom of Cambodia"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:22
+msgid "Lao Front for National Construction"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:23
+msgid "Lao Trade Union"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:24
+msgid "Lao Women's Union"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:25
+msgid "Lao Youth Union"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:26
+msgid "Luangnamtha Province"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:27
+msgid "Luangprabang Province"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:28
+msgid "Ministry of Agriculture and Forestry"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:29
+msgid "Ministry of Agriculture Forestry and Fisheries"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:32
+msgid "Ministry of Cult and Religion"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:33
+msgid "Ministry of Culture- Sports and Tourism"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:34
+msgid "Ministry of Education and Sport"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:35
+msgid "Ministry of Education and Training"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:36
+msgid "Ministry of Energy and Mines"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:37
+msgid "Ministry of Finance"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:39
+msgid "Ministry of Health"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:41
+msgid "Ministry of Industries, Mines and Energy"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:42
+msgid "Ministry of Industry and Commerce"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:43
+msgid "Ministry of Industry and Trade"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:44
+msgid "Ministry of Information and Communications"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:45
+msgid "Ministry of Information, Culture and Tourism"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:46
+msgid "Ministry of Justice"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:47
+msgid "Ministry of Labor, War Invalids and Social Affairs"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:48
+msgid "Ministry of Labour and Social Welfare"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:50
+msgid "Ministry of National Assembly-Senate Relations and Inspection"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:51
+msgid "Ministry of National Defence"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:52
+msgid "Ministry of Natural Resources and Environment"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:53
+msgid "Ministry of Planning and Investment"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:54
+msgid "Ministry of Posts and Telecommunications"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:55
+msgid "Ministry of Public Health"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:56
+msgid "Ministry of Public Security"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:57
+msgid "Ministry of Public Works and Transport"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:58
+msgid "Ministry of Rural Development"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:59
+msgid "Ministry of Science and Technology"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:60
+msgid "Ministry of Social Affairs, Veterans and Youth Rehabilitation"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:61
+msgid "Ministry of Tourism"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:62
+msgid "Ministry of Transport"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:63
+msgid "Ministry of Water Resources and Meterology"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:64
+msgid "Ministry of Woman's Affairs"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:65
+msgid "Myanmar Socialist Party"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:66
+msgid "NA Standing Committee"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:67
+msgid "National Assembly"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:68
+msgid "Office of the Council of Ministers"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:69
+msgid "Office of the Government"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:70
+msgid "Office of the Prime Minister"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:71
+msgid "Oudomxay Province"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:72
+msgid "Parliament"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:73
+msgid "Phnom Penh Captial Hall"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:74
+msgid "Phongsaly Province"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:75
+msgid "Presidential Office"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:77
+msgid "Provincial Authorities"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:78
+msgid "Provincial Department of Ministry"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:79
+msgid "Provincial-Capital Council"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:80
+msgid "Pyidaungsu Hluttaw"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:81
+msgid "Revolutionary Council"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:82
+msgid "Royal Government of Cambodia"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:83
+msgid "Royal Palace"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:84
+msgid "Saravan Province"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:85
+msgid "Savannakhet Province"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:86
+msgid "Sekong Province"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:87
+msgid "Self-Administered Zone"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:88
+msgid "Senate"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:89
+msgid "State and Regional Hluttaws"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:90
+msgid "State Inspection Organization"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:91
+msgid "State Law and Order Restoration Council"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:92
+msgid "State Peace and Development Council"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:93
+msgid "State President"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:94
+msgid "Supreme People's Court"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:95
+msgid "Supreme People's Prosecutor"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:96
+msgid "The Government"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:97
+msgid "The National Assembly"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:98
+msgid "The State Bank"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:99
+msgid "Vientiane Capital"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:100
+msgid "Vientiane Province"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:101
+msgid "Village administration"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:102
+msgid "Xayabouly Province"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:103
+msgid "Xaysomboun Province"
+msgstr ""
+
+#: odm_laws/i18n/odm_issuing_agencies.php:104
+msgid "Xiengkhauang Province"
+msgstr ""
+
+#: odm_laws/i18n/odm_laws_status.php:3
+msgid "Under negotitation"
+msgstr ""
+
+#: odm_laws/i18n/odm_laws_status.php:4
+msgid "Framework agreement signed"
+msgstr ""
+
+#: odm_laws/i18n/odm_laws_status.php:5
+msgid "Negotiations launched"
+msgstr ""
+
+#: odm_laws/i18n/odm_laws_status.php:6
+msgid "Signed but not yet in effect/validated"
+msgstr ""
+
+#: odm_laws/i18n/odm_laws_status.php:7
+msgid "Signed and in effect"
+msgstr ""
+
+#: odm_laws/i18n/odm_laws_status.php:9
+msgid "Adopted / validated / in effect"
+msgstr ""
+
+#: odm_laws/i18n/odm_laws_status.php:10
+msgid "Cancelled"
+msgstr ""
+
+#: odm_laws/i18n/odm_laws_status.php:11
+msgid "Expired"
+msgstr ""
+
+#: odm_laws/i18n/odm_laws_status.php:12
+msgid "Bill approved"
+msgstr ""
+
+#: odm_laws/i18n/odm_laws_status.php:13
+msgid "Bill discussed in Pyidaungsu Hluttaw"
+msgstr ""
+
+#: odm_laws/i18n/odm_laws_status.php:14
+msgid "Bill send to the President for signature"
+msgstr ""
+
+#: odm_laws/i18n/odm_laws_status.php:15
+msgid "Repealed"
+msgstr ""
 
 #: odm_laws/templates/header.html:5 odm_laws/templates/package/base.html:5
 #: odm_laws/templates/package/base.html:15
@@ -221,20 +1324,19 @@ msgstr ""
 msgid "Manage"
 msgstr ""
 
-#: odm_laws/templates/package/read_base.html:15
-#: odm_laws/templates/package/snippets/new_package_breadcrumb.html:4
-msgid "Law"
-msgstr ""
-
 #: odm_laws/templates/package/read_base.html:16
 msgid "Activity Stream"
 msgstr ""
 
-#: odm_laws/templates/package/read_base.html:17
-msgid "Related"
+#: odm_laws/templates/package/read_base.html:29
+msgid "Record metadata not complete!!"
 msgstr ""
 
-#: odm_laws/templates/package/read_base.html:30
+#: odm_laws/templates/package/read_base.html:31
+msgid "This law record is missing some mandatory fields, please complete:"
+msgstr ""
+
+#: odm_laws/templates/package/read_base.html:44
 msgid "Document preview"
 msgstr ""
 
@@ -267,6 +1369,15 @@ msgstr ""
 #: odm_laws/templates/snippets/search_form.html:12
 msgid "Submit"
 msgstr ""
+
+#~ msgid ""
+#~ "Thank you for uploading this item. Instructions about vetting system "
+#~ "available on https://wiki.opendevelopmentmekong.net/partners:"
+#~ "content_review#instructions_for_default_issue_on_law_records"
+#~ msgstr ""
+#~ "សូមអរគុណសម្រាប់ការផ្ទុកឡើង។ សេចក្តីណែនាំបន្ថែអំពីការប្រើប្រាស់អាចរកបាននៅលើ\n"
+#~ "https://wiki.opendevelopmentmekong.net/partners:"
+#~ "content_review#instructions_for_default_issue_on_law_records"
 
 #~ msgid "Anukret/Sub-Decree"
 #~ msgstr "អនុ​ក្រឹត្យ "
@@ -384,9 +1495,6 @@ msgstr ""
 
 #~ msgid "Unspecified"
 #~ msgstr "មិនបញ្ជាក់"
-
-#~ msgid "Draft"
-#~ msgstr "សេចក្តីព្រាង"
 
 #~ msgid "Adopted"
 #~ msgstr "បានអនុម័ត"
