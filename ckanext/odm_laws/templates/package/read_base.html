@@ -1,13 +1,15 @@
 {% ckan_extends %}
 
 {% block content_action %}
-  {% if h.check_access('package_update', {'id':pkg.id }) %}
     {% if dataset_type == 'laws_record' %}
-      {% link_for _('Manage'), controller='package', type='laws_record', action='edit', id=pkg.name, class_='btn', icon='wrench' %}
+        {% if h.check_access('package_update', {'id':pkg.id }) %}
+            <div class="actions">
+                {% link_for _('Manage'), controller='package', type='laws_record', action='edit', id=pkg.name, class_='btn', icon='wrench' %}
+            </div>
+        {% endif%}
     {% else %}
-      {{super()}}
-    {% endif%}
-  {% endif %}
+        {{super()}}
+    {% endif %}
 {% endblock %}
 
 {% block content_primary_nav %}
@@ -35,7 +37,7 @@
 		{% endif %}
 	{% endif %}
 #}
-
+odm_laws
 	{% if dataset_type == 'laws_record' %}
 		{% block odm_laws_pdf_thumbnail %}
 			{% set resources = c.pkg_dict.resources %}
