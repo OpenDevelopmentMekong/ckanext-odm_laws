@@ -1,20 +1,8 @@
 {% ckan_extends %}
 
 {% block search_input %}
-
-  {% if c.type == 'laws_record' %}
-  	{% set placeholder = _('Search laws...') %}
-    <div class="search-input control-group {{ search_class }}">
-      <input type="text" class="search" name="q" value="{{ query }}" autocomplete="off" placeholder="{{ placeholder }}">
-      {% block search_input_button %}
-      <button type="submit" value="search">
-        <i class="icon-search"></i>
-        <span>{{ _('Submit') }}</span>
-      </button>
-      {% endblock %}
-    </div>
-  {% else %}
-  	{{super()}}
-  {% endif%}
-
+    {% if c.type == 'laws_record' %}
+  	    {% set placeholder = _('Search laws...') %}
+    {% endif %}
+  	{{ super() }}
 {% endblock %}
