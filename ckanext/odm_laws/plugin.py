@@ -14,7 +14,6 @@ from pylons import config
 import collections
 from routes.mapper import SubMapper
 import ckan.lib.helpers as h
-from wand.image import Image
 import requests
 import tempfile
 
@@ -32,6 +31,7 @@ def _create_or_update_pdf_thumbnail(context,pkg_dict_or_resource):
   if enabled_pdf_preview:
 
     try:
+      from wand.image import Image
 
       pdf=Image(filename=pdf_url+"[0]")
       pdf.format='png'
