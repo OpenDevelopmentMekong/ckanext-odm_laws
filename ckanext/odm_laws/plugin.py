@@ -1,5 +1,4 @@
 import ckan
-import pylons
 import logging
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
@@ -10,7 +9,7 @@ sys.path.append(os.path.join(os.path.dirname(__file__), "lib"))
 import odm_laws_helper
 from urlparse import urlparse
 import json
-from pylons import config
+from ckan.common import config
 import collections
 from routes.mapper import SubMapper
 import ckan.lib.helpers as h
