@@ -2,7 +2,7 @@
 
 {% block content_action %}
 	{% if dataset_type == 'laws_record' %}
-		{% link_for _('View Law'), controller='package', type='laws_record', action='read', id=pkg.name, class_='btn', icon='eye-open' %}
+		{% link_for _('View Law'), controller='package', type='laws_record', action='read', id=pkg.name, class_='btn', icon='eye' %}
 	{% else %}
 		{{super()}}
 	{% endif%}
