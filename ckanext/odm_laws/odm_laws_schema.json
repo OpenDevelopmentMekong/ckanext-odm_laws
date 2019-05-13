@@ -10,7 +10,8 @@
 		"form_placeholder": "The geographic area that the dataset is relevant to (i.e. Cambodia, Laos).",
 		"preset": "odm_spatial_range",
 		"required": "true",
-		"validate": "true"
+		"validate": "true",
+                "validators": "not_empty"
 	},{
 		"field_name": "odm_province",
 		"label": "Province(s)",
