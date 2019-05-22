@@ -18,7 +18,7 @@
 		"preset": "odm_province"
 	},{
 		"field_name": "odm_document_number",
-		"preset": "fluent_text_single",
+		"preset": "odm_text_translated",
 		"validate": "true",
 		"multilingual": "true",
 		"label": {
@@ -28,7 +28,6 @@
 			"vi": "Tham chiếu tài liệu #",
 			"my": "ရည်ညွှန်း စာတမ်းများ"
 		},
-		"form_languages": ["en", "th", "km", "vi", "my"],
 		"form_placeholder": "The legal reference document number as used by the internal governing agency."
 	}, {
 		"field_name": "odm_laws_issuing_agency_parties",
@@ -61,8 +60,8 @@
 			"vi": "Tiêu đề đầy đủ chính thức",
 			"my": "ခေါင်းစဉ်အပြည့်အစုံ"
 		},
-		"form_languages": ["en", "th", "km", "vi", "my"],
 		"form_placeholder": "Full title of document. Please do not repeat the document type or number in this field.",
+		"form_snippet": "slug_target_fluent_text.html",
 		"form_attrs": {
 			"data-module": "slug-preview-target"
 		}
@@ -71,9 +70,6 @@
 		"label": "title",
 		"required": "true",
 		"preset": "text_hidden",
-		"form_attrs": {
-			"data-module": "slug-preview-target"
-		},
 		"validators": "if_empty_same_as(name)"
 	}, {
 		"field_name": "name",
@@ -92,7 +88,7 @@
 	}, {
 		"field_name": "odm_short_title",
 		"multilingual": "true",
-		"preset": "fluent_text_single",
+		"preset": "odm_text_translated",
 		"label": {
 			"en": "Alternative/short title",
 			"th": "Alternative/short title",
@@ -100,7 +96,6 @@
 			"vi": "Tiêu đề thay thế/ Tên rút gọn",
 			"my": "ခေါင်းစဉ်ကွဲ/ခေါင်းစဉ်တို"
 		},
-		"form_languages": ["en", "th", "km", "vi", "my"],
 		"form_placeholder": "Commonly used label, e.g. Cambodia Labor Law."
 	}, {
 		"field_name": "taxonomy",
@@ -109,10 +104,16 @@
 		"validate": "true",
 		"preset": "odm_taxonomy",
 		"form_placeholder": "e.g. economy, mental health, government"
-	}, {
+	},
+    {
+        "field_name": "notes",
+        "label": "Abstract",
+        "preset": "text_hidden"
+    },
+    {
 		"field_name": "notes_translated",
 		"multilingual": "true",
-		"preset": "fluent_core_notes_translated_markdown_single",
+		"preset": "odm_notes_translated_markdown",
 		"label": {
 			"en": "Short summary",
 			"th": "รายละเอียด",
@@ -120,7 +121,6 @@
 			"vi": "Mô tả",
 			"my": "Short summary"
 		},
-		"form_languages": ["en", "th", "km", "vi", "my"],
 		"form_placeholder": "Describe general purpose and scope, preamble will often provide a useful statement of objective."
 	},{
 		"field_name": "odm_laws_primary_policy_reference_point",
@@ -133,7 +133,6 @@
 			"vi": "Các điều luật tham chiếu",
 			"my": "မူရင်းမူဝါဒများ ရည်ညွှန်းချက်"
 		},
-		"form_languages": ["en", "th", "km", "vi", "my"],
 		"form_placeholder": "References are generally in the preamble or opening sections of a legal authority as the legitimacy of the document is derived from the source it references."
 	}, {
 		"field_name": "owner_org",
@@ -158,7 +157,7 @@
 	}, {
 		"field_name": "odm_access_and_use_constraints",
 		"multilingual": "true",
-		"preset": "fluent_markdown_single",
+		"preset": "fluent_markdown_translated",
 		"label": {
 			"en": "Access and use constraints",
 			"th": "การเข้าถึงและข้อจำกัด",
@@ -166,7 +165,6 @@
 			"vi": "Hạn chế truy cập và sử dụng",
 			"my": "ရယူခြင်းနှင့် အကန့်အသတ်များအသုံးပြုခြင်း"
 		},
-		"form_languages": ["en", "th", "km", "vi", "my"],
 		"form_placeholder": "A few sentences describing legal considerations for people who access the website and/or use its contents."
 	}, {
 		"field_name": "odm_laws_status",
@@ -202,7 +200,7 @@
 	}, {
 		"field_name": "odm_laws_previous_changes_notes",
 		"multilingual": "true",
-		"preset": "fluent_markdown_single",
+		"preset": "fluent_markdown_translated",
 		"label": {
 			"en": "Short notes of change",
 			"th": "Short notes of change",
@@ -210,7 +208,6 @@
 			"vi": "Ghi chú nhanh về chỉnh sửa",
 			"my": "ပြောင်းလဲမှု၏ မှတ်စုတိုများ"
 		},
-		"form_languages": ["en", "th", "km", "vi", "my"],
 		"form_placeholder": "A short statement describing what changed."
 	}, {
 		"field_name": "odm_laws_parent_document",
@@ -242,7 +239,7 @@
 	}, {
 		"field_name": "odm_contact",
 		"multilingual": "true",
-		"preset": "fluent_markdown_single",
+		"preset": "fluent_markdown_translated",
 		"label": {
 			"en": "Contact",
 			"th": "ข้อมูลติดต่อ",
@@ -250,12 +247,11 @@
 			"vi": "Liên hệ",
 			"my": "ဆက်သွယ်ရန်"
 		},
-		"form_languages": ["en", "th", "km", "vi", "my"],
 		"form_placeholder": "Contact information for the individual or organization that is responsible for or most knowledgeable about the document."
 	}, {
 		"field_name": "odm_laws_notes",
 		"multilingual": "true",
-		"preset": "fluent_markdown_single",
+		"preset": "fluent_markdown_translated",
 		"label": {
 			"en": "Notes",
 			"th": "Notes",
@@ -263,7 +259,6 @@
 			"vi": "Ghi chú",
 			"my": "မှတ်စုများ"
 		},
-		"form_languages": ["en", "th", "km", "vi", "my"],
 		"form_placeholder": "Any additional notes regarding this document."
 	}, {
 		"field_name": "odm_reference_document",
@@ -316,7 +311,7 @@
 	}, {
 		"field_name": "name_translated",
 		"validate": "true",
-		"preset": "fluent_text_single",
+		"preset": "odm_text_translated",
 		"label": {
 			"en": "Name",
 			"th": "Name",
@@ -324,7 +319,6 @@
 			"vi": "Tên",
 			"my": "အမည်"
 		},
-		"form_languages": ["en", "th", "km", "vi", "my"],
 		"form_placeholder": "eg. January 2011 Gold Prices"
 	}, {
 		"field_name": "name",
@@ -333,7 +327,7 @@
 	}, {
 		"field_name": "description_translated",
 		"validate": "true",
-		"preset": "fluent_markdown_single",
+		"preset": "fluent_markdown_translated",
 		"label": {
 			"en": "Description",
 			"th": "Description",
@@ -341,7 +335,6 @@
 			"vi": "Mô tả",
 			"my": "ဖော်ပြချက်"
 		},
-		"form_languages": ["en", "th", "km", "vi", "my"],
 		"form_placeholder": "Some useful notes about the data"
 	}, {
 		"field_name": "description",
