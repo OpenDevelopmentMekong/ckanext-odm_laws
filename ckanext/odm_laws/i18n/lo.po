@@ -1,23 +1,26 @@
-#
+# 
 # Translators:
 # Noudsavanh Pheungsavanh <co@laolandinfo.org>, 2017
+# phonephasouk volabouth <phonephasouk@villagefocus.org>, 2018
+# Pinkie, 2017
+# gimmemochi, 2017
+# Souchitta Chemcheng <c.souchitta@gmail.com>, 2018
 msgid ""
 msgstr ""
 "Project-Id-Version: ODM ckanext-odm_laws\n"
 "POT-Creation-Date: 2017-12-04 12:36+0100\n"
-"PO-Revision-Date: 2017-12-04 12:36+0100\n"
-"Last-Translator: Noudsavanh Pheungsavanh <co@laolandinfo.org>\n"
-"Language-Team: Lao (http://www.transifex.com/open-development-mekong/odm-ckanext-"
-"odm_laws/language/lo/)\n"
-"Language: lo\n"
+"PO-Revision-Date: 2018-05-24 08:53+0000\n"
+"Last-Translator: phonephasouk volabouth <phonephasouk@villagefocus.org>\n"
+"Language-Team: Lao (http://www.transifex.com/open-development-mekong/odm-ckanext-odm_laws/language/lo/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: lo\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Poedit 1.8.7.1\n"
 "X-Poedit-Basepath: ../../../ckanext\n"
-"X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
 
 #: odm_laws/i18n/metadata_fields.php:3
 msgid "Document type"
@@ -53,7 +56,7 @@ msgstr "ສັງລວມໂດຍຫຍໍ້"
 
 #: odm_laws/i18n/metadata_fields.php:11
 msgid "Primary policy reference point"
-msgstr "ຈຸດອ້າງອີງຈາກນະໂຍບາຍ"
+msgstr "ຈຸດອ້າງອີງຈາກນະໂຍບາຍຫຼັກ"
 
 #: odm_laws/i18n/metadata_fields.php:12
 msgid "Geographic area (spatial range)"
@@ -65,15 +68,15 @@ msgstr "ອົງການຈັດຕັ້ງ"
 
 #: odm_laws/i18n/metadata_fields.php:14
 msgid "License"
-msgstr "ການອະນຸມັດ"
+msgstr "ການອະນຸຍາດ"
 
 #: odm_laws/i18n/metadata_fields.php:15
 msgid "Copyright"
-msgstr "ລິດຂະສິດ"
+msgstr "ລິຂະສິດ"
 
 #: odm_laws/i18n/metadata_fields.php:16
 msgid "Access and use constraints"
-msgstr "ຂໍ້ຈຳກັດ ການເຂົ້າເຖິງ ແລະ ການນຳໃຊ້ງານ"
+msgstr "ຂໍ້ຈຳກັດໃນການເຂົ້າເຖິງ ແລະ ນຳໃຊ້"
 
 #: odm_laws/i18n/metadata_fields.php:17
 msgid "Status"
@@ -85,7 +88,7 @@ msgstr "ວັນທີ ສ້າງຮູບແບບຊຸດຂໍ້ມູ�
 
 #: odm_laws/i18n/metadata_fields.php:19
 msgid "Adoption date/Promulgation date/Signing"
-msgstr "ວັນທີ ຮັບຮອງເອົາ /ບັງຄັບໃຊ້ /ເຊັນຮັບຮອງ   "
+msgstr "ວັນທີ ຮັບຮອງເອົາ /ປະກາດໃຊ້ /ລົງນາມ   "
 
 #: odm_laws/i18n/metadata_fields.php:20
 msgid "Effective date"
@@ -105,11 +108,11 @@ msgstr "ໝາຍເຫດ ກ່ຽວກັບການປ່ຽນແປງ"
 
 #: odm_laws/i18n/metadata_fields.php:24
 msgid "Parent document"
-msgstr "ກົດໝາຍຫຼັກ"
+msgstr "ເອກະສານຫຼັກ"
 
 #: odm_laws/i18n/metadata_fields.php:25
 msgid "Child document"
-msgstr "ກົດໝາຍ ສຳຮອງ"
+msgstr "ກົດໝາຍສຳຮອງ"
 
 #: odm_laws/i18n/metadata_fields.php:26
 msgid "Associated Document"
@@ -117,7 +120,7 @@ msgstr "ເອກະສານທີ່ກ່ຽວຂ້ອງ"
 
 #: odm_laws/i18n/metadata_fields.php:27
 msgid "Publication reference"
-msgstr "ກົດໝາຍເຜີຍແຜ່ທີ່ກ່ຽວຂ້ອງ"
+msgstr "ເອກະສານອ້າງອີງ"
 
 #: odm_laws/i18n/metadata_fields.php:28
 msgid "Links to source"
@@ -133,11 +136,11 @@ msgstr "ໜ່ວຍງານຮ່າງກົດໝາຍ"
 
 #: odm_laws/i18n/metadata_fields.php:31 odm_laws/i18n/metadata_fields.php:44
 msgid "Yes"
-msgstr "ແມ່ນ"
+msgstr "ມີ"
 
 #: odm_laws/i18n/metadata_fields.php:32 odm_laws/i18n/metadata_fields.php:45
 msgid "No"
-msgstr "ບໍ່ແມ່ນ"
+msgstr "ບໍ່ມີ"
 
 #: odm_laws/i18n/metadata_fields.php:33
 msgid "Unknown"
@@ -145,11 +148,11 @@ msgstr "ບໍ່ຮູ້"
 
 #: odm_laws/i18n/metadata_fields.php:34
 msgid "Issuing agency/parties"
-msgstr "ໜ່ວຍງານ ຫຼື ພາກສ່ວນ ອອກກົດໝາຍ"
+msgstr "ໜ່ວຍງານ/ພາກສ່ວນ ອອກກົດໝາຍ"
 
 #: odm_laws/i18n/metadata_fields.php:35
 msgid "Implementing agencies"
-msgstr "ໜ່ວຍງານດຳເນີນປະຕິບັດກົດໝາຍ"
+msgstr "ໜ່ວຍງານຈັດຕັ້ງປະຕິບັດ"
 
 #: odm_laws/i18n/metadata_fields.php:36
 msgid "Notes"
@@ -177,1119 +180,1128 @@ msgstr "ຮູບແບບ"
 
 #: odm_laws/i18n/metadata_fields.php:42
 msgid "Province(s)"
-msgstr ""
+msgstr "ແຂວງ"
 
 #: odm_laws/i18n/metadata_fields.php:43
 msgid "Formal type of document"
-msgstr ""
+msgstr "ປະເພດເອກະສານ"
 
 #: odm_laws/i18n/metadata_fields.php:46
 msgid "Unclear copyright"
-msgstr ""
+msgstr "ລິຂະສິດບໍ່ຈະແຈ້ງ"
 
 #: odm_laws/i18n/metadata_fields.php:47
 msgid "To be determined"
-msgstr ""
+msgstr "ກຳລັງພິຈາລະນາ"
 
 #: odm_laws/i18n/metadata_fields.php:48
 msgid "Keywords"
-msgstr ""
+msgstr "ຄຳຫຼັກ"
 
 #: odm_laws/i18n/metadata_fields.php:49
 msgid "Date modified"
-msgstr ""
+msgstr "ວັນທີແກ້ໄຂ"
 
 #: odm_laws/i18n/metadata_fields.php:50
-msgid "The geographic area that the dataset is relevant to (i.e. Cambodia, Laos)."
-msgstr ""
+msgid ""
+"The geographic area that the dataset is relevant to (i.e. Cambodia, Laos)."
+msgstr "ພື້ນທີ່ທາງພູມມິສາດ ທີ່ກ່ຽວຂ້ອງກັບຊຸດຂໍ້ມູນ (ເຊັ່ນ ກຳປູເຈຍ, ລາວ) "
 
 #: odm_laws/i18n/metadata_fields.php:51
 msgid "The province(s) this dataset relates to"
-msgstr ""
+msgstr "ແຂວງທີ່ກ່ຽວຂ້ອງກັບຊຸດຂໍ້ມູນ"
 
 #: odm_laws/i18n/metadata_fields.php:52
-msgid "The legal reference document number as used by the internal governing agency."
-msgstr ""
+msgid ""
+"The legal reference document number as used by the internal governing "
+"agency."
+msgstr "ເລກທີເອກະສານອ້າງອີງທາງນິຕິກຳ ທີ່ໃຊ້ສະເພາະອົງການຄຸ້ມຄອງພາຍໃນ"
 
 #: odm_laws/i18n/metadata_fields.php:53
 msgid ""
-"The jurisdictional agency responsible for drafting and issuing the (law) legal "
-"document."
-msgstr ""
+"The jurisdictional agency responsible for drafting and issuing the (law) "
+"legal document."
+msgstr "ອົງການນິຕິກຳທີ່ຮັບຜິດຊອບການຮ່າງ ແລະ ອອກເອກະສານທາງນິຕິກຳ (ກົດໝາຍ)"
 
 #: odm_laws/i18n/metadata_fields.php:54
 msgid ""
-"The jurisdictional agency responsible for the enforcing and implementing the (law) "
-"legal document."
-msgstr ""
+"The jurisdictional agency responsible for the enforcing and implementing the"
+" (law) legal document."
+msgstr "ອົງການນິຕິກຳທີ່ຮັບຜິດຊອບໃນການບັງຄັບໃຊ້ ແລະ ຈັດຕັ້ງປະຕິບັດເອກະສານທາງນິຕິກຳ (ກົດໝາຍ)"
 
 #: odm_laws/i18n/metadata_fields.php:55
 msgid "Language(s) of the dataset, including resources within dataset."
-msgstr ""
+msgstr "ພາສາຂອງຊຸດຂໍ້ມູນ ເຊິ່ງລວມທັງ ແຫຼ່ງຂໍ້ມູນທີ່ມາພ້ອມກັບຊຸດຂໍ້ມູນ"
 
 #: odm_laws/i18n/metadata_fields.php:56
 msgid ""
-"Full title of document. Please do not repeat the document type or number in this field."
-msgstr ""
+"Full title of document. Please do not repeat the document type or number in "
+"this field."
+msgstr "ຊື່ເຕັມຂອງເອກະສານ. ກະລຸນາຢ່າໃສ່ຊື່ປະເພດ ຫຼື ເລກທີເອກະສານໃນຊ່ອງນີ້."
 
 #: odm_laws/i18n/metadata_fields.php:57
 msgid "eg. my-dataset"
-msgstr ""
+msgstr "ຕົວຢ່າງ my-dataset"
 
 #: odm_laws/i18n/metadata_fields.php:58
 msgid "Commonly used label, e.g. Cambodia Labor Law."
-msgstr ""
+msgstr "ຊື່ທີ່ເອີ້ນໂດຍທົ່ວໄປ ເຊັ່ນ ກົດໝາຍແຮງງານກຳປູເຈຍ"
 
 #: odm_laws/i18n/metadata_fields.php:59 odm_laws/i18n/metadata_fields.php:61
 msgid "e.g. economy, mental health, government"
-msgstr ""
+msgstr "ຕົວຢ່າງ ເສດຖະກິດ, ສຸຂະພາບທາງຈິດ, ລັດຖະບານ"
 
 #: odm_laws/i18n/metadata_fields.php:60 odm_laws/i18n/metadata_fields.php:62
 msgid ""
-"Describe general purpose and scope, preamble will often provide a useful statement of "
-"objective."
-msgstr ""
+"Describe general purpose and scope, preamble will often provide a useful "
+"statement of objective."
+msgstr "ອະທິບາຍລວມກ່ຽວກັບຈຸດປະສົງ ແລະ ຂອບເຂດ ຄຳນຳຈະລະບຸຈຸດປະສົງການນຳໃຊ້"
 
 #: odm_laws/i18n/metadata_fields.php:63
 msgid ""
-"References are generally in the preamble or opening sections of a legal authority as "
-"the legitimacy of the document is derived from the source it references."
-msgstr ""
+"References are generally in the preamble or opening sections of a legal "
+"authority as the legitimacy of the document is derived from the source it "
+"references."
+msgstr "ເອກະສານອ້າງອີງສ່ວນໃຫຍ່ແມ່ນຢູ່ໃນພາກຄຳນຳ ຫຼື ພາກເປີດຫົວເລື່ອງ ຂອງເອກະສານທາງນິຕິກຳ ແລະ ສິດໃນການນຳໃຊ້ເອກະສານແມ່ນໄດ້ມາຈາກແຫຼ່ງຂໍ້ມູນອ້າງອີງ"
 
 #: odm_laws/i18n/metadata_fields.php:64
 msgid ""
-"A few sentences describing legal considerations for people who access the website and/"
-"or use its contents."
-msgstr ""
+"A few sentences describing legal considerations for people who access the "
+"website and/or use its contents."
+msgstr "ອະທິບາຍໂດຍຫຍໍ້ກ່ຽວກັບກົດລະບຽບທາງນິຕິກຳສຳລັບຜູ້ທີ່ເຂົ້າເບິ່ງເວັບໄຊ້ ແລະ/ຫຼື ນຳໃຊ້ເນື້ອຫາ."
 
 #: odm_laws/i18n/metadata_fields.php:65
 msgid "Current operational state of the legal document."
-msgstr ""
+msgstr "ສະຖານະການດຳເນີນງານປະຈຸບັນກ່ຽວກັບເອກະສານນິຕິກຳ"
 
 #: odm_laws/i18n/metadata_fields.php:66
 msgid "The version date of when the law was drafted."
-msgstr ""
+msgstr "ວັນທີສ້າງຮ່າງກົດໝາຍ"
 
 #: odm_laws/i18n/metadata_fields.php:67
 msgid "The date the law was officially authorised."
-msgstr ""
+msgstr "ວັັນທີ ປະກາດໃຊ້ກົດໝາຍທາງການ"
 
 #: odm_laws/i18n/metadata_fields.php:68
 msgid "Date the law is to take effect."
-msgstr ""
+msgstr "ວັນທີີ ກົດໝາຍມີຜົນບັງຄັບໃຊ້"
 
 #: odm_laws/i18n/metadata_fields.php:69
 msgid "Does this law replace, amend or supplement previous law?"
-msgstr ""
+msgstr "ກົດໝາຍສະບັບນີ້ຈະນຳໃຊ້ປ່ຽນແທນ, ດັດແກ້ ຫຼື ເພີ່ມເຕີມກົດໝາຍສະບັບເດີມຫຼືບໍ່?"
 
 #: odm_laws/i18n/metadata_fields.php:70
 msgid "A short statement describing what changed."
-msgstr ""
+msgstr "ອະທິບາຍໂດຍຫຍໍ້ກ່ຽວກັບການປ່ຽນແປງ"
 
 #: odm_laws/i18n/metadata_fields.php:71
 msgid "The law that directly supersedes this law"
-msgstr ""
+msgstr "ກົດໝາຍທີ່ໃຊ້ແທນກົດໝາຍສະບັບນີ້ໂດຍກົງ"
 
 #: odm_laws/i18n/metadata_fields.php:72
 msgid "The law that directly precedes this law"
-msgstr ""
+msgstr "ກົດໝາຍທີ່ໃຊ້ກ່ອນໜ້າກົດໝາຍສະບັບນີ້ໂດຍກົງ"
 
 #: odm_laws/i18n/metadata_fields.php:73
 msgid ""
-"Any other supporting documents or references that relate to this law; i.e. reports, "
-"policy briefs etc."
-msgstr ""
+"Any other supporting documents or references that relate to this law; i.e. "
+"reports, policy briefs etc."
+msgstr "ແຫຼ່ງຂໍ້ມູນ ຫຼື ເອກະສານສະໜັບສະໜູນອື່ນໆທີ່ກ່ຽວຂ້ອງ ກັບກົດໝາຍສະບັບນີ້ ເຊັ່ນ ບົດລາຍງານ, ບົດຄັດຫຍໍ້ນະໂຍບາຍ ແລະ ອື່ນໆ"
 
 #: odm_laws/i18n/metadata_fields.php:74
 msgid ""
-"The official gazette or other official promulgation of policy, referencing issue #, "
-"date and page"
-msgstr ""
+"The official gazette or other official promulgation of policy, referencing "
+"issue #, date and page"
+msgstr "ຈົດໝາຍເຫດທາງລັດຖະການ ຫຼື ການປະກາດໃຊ້ ນະໂຍບາຍຢ່າງເປັນທາງການ, ເລກທີ່ອ້າງອີງ, ວັນທີ ແລະ ໜ້າທີ"
 
 #: odm_laws/i18n/metadata_fields.php:75
 msgid "Official URLs where the document is made available."
-msgstr ""
+msgstr "ທີ່ຢູ່ເວັບໄຊ້ທາງການຂອງເອກະສານຕົ້ນສະບັບ"
 
 #: odm_laws/i18n/metadata_fields.php:76
 msgid ""
-"Contact information for the individual or organization that is responsible for or most "
-"knowledgeable about the document."
-msgstr ""
+"Contact information for the individual or organization that is responsible "
+"for or most knowledgeable about the document."
+msgstr "ຂໍ້ມູນຕິດຕໍ່ສຳລັບສ່ວນບຸກຄົນ ຫຼື ອົງການທີ່ຮັບຜິດຊອບເອກະສານ ຫຼື ມີຄວາມຊ່ຽວຊານທີ່ສຸດກ່ຽວກັບເອກະສານນີ້"
 
 #: odm_laws/i18n/metadata_fields.php:77
 msgid "Any additional notes regarding this document."
-msgstr ""
+msgstr "ໝາຍເຫດເພີ່ມເຕີມກ່ຽວກັບເອກະສານນີ້ "
 
 #: odm_laws/i18n/metadata_fields.php:78
 msgid "e.g Tong_Min_Group_Engineering__21.06.2011.pdf"
-msgstr ""
+msgstr "ຕົວຢ່າງ Tong_Min_Group_Engineering__21.06.2011.pdf"
 
 #: odm_laws/i18n/metadata_fields.php:79 odm_laws/i18n/metadata_fields.php:80
 msgid "Date a new version or update of the dataset was uploaded."
-msgstr ""
+msgstr "ວັນທີເຜີຍແຜ່ຊຸດຂໍ້ມູນໃໝ່ ຫຼື ປັບປຸງຊຸດຂໍ້ມູນນີ້"
 
 #: odm_laws/i18n/metadata_fields.php:81
 msgid ""
-"INTERNAL USE ONLY: Enter keywords for improving the discoverability of this record via "
-"search"
-msgstr ""
+"INTERNAL USE ONLY: Enter keywords for improving the discoverability of this "
+"record via search"
+msgstr "ນຳໃຊ້ສະເພາະພາຍໃນເທົ່ານັ້ນ: ກະລຸນາປ້ອນຄຳສັບຫຼັກ ເພື່ອປັບປຸງການຊອກຫາລາຍການນີ້ ດ້ວຍການຄົ້ນຫາ"
 
 #: odm_laws/i18n/metadata_fields.php:82
 msgid "eg. January 2011 Gold Prices"
-msgstr ""
+msgstr "ຕົວຢ່າງ:​ ລາຄາຄຳ ເດືອນມັງກອນ 2011"
 
 #: odm_laws/i18n/metadata_fields.php:83
 msgid "Some useful notes about the data"
-msgstr ""
+msgstr "ໝາຍເຫດກ່ຽວກັບຂໍ້ມູນ"
 
 #: odm_laws/i18n/metadata_fields.php:84
 msgid "Language(s) of the resource."
-msgstr ""
+msgstr "ພາສາຂອງແຫຼ່ງຂໍ້ມູນ"
 
 #: odm_laws/i18n/odm_document_type.php:3
 msgid "Action Plan"
-msgstr ""
+msgstr "ແຜນດຳເນີນງານ"
 
 #: odm_laws/i18n/odm_document_type.php:4
 msgid "Agreements"
-msgstr ""
+msgstr "ຂໍ້ຕົກລົງ"
 
 #: odm_laws/i18n/odm_document_type.php:5
 msgid "Amendments"
-msgstr ""
+msgstr "ການແກ້ໄຂ"
 
 #: odm_laws/i18n/odm_document_type.php:6
 msgid "ASEAN Agreements"
-msgstr ""
+msgstr "ຂໍ້ຕົກລົງອາຊຽນ"
 
 #: odm_laws/i18n/odm_document_type.php:7
 msgid "Bilateral Agreements"
-msgstr ""
+msgstr "ຂໍ້ຕົກລົງລະຫວ່າງປະເທດ"
 
 #: odm_laws/i18n/odm_document_type.php:8
 msgid "Bilateral Treaty"
-msgstr ""
+msgstr "ສົນທິສັນຍາລະຫວ່າງປະເທດ"
 
 #: odm_laws/i18n/odm_document_type.php:9
 msgid "By-Laws"
-msgstr ""
+msgstr "ໂດຍກົດໝາຍ"
 
 #: odm_laws/i18n/odm_document_type.php:10
 msgid "Circular"
-msgstr ""
+msgstr "ຈົດໝາຍວຽນ"
 
 #: odm_laws/i18n/odm_document_type.php:11
 msgid "Code"
-msgstr ""
+msgstr "ກົດລະບຽບ"
 
 #: odm_laws/i18n/odm_document_type.php:12
 msgid "Constitution"
-msgstr ""
+msgstr "ລັດຖະທຳມະນູນ"
 
 #: odm_laws/i18n/odm_document_type.php:13
 msgid "Contracts"
-msgstr ""
+msgstr "ສັນຍາ"
 
 #: odm_laws/i18n/odm_document_type.php:14
 msgid "Customary law"
-msgstr ""
+msgstr "ກົດໝາຍປະເພນີ"
 
 #: odm_laws/i18n/odm_document_type.php:15
 msgid "Decision"
-msgstr ""
+msgstr "ຂໍ້ຕົກລົງ"
 
 #: odm_laws/i18n/odm_document_type.php:16
 msgid "Decree"
-msgstr ""
+msgstr "ດຳລັດ"
 
 #: odm_laws/i18n/odm_document_type.php:17
 msgid "Directive"
-msgstr ""
+msgstr "ຄຳສັ່ງ"
 
 #: odm_laws/i18n/odm_document_type.php:18 odm_laws/i18n/odm_laws_status.php:8
 msgid "Draft"
-msgstr ""
+msgstr "ຮ່າງ"
 
 #: odm_laws/i18n/odm_document_type.php:19
 msgid "Guideline"
-msgstr ""
+msgstr "ຄູ່ມືແນະນຳ"
 
 #: odm_laws/i18n/odm_document_type.php:20
 msgid "Instruction"
-msgstr ""
+msgstr "ຄຳແນະນຳ"
 
 #: odm_laws/i18n/odm_document_type.php:21
 msgid "International Treaty"
-msgstr ""
+msgstr "ສົນທິສັນຍາສາກົນ"
 
 #: odm_laws/i18n/odm_document_type.php:22
 msgid "Joint circular"
-msgstr ""
+msgstr "ຈົດໝາຍວຽນຮ່ວມ"
 
-#: odm_laws/i18n/odm_document_type.php:23 odm_laws/templates/package/read_base.html:15
+#: odm_laws/i18n/odm_document_type.php:23
+#: odm_laws/templates/package/read_base.html:15
 #: odm_laws/templates/package/snippets/new_package_breadcrumb.html:4
 msgid "Law"
 msgstr "ກົດໝາຍ"
 
 #: odm_laws/i18n/odm_document_type.php:24
 msgid "Letter"
-msgstr ""
+msgstr "ຈົດໝາຍ"
 
 #: odm_laws/i18n/odm_document_type.php:25
 msgid "Notice"
-msgstr ""
+msgstr "ແຈ້ງການ"
 
 #: odm_laws/i18n/odm_document_type.php:26
 msgid "Notification"
-msgstr ""
+msgstr "ການແຈ້ງການ"
 
 #: odm_laws/i18n/odm_document_type.php:27
 msgid "Order"
-msgstr ""
+msgstr "ຄຳສັ່ງ"
 
 #: odm_laws/i18n/odm_document_type.php:28
 msgid "Ordinance"
-msgstr ""
+msgstr "ລັດຖະບັນຍັດ"
 
 #: odm_laws/i18n/odm_document_type.php:29
 msgid "other"
-msgstr ""
+msgstr "ອື່ນໆ"
 
 #: odm_laws/i18n/odm_document_type.php:30
 msgid "Policy"
-msgstr ""
+msgstr "ນະໂຍບາຍ"
 
 #: odm_laws/i18n/odm_document_type.php:31
 msgid "Proclamation"
-msgstr ""
+msgstr "ການຖະແຫຼງ"
 
 #: odm_laws/i18n/odm_document_type.php:32
 msgid "Regional Agreements"
-msgstr ""
+msgstr "ຂໍ້ຕົກລົງລະດັບພາກພື້ນ"
 
 #: odm_laws/i18n/odm_document_type.php:33
 msgid "Regulation"
-msgstr ""
+msgstr "ກົດລະບຽບ"
 
 #: odm_laws/i18n/odm_document_type.php:34
 msgid "Resolution"
-msgstr ""
+msgstr "ມະຕິຕົກລົງ"
 
 #: odm_laws/i18n/odm_document_type.php:35
 msgid "Royal decree"
-msgstr ""
+msgstr "ລາຊະດຳລັດ"
 
 #: odm_laws/i18n/odm_document_type.php:36
 msgid "Rule"
-msgstr ""
+msgstr "ກົດລະບຽບ"
 
 #: odm_laws/i18n/odm_document_type.php:37
 msgid "Strategic Plan"
-msgstr ""
+msgstr "ແຜນຍຸດທະສາດ"
 
 #: odm_laws/i18n/odm_document_type.php:38
 msgid "Strategy"
-msgstr ""
+msgstr "ຍຸດທະສາດ"
 
 #: odm_laws/i18n/odm_document_type.php:39
 msgid "Sub-decree"
-msgstr ""
+msgstr "ດຳລັດຍ່ອຍ"
 
 #: odm_laws/i18n/odm_document_type.php:40
 msgid "Trade Agreements"
-msgstr ""
+msgstr "ຂໍ້ຕົກລົງການຄ້າ"
 
 #: odm_laws/i18n/odm_document_type.php:41
 msgid "Triangualar Agreement"
-msgstr ""
+msgstr "ສັນຍາສາມຝ່າຍ"
 
 #: odm_laws/i18n/odm_document_type.php:42
 msgid "UN Charters"
-msgstr ""
+msgstr "ກົດບັດສະຫະປະຊາຊາດ"
 
 #: odm_laws/i18n/odm_document_type.php:43
 msgid "Village Regulation"
-msgstr ""
+msgstr "ກົດລະບຽບຂອງບ້ານ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:3
 #: odm_laws/i18n/odm_issuing_agencies.php:76
 msgid "Prime Minister"
-msgstr ""
+msgstr "ນາຍົກລັດຖະມົນຕີ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:4
 msgid "Minister in charge of the Office of the Council of Ministers"
-msgstr ""
+msgstr "ລັດຖະມົນຕີວ່າການຫ້ອງການຄະນະລັດຖະມົນຕີ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:5
 msgid "Minister of Interior"
-msgstr ""
+msgstr "ລັດຖະມົນຕີກະຊວງພາຍໃນ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:6
 msgid "Minister of Land Management Urban Planning and Construction"
-msgstr ""
+msgstr "ລັດຖະມົນຕີກະຊວງຄຸ້ມຄອງທີ່ດິນ ວາງແຜນ ແລະ ກໍ່ສ້າງຕົວເມືອງ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:7
 msgid "Minister of Economy and Finance"
-msgstr ""
+msgstr "ລັດຖະມົນຕີກະຊວງເສດຖະກິດ ແລະ ການເງິນ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:8
 #: odm_laws/i18n/odm_implementing_agencies.php:15
 msgid "Minister of Environment"
-msgstr ""
+msgstr "ລັດຖະມົນຕີກະຊວງສິ່ງແວດລ້ອມ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:9
 msgid "Minister of Agriculture Forestry and Fisheries"
-msgstr ""
+msgstr "ລັດຖະມົນຕີກະຊວງກະສິກຳ ປ່າໄມ້ ແລະ ການປະມົງ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:10
 msgid "Minister of Civil Service"
-msgstr ""
+msgstr "ລັດຖະມົນຕີກະຊວງໂຍທາທິການ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:11
 msgid "Minister of Cult and Religion"
-msgstr ""
+msgstr "ລັດຖະມົນຕີກະຊວງທຳມະການ ແລະ ສາດສະໜາ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:12
 msgid "Minister of Culture and Fine Arts"
-msgstr ""
+msgstr "ລັດຖະມົນຕີກະຊວງວັດທະນະທຳ ແລະ ວິຈິດສິນ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:13
 #: odm_laws/i18n/odm_implementing_agencies.php:66
 #: odm_laws/i18n/odm_issuing_agencies.php:30
 msgid "Ministry of Commerce"
-msgstr ""
+msgstr "ລັດຖະມົນຕີກະຊວງການຄ້າ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:14
 msgid "Minister of Education Youth and Sport"
-msgstr ""
+msgstr "ລັດຖະມົນຕີກະຊວງສຶກສາທິການ ຊາວໜຸ່ມ ແລະ ກິລາ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:16
 msgid "Minister of Foreign Affairs and International Cooperation"
-msgstr ""
+msgstr "ລັດຖະມົນຕີກະຊວງການຕ່າງປະເທດ ແລະ ການຮ່ວມມືສາກົນ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:17
 msgid "Minister of Health"
-msgstr ""
+msgstr "ລັດຖະມົນຕີກະຊວງສາທາລະນະສຸກ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:18
 msgid "Minister of Industry and Handicrafts"
-msgstr ""
+msgstr "ລັດຖະມົນຕີກະຊວງອຸດສາຫະກຳ ແລະ ຫັດຖະກຳ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:19
 msgid "Minister of Information"
-msgstr ""
+msgstr "ລັດຖະມົນຕີກະຊວງຖະແຫຼງຂ່າວ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:20
 msgid "Minister of Justice"
-msgstr ""
+msgstr "ລັດຖະມົນຕີກະຊວງຍຸດຕິທຳ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:21
 msgid "Minister of Labour and Vocational Training"
-msgstr ""
+msgstr "ລັດຖະມົນຕີກະຊວງແຮງງານ ແລະ ພັດທະນາວິຊາຊີບ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:22
 #: odm_laws/i18n/odm_issuing_agencies.php:49
 msgid "Ministry of Land Management, Urban Planning and Construction"
-msgstr ""
+msgstr "ກະຊວງການຄຸ້ມຄອງທີ່ດິນ ວາງແຜນ ແລະ ກໍ່ສ້າງຕົວເມືອງ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:23
 msgid "Minister of Mines and Energy"
-msgstr ""
+msgstr "ລັດຖະມົນຕີກະຊວງພະລັງງານ ແລະ ບໍ່ແຮ່"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:24
 msgid "Minister of National Defense"
-msgstr ""
+msgstr "ລັດຖະມົນຕີກະຊວງປ້ອງກັນປະເທດ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:25
 msgid "Minister of National Assembly-Senate Relations and Inspection"
-msgstr ""
+msgstr "ລັດຖະມົນຕີການພົວພັນ ແລະ ກວດສອບລັດຖະສະພາ-ວຸດທິສະພາ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:26
 msgid "Minister of Planning"
-msgstr ""
+msgstr "ລັດຖະມົນຕີກະຊວງແຜນການ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:27
 msgid "Minister of Posts and Telecommunication"
-msgstr ""
+msgstr "ລັດຖະມົນຕີກະຊວງໄປສະນີ ແລະ ສື່ສານຄົມມະນາຄົມ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:28
 msgid "Minister of Public Works and Transport"
-msgstr ""
+msgstr "ລັດຖະມົນຕີກະຊວງໂຍທາທິການ ແລະ ການຂົນສົ່ງ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:29
 msgid "Minister of Social Affairs Veterans and Youth Rehabilitation"
-msgstr ""
+msgstr "ກະຊວງກິດຈະກຳສັງຄົມ ນັກຮົບເກົ່າ ແລະ ການຟື້ນຟູສະມັດຖະພາບຊາວໜຸ່ມ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:30
 msgid "Minister of Tourism"
-msgstr ""
+msgstr "ລັດຖະມົນຕີກະຊວງການທ່ອງທ່ຽວ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:31
 msgid "Minister of Water Resources and Meteorology"
-msgstr ""
+msgstr "ລັດຖະມົນຕີກະຊວງຊັບພະຍາກອນນໍ້າ ແລະ ອຸຕຸນິຍົມ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:32
 msgid "Minister of Women’s Affairs"
-msgstr ""
+msgstr "ລັດຖະມົນຕີກະຊວງແມ່ຍິງ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:33
 msgid "Secretary of State of Civil Aviation"
-msgstr ""
+msgstr "ເລຂາທິການການບິນພົນລະເຮືອນ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:34
 msgid "Secretary of State"
-msgstr ""
+msgstr "ເລ​ຂາ​ທິ​ການ​ໃຫຍ່"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:35
 msgid "Municipal-Provincial Governor/Council"
-msgstr ""
+msgstr "ເຈົ້າແຂວງ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:36
 msgid "City Governor/Council"
-msgstr ""
+msgstr "ເຈົ້າເມືອງ/ສະພາເທດສະບານເມືອງ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:37
 msgid "District Governor/Council"
-msgstr ""
+msgstr "ເຈົ້າເມືອງ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:38
 msgid "Commune Governor/Council"
-msgstr ""
+msgstr "ຫົວໜ້າຄຸ້ມບ້ານ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:39
 msgid ""
-"Inter-Ministerial Committee for Assessment Measurement and Evaluation of the Economic "
-"Land Concessions"
-msgstr ""
+"Inter-Ministerial Committee for Assessment Measurement and Evaluation of the"
+" Economic Land Concessions"
+msgstr "ຄະນະກຳມະການລະຫວ່າງກະຊວງເພື່ອການປະເມີນ ວັດແທກ ແລະ ປະເມີນຜົນດ້ານການສຳປະທານທີ່ດິນທາງເສດຖະກິດ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:40
 msgid "Royal Government of the Kingdom of Cambodia"
-msgstr ""
+msgstr "ລັດຖະບານຣາຊະອະນາຈັກກຳປູເຈຍ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:41
 msgid "Secretary General"
-msgstr ""
+msgstr "ເລຂາທິການໃຫຍ່"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:42
 msgid "General Inspector"
-msgstr ""
+msgstr "ຫົວໜ້າກົມກວດກາ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:43
 msgid "Forestry Administration"
-msgstr ""
+msgstr "ຫ້ອງການບໍລິຫານປ່າໄມ້"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:44
 msgid "Council for Development of Cambodia"
-msgstr ""
+msgstr "ສະພາພັດທະນາຂອງກຳປູເຈຍ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:45
 #: odm_laws/i18n/odm_issuing_agencies.php:16
 msgid "Electricity Authority of Cambodia"
-msgstr ""
+msgstr "ໄຟຟ້າກຳປູເຈຍ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:46
 msgid "Cabinet"
-msgstr ""
+msgstr "ຄະນະລັດຖະມົນຕີ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:47
 msgid "National Authority for Land Dispute Resolution"
-msgstr ""
+msgstr "ອຳນາດການປົກຄອງແຫ່ງຊາດເພື່ອການແກ້ໄຂບັນຫາທີ່ດິນ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:48
 #: odm_laws/i18n/odm_issuing_agencies.php:14
 msgid "Council of Ministers"
-msgstr ""
+msgstr "ຄະນະລັດຖະມົນຕີ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:49
 msgid "Company Director"
-msgstr ""
+msgstr "ຜູ້ອຳນວຍການບໍລິສັດ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:50
 msgid "Apsara Authority"
-msgstr ""
+msgstr "ອຳນາດການປົກຄອງ ອັບສະຣາ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:51
 msgid "Phnom Penh Capital Hall"
-msgstr ""
+msgstr "ສາລາກາງນະຄອນພະນົມເປັນ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:52
 msgid "Ministry of President’s Office"
-msgstr ""
+msgstr "ກະຊວງສຳນັກງານປະທານປະເທດ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:53
 #: odm_laws/i18n/odm_issuing_agencies.php:40
 msgid "Ministry of Home Affairs"
-msgstr ""
+msgstr "ກະຊວງພາຍໃນ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:54
 msgid "Ministry of Defence"
-msgstr ""
+msgstr "ກະຊວງປ້ອງກັນປະເທດ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:55
 msgid "Ministry of Border Affairs"
-msgstr ""
+msgstr "ກະຊວງການຕ່າງປະເທດ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:56
 msgid "Ministry of Office of the State Counsellor"
-msgstr ""
+msgstr "ກະຊວງສຳນັກງານທີ່ປຶກສາແຫ່ງລັດ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:57
 msgid "Ministry of Information"
-msgstr ""
+msgstr "ກະຊວງຖະແຫຼງຂ່າວ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:58
 msgid "Ministry of Religious Affairs and Culture"
-msgstr ""
+msgstr "ກະຊວງສາສະໜາ ແລະ ວັດທະນະທຳ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:59
 msgid "Ministry of Agriculture, Livestock and Irrigation"
-msgstr ""
+msgstr "ກະຊວງກະສິກຳ ລ້ຽງສັດ ແລະ ຊົນລະປະທານ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:60
 msgid "Ministry of Transport and Communications"
-msgstr ""
+msgstr "ກະຊວງຂົນສົ່ງ ແລະ ການສື່ສານ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:61
 msgid "Ministry of Natural Resources and Environmental Conservation"
-msgstr ""
+msgstr "ກະຊວງຊັບພະຍາກອນທຳມະຊາດ ແລະ ອະນຸລັກສິ່ງແວດລ້ອມ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:62
 msgid "Ministry of Electricity and Energy"
-msgstr ""
+msgstr "ກະຊວງການໄຟຟ້າ ແລະ ພະລັງງານ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:63
 #: odm_laws/i18n/odm_issuing_agencies.php:38
 msgid "Ministry of Foreign Affairs"
-msgstr ""
+msgstr "ກະຊວງການຕ່າງປະເທດ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:64
 msgid "Ministry of Labour, Immigration and Population"
-msgstr ""
+msgstr "ກະຊວງແຮງງານ, ກວດຄົນເຂົ້າເມືອງ ແລະ ປະຊາກອນ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:65
 msgid "Ministry of Industry"
-msgstr ""
+msgstr "ກະຊວງອຸດສາຫະກຳ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:67
 msgid "Ministry of Education"
-msgstr ""
+msgstr "ກະຊວງສຶກສາທິການ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:68
 msgid "Ministry of Health and Sports"
-msgstr ""
+msgstr "ກະຊວງສາທາລະນະສຸກ ແລະ ກິລາ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:69
 msgid "Ministry of Planning and Finance"
-msgstr ""
+msgstr "ກະຊວງແຜນການ ແລະ ການເງິນ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:70
 #: odm_laws/i18n/odm_issuing_agencies.php:31
 msgid "Ministry of Construction"
-msgstr ""
+msgstr "ກະຊວງໂຍທາທິການ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:71
 msgid "Ministry of Social Welfare, Relief and Resettlement"
-msgstr ""
+msgstr "ກະຊວງສະຫວັດດີການສັງຄົມ, ບັນເທົາທຸກ ແລະ ຍົກຍ້າຍຈັດສັນ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:72
 msgid "Ministry of Hotels and Tourism"
-msgstr ""
+msgstr "ກະຊວງການໂຮງແຮມ ແລະ ທ່ອງທ່ຽວ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:73
 msgid "Office of the Auditor General of the Union"
-msgstr ""
+msgstr "ຫ້ອງການກວດສອບລັດຖະບານຂອງສະຫະພາບ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:74
 msgid "Union Attorney General's Office"
-msgstr ""
+msgstr "ສຳນັກງານໄອຍະການສູງສຸດຂອງສະຫະພາບ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:75
 msgid "Ministry of Ethnic Affairs"
-msgstr ""
+msgstr "ກະຊວງຊົນເຜົ່າ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:76
 msgid "Central Bank of Myanmar"
-msgstr ""
+msgstr "ທະນາຄານກາງມຽນມ້າ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:77
 msgid "Union Election Committee"
-msgstr ""
+msgstr "ຄະນະກຳມະການເລືອກຕັ້ງຂອງສະຫະພາບ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:78
 msgid "Constitutional Tribunal of the Union of Myanmar"
-msgstr ""
+msgstr "ສານລັດຖະທຳມະນຸນແຫ່ງສະຫະພາບມຽນມ້າ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:79
 msgid "Union Supreme Court"
-msgstr ""
+msgstr "ສານສູງສຸດຂອງສະຫະພາບ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:80
 msgid "Anti-corruption commission"
-msgstr ""
+msgstr "ຄະນະກໍາມາທິການຕ້ານການສໍ້ລາດບັງຫຼວງ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:81
 msgid "Yangon City Development Committee"
-msgstr ""
+msgstr "ຄະນະກຳມະການພັດທະນາຕົວເມືອງຢ້າງກຸ້ງ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:82
 msgid "Naypyidaw Council"
-msgstr ""
+msgstr "ສະພາເທດສະບານເນປິດໍ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:83
 msgid "Naypyidaw Development Committee"
-msgstr ""
+msgstr "ຄະນະກຳມະການພັດທະນາເນປິດໍ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:84
 msgid "Union Government Office"
-msgstr ""
+msgstr "ສຳນັກລັດຖະບານຂອງສະຫະພາບ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:85
 msgid "Union Parliament Office"
-msgstr ""
+msgstr "ສຳນັກງານລັດຖະສະພາຂອງສະຫະພາບ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:86
 msgid "Union Human Resource Office"
-msgstr ""
+msgstr "ຫ້ອງການຊັບພະຍາກອນມະນຸດຂອງສະຫະພາບ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:87
 msgid "The Union of Myanmar"
-msgstr ""
+msgstr "ສະຫະພັນມຽນມ້າ"
 
 #: odm_laws/i18n/odm_implementing_agencies.php:88
 msgid "The State Peace and Development Council"
-msgstr ""
+msgstr "ສະພາສັນຕິພາບ ແລະ ການພັດທະນາແຫ່ງລັດ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:3
 msgid "Attapeu Province"
-msgstr ""
+msgstr "ແຂວງອັດຕະປື"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:4
 msgid "Bank of the Lao PDR"
-msgstr ""
+msgstr "ທະນາຄານແຫ່ງ ສປປລາວ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:5
 msgid "Bokeo Province"
-msgstr ""
+msgstr "ແຂວງບໍ່ແກ້ວ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:6
 msgid "Central Party's Office"
-msgstr ""
+msgstr "ຫ້ອງການສູນກາງພັກ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:7
 msgid "Champasak Province"
-msgstr ""
+msgstr "ແຂວງຈຳປາສັກ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:8
 msgid "City Council"
-msgstr ""
+msgstr "ສະພາເທດສະບານເມືອງ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:9
 msgid "Committee for Ethnic Affairs"
-msgstr ""
+msgstr "ຄະນະກຳມະການຊົນເຜົ່າ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:10
 msgid "Commune Council"
-msgstr ""
+msgstr "ສະພາຄຸ້ມບ້ານ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:11
 msgid "Congress between National Assembly and Senate"
-msgstr ""
+msgstr "ກອງປະຊຸມໃຫຍ່ລະຫວ່າງສະພາແຫ່ງຊາດ ແລະ ວຸດທິສະພາ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:12
 msgid "Constituent Assembly"
-msgstr ""
+msgstr "ສະພາຮ່າງລັດຖະທຳມະນູນ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:13
 msgid "Constitutional Council"
-msgstr ""
+msgstr "ສະພາລັດຖະທຳມະນູນ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:15
 msgid "District Council"
-msgstr ""
+msgstr "ສະພາເມືອງ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:17
 msgid "Government Inspectorate"
-msgstr ""
+msgstr "ກົມກວດກາລັດຖະບານ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:18
 msgid "Government Office"
-msgstr ""
+msgstr "ຫ້ອງການລັດຖະບານ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:19
 msgid "Huaphan Province"
-msgstr ""
+msgstr "ແຂວງຫົວພັນ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:20
 msgid "Khammuan Province"
-msgstr ""
+msgstr "ແຂວງຄຳມ່ວນ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:21
 msgid "King, of the Kingdom of Cambodia"
-msgstr ""
+msgstr "ເຈົ້າຊີວິດ ແຫ່ງລາຊະອານາຈັກກຳປູເຈຍ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:22
 msgid "Lao Front for National Construction"
-msgstr ""
+msgstr "ແນວລາວສ້າງຊາດ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:23
 msgid "Lao Trade Union"
-msgstr ""
+msgstr "ສະຫະພັນກຳມະບານລາວ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:24
 msgid "Lao Women's Union"
-msgstr ""
+msgstr "ສະຫະພັນແມ່ຍິງລາວ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:25
 msgid "Lao Youth Union"
-msgstr ""
+msgstr "ສະຫະພັນຊາວໜຸ່ມລາວ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:26
 msgid "Luangnamtha Province"
-msgstr ""
+msgstr "ແຂວງຫຼວງນໍ້າທາ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:27
 msgid "Luangprabang Province"
-msgstr ""
+msgstr "ແຂວງຫຼວງພະບາງ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:28
 msgid "Ministry of Agriculture and Forestry"
-msgstr ""
+msgstr "ກະຊວງກະສິກຳ ແລະ ປ່າໄມ້"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:29
 msgid "Ministry of Agriculture Forestry and Fisheries"
-msgstr ""
+msgstr "ກະຊວງກະສິກຳ ປ່າໄມ້ ແລະ ການປະມົງ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:32
 msgid "Ministry of Cult and Religion"
-msgstr ""
+msgstr "ກະຊວງທຳມະການ ແລະ ສາສະໜາ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:33
 msgid "Ministry of Culture- Sports and Tourism"
-msgstr ""
+msgstr "ກະຊວງວັດທະນະທຳ ກິລາ ແລະ ທ່ອງທ່ຽວ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:34
 msgid "Ministry of Education and Sport"
-msgstr ""
+msgstr "ກະຊວງສຶກສາທິການ ແລະ ກິລາ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:35
 msgid "Ministry of Education and Training"
-msgstr ""
+msgstr "ກະຊວງສຶກສາທິການ ແລະ ການຝຶກອົບຮົມ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:36
 msgid "Ministry of Energy and Mines"
-msgstr ""
+msgstr "ກະຊວງພະລັງງານ ແລະ ບໍ່ແຮ່"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:37
 msgid "Ministry of Finance"
-msgstr ""
+msgstr "ກະຊວງການເງິນ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:39
 msgid "Ministry of Health"
-msgstr ""
+msgstr "ກະຊວງສາທາລະນະສຸກ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:41
 msgid "Ministry of Industries, Mines and Energy"
-msgstr ""
+msgstr "ກະຊວງອຸດສາຫະກຳ, ບໍ່ແຮ່ ແລະ ພະລັງງານ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:42
 msgid "Ministry of Industry and Commerce"
-msgstr ""
+msgstr "ກະຊວງອຸດສາຫະກຳ ແລະ ການຄ້າ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:43
 msgid "Ministry of Industry and Trade"
-msgstr ""
+msgstr "ກະຊວງອຸດສາຫະກຳ ແລະ ການຄ້າ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:44
 msgid "Ministry of Information and Communications"
-msgstr ""
+msgstr "ກະຊວງຖະແຫຼງຂ່າວ ແລະ ຄົມມະນາຄົມ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:45
 msgid "Ministry of Information, Culture and Tourism"
-msgstr ""
+msgstr "ກະຊວງຖະແຫຼງຂ່າວ, ວັດທະນະທຳ ແລະ ທ່ອງທ່ຽວ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:46
 msgid "Ministry of Justice"
-msgstr ""
+msgstr "ກະຊວງຍຸດຕິທຳ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:47
 msgid "Ministry of Labor, War Invalids and Social Affairs"
-msgstr ""
+msgstr "ກະຊວງແຮງງານ, ທະຫານຜ່ານເສິກ ແລະ ສະຫວັດດີການສັງຄົມ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:48
 msgid "Ministry of Labour and Social Welfare"
-msgstr ""
+msgstr "ກະຊວງແຮງງານ ແລະ ສະຫວັດດີການສັງຄົມ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:50
 msgid "Ministry of National Assembly-Senate Relations and Inspection"
-msgstr ""
+msgstr "ກະຊວງການພົວພັນແລະ ກວດສອບລັດຖະສະພາ-ວຸດທິສະພາ "
 
 #: odm_laws/i18n/odm_issuing_agencies.php:51
 msgid "Ministry of National Defence"
-msgstr ""
+msgstr "ກະຊວງປ້ອງກັນປະເທດ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:52
 msgid "Ministry of Natural Resources and Environment"
-msgstr ""
+msgstr "ກະຊວງຊັບພະຍາກອນທຳມະຊາດ ແລະ ສິ່ງແວດລ້ອມ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:53
 msgid "Ministry of Planning and Investment"
-msgstr ""
+msgstr "ກະຊວງແຜນການ ແລະ ການລົງທຶນ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:54
 msgid "Ministry of Posts and Telecommunications"
-msgstr ""
+msgstr "ກະຊວງໄປສະນີ ແລະ ໂທລະຄົມມະນາຄົມ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:55
 msgid "Ministry of Public Health"
-msgstr ""
+msgstr "ກະຊວງສາທາລະນະສຸກ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:56
 msgid "Ministry of Public Security"
-msgstr ""
+msgstr "ກະຊວງປ້ອງກັນຄວາມສະຫງົບ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:57
 msgid "Ministry of Public Works and Transport"
-msgstr ""
+msgstr "ກະຊວງໂຍທາທິການ ແລະ ການຂົນສົ່ງ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:58
 msgid "Ministry of Rural Development"
-msgstr ""
+msgstr "ກະຊວງພັດທະນາຊົນນະບົດ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:59
 msgid "Ministry of Science and Technology"
-msgstr ""
+msgstr "ກະຊວງວິທະຍາສາດ ແລະ ເຕັກໂນໂລຊີ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:60
 msgid "Ministry of Social Affairs, Veterans and Youth Rehabilitation"
-msgstr ""
+msgstr "ກະຊວງການສັງຄົມ, ນັກຮົບເກົ່າ ແລະ ຟື້ນຟູສະມັດຖະພາບຊາວໜຸ່ມ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:61
 msgid "Ministry of Tourism"
-msgstr ""
+msgstr "ກະຊວງການທ່ອງທ່ຽວ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:62
 msgid "Ministry of Transport"
-msgstr ""
+msgstr "ກະຊວງການຂົນສົ່ງ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:63
 msgid "Ministry of Water Resources and Meterology"
-msgstr ""
+msgstr "ກະຊວງຊັບພະຍາກອນນໍ້າ ແລະ ອຸຕຸນິຍົມ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:64
 msgid "Ministry of Woman's Affairs"
-msgstr ""
+msgstr "ກະຊວງແມ່ຍິງ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:65
 msgid "Myanmar Socialist Party"
-msgstr ""
+msgstr "ພັກສັງຄົມນິຍົມມຽນມ້າ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:66
 msgid "NA Standing Committee"
-msgstr ""
+msgstr "ຄະນະປະຈຳສະພາແຫ່ງຊາດ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:67
 msgid "National Assembly"
-msgstr ""
+msgstr "ສະພາແຫ່ງຊາດ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:68
 msgid "Office of the Council of Ministers"
-msgstr ""
+msgstr "ຫ້ອງການຄະນະລັດຖະມົນຕີ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:69
 msgid "Office of the Government"
-msgstr ""
+msgstr "ຫ້ອງການລັດຖະບານ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:70
 msgid "Office of the Prime Minister"
-msgstr ""
+msgstr "ສຳນັກງານນາຍົກລັດຖະມົນຕີ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:71
 msgid "Oudomxay Province"
-msgstr ""
+msgstr "ແຂວງອຸດົມໄຊ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:72
 msgid "Parliament"
-msgstr ""
+msgstr "ສະພາ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:73
 msgid "Phnom Penh Captial Hall"
-msgstr ""
+msgstr "ສາລາກາງນະຄອນພະນົມເປັນ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:74
 msgid "Phongsaly Province"
-msgstr ""
+msgstr "ແຂວງຜົ້ງສາລີ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:75
 msgid "Presidential Office"
-msgstr ""
+msgstr "ສຳນັກງານປະທານປະເທດ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:77
 msgid "Provincial Authorities"
-msgstr ""
+msgstr "ອຳນາດການປົກຄອງແຂວງ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:78
 msgid "Provincial Department of Ministry"
-msgstr ""
+msgstr "ກົມການປົກຄອງຂັ້ນແຂວງ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:79
 msgid "Provincial-Capital Council"
-msgstr ""
+msgstr "ສະພາແຂວງ-ນະຄອນຫຼວງ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:80
 msgid "Pyidaungsu Hluttaw"
-msgstr ""
+msgstr "ລັດຖະສະພາຂອງສາທາລະນະລັດແຫ່ງສະຫະພາບມຽນມ້າ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:81
 msgid "Revolutionary Council"
-msgstr ""
+msgstr "ສະພາປະຕິວັດ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:82
 msgid "Royal Government of Cambodia"
-msgstr ""
+msgstr "ລັດຖະບານປະເທດກຳປູເຈຍ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:83
 msgid "Royal Palace"
-msgstr ""
+msgstr "ພະລາຊະວັງ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:84
 msgid "Saravan Province"
-msgstr ""
+msgstr "ແຂວງສາລະວັນ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:85
 msgid "Savannakhet Province"
-msgstr ""
+msgstr "ແຂວງສະຫວັນນະເຂດ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:86
 msgid "Sekong Province"
-msgstr ""
+msgstr "ແຂວງເຊກອງ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:87
 msgid "Self-Administered Zone"
-msgstr ""
+msgstr "ເຂດປົກຄອງຕົນເອງ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:88
 msgid "Senate"
-msgstr ""
+msgstr "ວຸດທິສະພາ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:89
 msgid "State and Regional Hluttaws"
-msgstr ""
+msgstr "ລັດຖະສະພາພາກພື້ນ ແລະ ລັດ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:90
 msgid "State Inspection Organization"
-msgstr ""
+msgstr "ອົງການກວດສອບແຫ່ງລັດ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:91
 msgid "State Law and Order Restoration Council"
-msgstr ""
+msgstr "ສະພາຟື້ນຟູກົດໝາຍ ແລະ ລະບຽບການແຫ່ງລັດ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:92
 msgid "State Peace and Development Council"
-msgstr ""
+msgstr "ສະພາສັນຕິພາບ ແລະ ການພັດທະນາແຫ່ງລັດ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:93
 msgid "State President"
-msgstr ""
+msgstr "ປະທານປະເທດ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:94
 msgid "Supreme People's Court"
-msgstr ""
+msgstr "ສານປະຊາຊົນສູງສຸດ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:95
 msgid "Supreme People's Prosecutor"
-msgstr ""
+msgstr "ໄອຍະການປະຊາຊົນສູງສຸດ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:96
 msgid "The Government"
-msgstr ""
+msgstr "ລັດຖະບານ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:97
 msgid "The National Assembly"
-msgstr ""
+msgstr "ສະພາແຫ່ງຊາດ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:98
 msgid "The State Bank"
-msgstr ""
+msgstr "ທະນາຄານແຫ່ງລັດ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:99
 msgid "Vientiane Capital"
-msgstr ""
+msgstr "ນະຄອນຫຼວງວຽງຈັນ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:100
 msgid "Vientiane Province"
-msgstr ""
+msgstr "ແຂວງວຽງຈັນ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:101
 msgid "Village administration"
-msgstr ""
+msgstr "ອຳນາດການປົກຄອງບ້ານ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:102
 msgid "Xayabouly Province"
-msgstr ""
+msgstr "ແຂວງໄຊຍະບູລີ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:103
 msgid "Xaysomboun Province"
-msgstr ""
+msgstr "ແຂວງໄຊສົມບູນ"
 
 #: odm_laws/i18n/odm_issuing_agencies.php:104
 msgid "Xiengkhauang Province"
-msgstr ""
+msgstr "ແຂວງຊຽງຂວາງ"
 
 #: odm_laws/i18n/odm_laws_status.php:3
 msgid "Under negotitation"
-msgstr ""
+msgstr "ພາຍໃຕ້ການເຈລະຈາ"
 
 #: odm_laws/i18n/odm_laws_status.php:4
 msgid "Framework agreement signed"
-msgstr ""
+msgstr "ກອບຂໍ້ຕົກລົງໄດ້ຖືກລົງນາມ"
 
 #: odm_laws/i18n/odm_laws_status.php:5
 msgid "Negotiations launched"
-msgstr ""
+msgstr "ການເຈລະຈາໄດ້ລິເລີ່ມ"
 
 #: odm_laws/i18n/odm_laws_status.php:6
 msgid "Signed but not yet in effect/validated"
-msgstr ""
+msgstr "ໄດ້ລົງນາມ ແຕ່ຍັງບໍ່ທັນມີຜົນບັງຄັບໃຊ້"
 
 #: odm_laws/i18n/odm_laws_status.php:7
 msgid "Signed and in effect"
-msgstr ""
+msgstr "ໄດ້ລົງນາມ ແລະ ມີຜົນບັງຄັບໃຊ້"
 
 #: odm_laws/i18n/odm_laws_status.php:9
 msgid "Adopted / validated / in effect"
-msgstr ""
+msgstr "ຮັບຮອງ/ກວດສອບ/ມີຜົນສັກສຶດ"
 
 #: odm_laws/i18n/odm_laws_status.php:10
 msgid "Cancelled"
-msgstr ""
+msgstr "ຍົກເລີກ"
 
 #: odm_laws/i18n/odm_laws_status.php:11
 msgid "Expired"
-msgstr ""
+msgstr "ໝົດອາຍຸ"
 
 #: odm_laws/i18n/odm_laws_status.php:12
 msgid "Bill approved"
-msgstr ""
+msgstr "ກົດໝາຍໄດ້ຖືກຮັບຮອງແລ້ວ"
 
 #: odm_laws/i18n/odm_laws_status.php:13
 msgid "Bill discussed in Pyidaungsu Hluttaw"
-msgstr ""
+msgstr "ກົດໝາຍພວມໄດ້ຮັບການປຶກສາຫາລືຢູ່ລັດຖະສະພາສາທາລະນະລັດສະຫະພາບມຽນມ້າ"
 
 #: odm_laws/i18n/odm_laws_status.php:14
 msgid "Bill send to the President for signature"
-msgstr ""
+msgstr "ກົດໝາຍໄດ້ຖືກສົ່ງໄປຫາປະທານປະເທດເພື່ອລົງລາຍເຊັນ"
 
 #: odm_laws/i18n/odm_laws_status.php:15
 msgid "Repealed"
-msgstr ""
+msgstr "ລົບລ້າງ"
 
 #: odm_laws/templates/header.html:5 odm_laws/templates/package/base.html:5
-#: odm_laws/templates/package/base.html:15 odm_laws/templates/package/base.html:18
-#: odm_laws/templates/package/search.html:5 odm_laws/templates/package/search.html:13
+#: odm_laws/templates/package/base.html:15
+#: odm_laws/templates/package/base.html:18
+#: odm_laws/templates/package/search.html:5
+#: odm_laws/templates/package/search.html:13
 msgid "Laws"
-msgstr "ກົດໝາຍຕ່າງໆ"
+msgstr "ກົດໝາຍ"
 
-#: odm_laws/templates/package/base.html:19 odm_laws/templates/package/new.html:5
+#: odm_laws/templates/package/base.html:19
+#: odm_laws/templates/package/new.html:5
 #: odm_laws/templates/package/snippets/new_package_breadcrumb.html:5
 #: odm_laws/templates/package/snippets/stages.html:7
 #: odm_laws/templates/package/snippets/stages.html:9
@@ -1298,7 +1310,7 @@ msgstr "ສ້າງ ເອກະສານກົດໝາຍ"
 
 #: odm_laws/templates/package/base_form_page.html:7
 msgid "What are Laws?"
-msgstr "ມີກົດໝາຍຫຍັງແດ່?"
+msgstr "ກົດໝາຍແມ່ນຫຍັງ?"
 
 #: odm_laws/templates/package/edit_base.html:5
 msgid "View Law"
@@ -1318,11 +1330,11 @@ msgstr "ກິດຈະກຳເຄື່ອນໄຫວລ່າສຸດ"
 
 #: odm_laws/templates/package/read_base.html:29
 msgid "Record metadata not complete!!"
-msgstr ""
+msgstr "ລາຍລະອຽດ ກ່ຽວກັບລາຍການ ຍັງບໍ່ສົມບູນ!!"
 
 #: odm_laws/templates/package/read_base.html:31
 msgid "This law record is missing some mandatory fields, please complete:"
-msgstr ""
+msgstr "ລາຍການກົດໝາຍນີ້ຍັງຂາດຂໍ້ມູນບາງອັນທີ່ຈຳເປັນ, ກະລຸນາຕື່ມໃຫ້ຄົບຖ້ວນ:"
 
 #: odm_laws/templates/package/read_base.html:44
 msgid "Document preview"
@@ -1334,7 +1346,7 @@ msgstr "ເພີ່ມ ເອກະສານກົດໝາຍ"
 
 #: odm_laws/templates/package/snippets/package_form.html:5
 msgid "Are you sure you want to delete this dataset?"
-msgstr "ເຈົ້າໝັ້ນໃຈບໍວ່າຈະລົບລ້າງຂໍ້ມູນຊຸດນີ້?"
+msgstr "ທ່ານຕ້ອງການຈະລົບລ້າງຊຸດຂໍ້ມູນນີ້ຫຼືບໍ່?"
 
 #: odm_laws/templates/package/snippets/package_form.html:6
 msgid "Delete"
@@ -1342,7 +1354,7 @@ msgstr "ລົບລ້າງ"
 
 #: odm_laws/templates/package/snippets/search_form.html:4
 msgid "Search Laws..."
-msgstr "ຄົ້ນຫາກົດໝາຍ"
+msgstr "ຄົ້ນຫາກົດໝາຍ ..."
 
 #: odm_laws/templates/package/snippets/stages.html:14
 #: odm_laws/templates/package/snippets/stages.html:18
@@ -1357,15 +1369,3 @@ msgstr "ຄົ້ນຫາກົດໝາຍ"
 #: odm_laws/templates/snippets/search_form.html:12
 msgid "Submit"
 msgstr "ສົ່ງ"
-
-#~ msgid ""
-#~ "Thank you for uploading this item. Instructions about vetting system available on "
-#~ "https://wiki.opendevelopmentmekong.net/partners:"
-#~ "content_review#instructions_for_default_issue_on_law_records"
-#~ msgstr ""
-#~ "ຂອບໃຈຫຼາຍໆສຳລັບການລົງເອກະສານຊຸດນີ້. ທ່ານສາມາດເຂົ້າເບິ່ງຄຳແນະນຳເພື່ອ "
-#~ "ກວບສອບຄວາມຖືກຕ້ອງຂອງຂໍ້ມູນຊຸດນີ້ຕາມລີ້ງຂ້າງລຸ່ມ: https://wiki.opendevelopmentmekong.net/partners:"
-#~ "content_review#instructions_for_default_issue_on_law_records"
-
-#~ msgid "Related"
-#~ msgstr "ກ່ຽວຂ້ອງ"
