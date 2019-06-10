@@ -265,30 +265,6 @@
 		"label": "Legacy reference document",
 		"form_placeholder": "e.g Tong_Min_Group_Engineering__21.06.2011.pdf"
 	}, {
-		"field_name": "maintainer",
-		"required": "true",
-		"validate": "true",
-		"label": "Maintainer",
-		"preset": "auto_maintainer"
-	}, {
-		"field_name": "maintainer_email",
-		"required": "true",
-		"validate": "true",
-		"label": "Maintainer email",
-		"preset": "auto_maintainer_email"
-	}, {
-		"field_name": "author",
-		"required": "true",
-		"validate": "true",
-		"label": "Author",
-		"preset": "auto_author"
-	}, {
-		"field_name": "author_email",
-		"required": "true",
-		"validate": "true",
-		"label": "Author email",
-		"preset": "auto_author_email"
-	}, {
 		"field_name": "odm_date_uploaded",
 		"label": "Date uploaded",
 		"form_placeholder": "Date a new version or update of the dataset was uploaded.",
