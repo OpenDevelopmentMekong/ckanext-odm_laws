@@ -66,24 +66,14 @@ class OdmLawsPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
   plugins.implements(plugins.IPackageController, inherit=True)
   plugins.implements(plugins.IResourceController, inherit=True)
 
-  def __init__(self, *args, **kwargs):
-
-    log.debug('OdmLawsPlugin init')
-    wsgi_app = SessionMiddleware(None, None)
-    odm_laws_helper.session = wsgi_app.session
 
   def before_map(self, m):
 
     m.connect('odm_laws_index','/laws_record',controller='package',type='laws_record',action='search')
-
     m.connect('odm_laws_new','/laws_record/new',controller='package',type='laws_record',action='new')
-
     m.connect('odm_laws_new_resource','/laws_record/new_resource/{id}',controller='package',type='laws_record',action='new_resource')
-
     m.connect('odm_laws_read', '/laws_record/{id}',controller='package',type='laws_record', action='read', ckan_icon='book')
-
     m.connect('odm_laws_edit', '/laws_record/edit/{id}',controller='package',type='laws_record', action='edit')
-
     m.connect('odm_laws_delete', '/laws_record/delete/{id}',controller='package',type='laws_record', action='delete')
 
     return m
