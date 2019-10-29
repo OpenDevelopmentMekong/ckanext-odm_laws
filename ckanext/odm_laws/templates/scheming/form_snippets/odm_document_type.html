@@ -12,7 +12,7 @@
 				data-module="autocomplete"
 				placeholder="{{ _(h.scheming_language_text(field.form_placeholder)) }}"
 				class="odm_spatial_range-specific">
-				{% for document_type in h.odm_dataset_get_resource_from_datatable(h.odm_dataset_get_resource_id_for_field('odm_document_type')) %}
+				{% for document_type in h.odm_dataset_get_resource_for_field_for_form('odm_document_type') %}
 					<option {{"selected " if document_type['id'] == data[field.field_name] }} data-country_codes="{{ document_type['country_codes'] }}" value="{{ document_type['id'] }}">{{ _(document_type['name']) }}</option>
 				{% endfor %}
 			</select>
