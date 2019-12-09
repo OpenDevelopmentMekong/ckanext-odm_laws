@@ -2,21 +2,23 @@
 # Copyright (C) 2019 ORGANIZATION
 # This file is distributed under the same license as the ckanext-odm_laws
 # project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
-#
-#, fuzzy
+# 
+# Translators:
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019
 msgid ""
 msgstr ""
-"Project-Id-Version: ckanext-odm_laws 3.0.2\n"
+"Project-Id-Version: ODM ckanext-odm_laws\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2019-10-14 11:22+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2019-10-14 11:33+0000\n"
+"Last-Translator: eric <eric@derilinx.com>\n"
+"Language-Team: English (http://www.transifex.com/open-development-mekong/odm-ckanext-odm_laws/language/en/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ckanext/odm_laws/templates/header.html:5
 #: ckanext/odm_laws/templates/package/base.html:5
@@ -25,7 +27,7 @@ msgstr ""
 #: ckanext/odm_laws/templates/package/search.html:5
 #: ckanext/odm_laws/templates/package/search.html:13
 msgid "Laws"
-msgstr ""
+msgstr "Laws"
 
 #: ckanext/odm_laws/templates/package/base.html:19
 #: ckanext/odm_laws/templates/package/new.html:5
@@ -33,74 +35,73 @@ msgstr ""
 #: ckanext/odm_laws/templates/package/snippets/stages.html:7
 #: ckanext/odm_laws/templates/package/snippets/stages.html:9
 msgid "Create Law"
-msgstr ""
+msgstr "Create Law"
 
 #: ckanext/odm_laws/templates/package/base_form_page.html:7
 msgid "What are Laws?"
-msgstr ""
+msgstr "What are Laws?"
 
 #: ckanext/odm_laws/templates/package/base_form_page.html:10
 msgid ""
-" Laws provide all the bibliographical information or metadata needed to "
-"help users find the documents most appropriate to their needs. Certain "
-"fields on this form are mandatory. Your Law cannot be uploaded without "
-"providing information in those fields. Please provide as much information"
-" as possible, even when fields are not mandatory. If you need more "
-"guidance on how to do this please see <a "
+" Laws provide all the bibliographical information or metadata needed to help"
+" users find the documents most appropriate to their needs. Certain fields on"
+" this form are mandatory. Your Law cannot be uploaded without providing "
+"information in those fields. Please provide as much information as possible,"
+" even when fields are not mandatory. If you need more guidance on how to do "
+"this please see <a "
 "href=\"https://wiki.opendevelopmentmekong.net/partners:creation_of_new_law_records\""
-" target=\"_blank\">WIKI</a>. Once you have completed the form, plse check"
-" to make sure it is accurate and complete. Your recommended library item "
-"will be made available to the public once your Law has been vetted. "
-msgstr ""
+" target=\"_blank\">WIKI</a>. Once you have completed the form, plse check to"
+" make sure it is accurate and complete. Your recommended library item will "
+"be made available to the public once your Law has been vetted. "
+msgstr " Laws provide all the bibliographical information or metadata needed to help users find the documents most appropriate to their needs. Certain fields on this form are mandatory. Your Law cannot be uploaded without providing information in those fields. Please provide as much information as possible, even when fields are not mandatory. If you need more guidance on how to do this please see <a href=\"https://wiki.opendevelopmentmekong.net/partners:creation_of_new_law_records\" target=\"_blank\">WIKI</a>. Once you have completed the form, plse check to make sure it is accurate and complete. Your recommended library item will be made available to the public once your Law has been vetted. "
 
 #: ckanext/odm_laws/templates/package/edit_base.html:5
 msgid "View Law"
-msgstr ""
+msgstr "View Law"
 
 #: ckanext/odm_laws/templates/package/new_package_form.html:8
 msgid "Update Law"
-msgstr ""
+msgstr "Update Law"
 
 #: ckanext/odm_laws/templates/package/read_base.html:7
 msgid "Manage"
-msgstr ""
+msgstr "Manage"
 
 #: ckanext/odm_laws/templates/package/read_base.html:17
 #: ckanext/odm_laws/templates/package/snippets/new_package_breadcrumb.html:4
 msgid "Law"
-msgstr ""
+msgstr "Law"
 
 #: ckanext/odm_laws/templates/package/read_base.html:18
 msgid "Activity Stream"
-msgstr ""
+msgstr "Activity Stream"
 
 #: ckanext/odm_laws/templates/package/read_base.html:46
 msgid "Document preview"
-msgstr ""
+msgstr "Document preview"
 
 #: ckanext/odm_laws/templates/package/search.html:23
 msgid "Add Law"
-msgstr ""
+msgstr "Add Law"
 
 #: ckanext/odm_laws/templates/package/snippets/package_form.html:5
 msgid "Are you sure you want to delete this dataset?"
-msgstr ""
+msgstr "Are you sure you want to delete this dataset?"
 
 #: ckanext/odm_laws/templates/package/snippets/package_form.html:6
 msgid "Delete"
-msgstr ""
+msgstr "Delete"
 
 #: ckanext/odm_laws/templates/package/snippets/search_form.html:4
 msgid "Search Laws..."
-msgstr ""
+msgstr "Search Laws..."
 
 #: ckanext/odm_laws/templates/package/snippets/stages.html:14
 #: ckanext/odm_laws/templates/package/snippets/stages.html:18
 #: ckanext/odm_laws/templates/package/snippets/stages.html:20
 msgid "Add data"
-msgstr ""
+msgstr "Add data"
 
 #: ckanext/odm_laws/templates/snippets/search_form.html:5
 msgid "Search laws..."
-msgstr ""
-
+msgstr "Search laws..."
