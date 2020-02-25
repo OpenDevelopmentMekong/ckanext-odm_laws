@@ -13,7 +13,7 @@
 		{% if pkg %}
 			{% set dataset = pkg.title or pkg.name %}
 			<li>{% link_for _('Laws'), controller='package', type='laws_record', action='search' %}</li>
-			<li{{ self.breadcrumb_content_selected() }}>{% link_for dataset|truncate(30), controller='package', type='laws_record', action='read', id=pkg.name %}</li>
+			<li{{ self.breadcrumb_content_selected() }}>{% link_for h.dataset_display_name(pkg)|truncate(30), controller='package', type='laws_record', action='read', id=pkg.name %}</li>
 		{% else %}
 			<li>{% link_for _('Laws'), controller='package', type='laws_record', action='search' %}</li>
 			<li class="active"><a href="">{{ _('Create Law') }}</a></li>
