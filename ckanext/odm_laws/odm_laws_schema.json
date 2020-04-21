@@ -6,17 +6,19 @@
             "preset": "resource_url_upload", 
             "field_name": "url", 
             "label": {
-                "vi": "URL", 
                 "en": "URL", 
+                "vi": "URL", 
                 "km": "\u17a2\u17b6\u179f\u1799\u178a\u17d2\u178b\u17b6\u1793 URL", 
+                "th": "URL", 
                 "lo": "URL"
             }
         }, 
         {
             "form_placeholder": {
-                "vi": "V\u00ed d\u1ee5. Gi\u00e1 v\u00e0ng Th\u00e1ng 01/2011", 
                 "en": "eg. January 2011 Gold Prices", 
+                "vi": "V\u00ed d\u1ee5. Gi\u00e1 v\u00e0ng Th\u00e1ng 01/2011", 
                 "km": "\u17a7. \u178f\u1798\u17d2\u179b\u17c3\u1798\u17b6\u179f\u1780\u17d2\u1793\u17bb\u1784\u1781\u17c2\u1798\u1780\u179a\u17b6 \u1786\u17d2\u1793\u17b6\u17c6\u17e2\u17e0\u17e1\u17e1", 
+                "th": "\u0e40\u0e0a\u0e48\u0e19 \u0e23\u0e32\u0e04\u0e32\u0e17\u0e2d\u0e07\u0e04\u0e33 \u0e40\u0e14\u0e37\u0e2d\u0e19\u0e21\u0e01\u0e23\u0e32\u0e04\u0e21 \u0e1e.\u0e28. 2554 ", 
                 "lo": "\u0ec0\u0e8a\u0eb1\u0ec8\u0e99 \u0ea5\u0eb2\u0e84\u0eb2\u0e84\u0ecd\u0eb2\u0ec0\u0e94\u0eb7\u0ead\u0e99\u0ea1\u0eb1\u0e87\u0e81\u0ead\u0e99 2011 "
             }, 
             "validate": "true", 
@@ -26,7 +28,7 @@
                 "en": "Name", 
                 "vi": "T\u00ean", 
                 "km": "\u1788\u17d2\u1798\u17c4\u17c7", 
-                "th": "Name", 
+                "th": "\u0e0a\u0e37\u0e48\u0e2d", 
                 "lo": "\u0e8a\u0eb7\u0ec8", 
                 "my": "\u1021\u1019\u100a\u103a"
             }
@@ -38,9 +40,10 @@
         }, 
         {
             "form_placeholder": {
-                "vi": "M\u1ed9t s\u1ed1 ghi ch\u00fa h\u1eefu \u00edch v\u1ec1 d\u1eef li\u1ec7u", 
                 "en": "Some useful notes about the data", 
+                "vi": "M\u1ed9t s\u1ed1 ghi ch\u00fa h\u1eefu \u00edch v\u1ec1 d\u1eef li\u1ec7u", 
                 "km": "\u1780\u17c6\u178e\u178f\u17cb\u1785\u17c6\u178e\u17b6\u17c6\u179f\u17c6\u1781\u17b6\u1793\u17cb\u17d7\u17a2\u17c6\u1796\u17b8\u1791\u17b7\u1793\u17d2\u1793\u1793\u17d0\u1799", 
+                "th": "\u0e04\u0e33\u0e2d\u0e18\u0e34\u0e1a\u0e32\u0e22\u0e40\u0e01\u0e35\u0e48\u0e22\u0e27\u0e01\u0e31\u0e1a\u0e02\u0e49\u0e2d\u0e21\u0e39\u0e25", 
                 "lo": "\u0edd\u0eb2\u0e8d\u0ec0\u0eab\u0e94\u0e81\u0ec8\u0ebd\u0ea7\u0e81\u0eb1\u0e9a\u0e82\u0ecd\u0ec9\u0ea1\u0eb9\u0e99"
             }, 
             "validate": "true", 
@@ -50,7 +53,7 @@
                 "en": "Description", 
                 "vi": "M\u00f4 t\u1ea3", 
                 "km": "\u1780\u17b6\u179a\u1796\u17b7\u1796\u178e\u17cc\u1793\u17b6", 
-                "th": "Description", 
+                "th": "\u0e04\u0e33\u0e2d\u0e18\u0e34\u0e1a\u0e32\u0e22", 
                 "lo": "\u0ea5\u0eb2\u0e8d\u0ea5\u0eb0\u0ead\u0ebd\u0e94", 
                 "my": "\u1016\u1031\u102c\u103a\u1015\u103c\u1001\u103b\u1000\u103a"
             }
@@ -65,26 +68,29 @@
             "field_name": "format", 
             "preset": "resource_format_autocomplete", 
             "label": {
-                "vi": "\u0110\u1ecbnh d\u1ea1ng", 
                 "en": "Format", 
+                "vi": "\u0110\u1ecbnh d\u1ea1ng", 
                 "km": "\u1791\u1798\u17d2\u179a\u1784\u17cb", 
+                "th": "\u0e23\u0e39\u0e1b\u0e41\u0e1a\u0e1a", 
                 "lo": "\u0eae\u0eb9\u0e9a\u0ec1\u0e9a\u0e9a\u0ec0\u0ead\u0e81\u0eb0\u0eaa\u0eb2\u0e99"
             }
         }, 
         {
             "form_placeholder": {
-                "vi": "(C\u00e1c) ng\u00f4n ng\u1eef c\u1ee7a t\u00e0i nguy\u00ean", 
                 "en": "Language(s) of the resource.", 
+                "vi": "(C\u00e1c) ng\u00f4n ng\u1eef c\u1ee7a t\u00e0i nguy\u00ean", 
                 "km": "\u1797\u17b6\u179f\u17b6\u179a\u1794\u179f\u17cb\u1792\u1793\u1792\u17b6\u1793", 
+                "th": "\u0e20\u0e32\u0e29\u0e32\u0e02\u0e2d\u0e07\u0e40\u0e2d\u0e01\u0e2a\u0e32\u0e23 ", 
                 "lo": "\u0e9e\u0eb2\u0eaa\u0eb2\u0e82\u0ead\u0e87\u0ec1\u0eab\u0ebc\u0ec8\u0e87\u0e82\u0ecd\u0ec9\u0ea1\u0eb9\u0e99"
             }, 
             "validate": "true", 
             "preset": "odm_language", 
             "field_name": "odm_language", 
             "label": {
-                "vi": "C\u00e1c ng\u00f4n ng\u1eef c\u1ee7a t\u00e0i nguy\u00ean", 
                 "en": "Resource's languages", 
+                "vi": "C\u00e1c ng\u00f4n ng\u1eef c\u1ee7a t\u00e0i nguy\u00ean", 
                 "km": "\u1797\u17b6\u179f\u17b6\u179a\u1794\u179f\u17cb\u1792\u1793\u1792\u17b6\u1793", 
+                "th": "\u0e20\u0e32\u0e29\u0e32\u0e02\u0e2d\u0e07\u0e40\u0e2d\u0e01\u0e2a\u0e32\u0e23", 
                 "lo": "\u0e9e\u0eb2\u0eaa\u0eb2\u0e82\u0ead\u0e87\u0ec1\u0eab\u0ebc\u0ec8\u0e87\u0e82\u0ecd\u0ec9\u0ea1\u0eb9\u0e99"
             }
         }
@@ -245,11 +251,11 @@
             }
         }, 
         {
-            "validators": "if_empty_same_as(name)", 
             "required": "true", 
             "field_name": "title", 
+            "label": "title", 
             "preset": "text_hidden", 
-            "label": "title"
+            "validators": "if_empty_same_as(name)"
         }, 
         {
             "required": "true", 
@@ -675,8 +681,8 @@
                 "vi": "URL ch\u00ednh th\u1ee9c c\u00f3 s\u1eb5n t\u00e0i li\u1ec7u.", 
                 "my": "\u1005\u102c\u101b\u103d\u1000\u103a\u1005\u102c\u1010\u1019\u103a\u1038\u101b\u101a\u1030\u1014\u102d\u102f\u1004\u103a\u101e\u1031\u102c \u1010\u101b\u102c\u1038\u101d\u1004\u103a \u101a\u1030\u1021\u102c\u101b\u103a\u1021\u101a\u103a\u101c\u103a\u1019\u103b\u102c\u1038"
             }, 
-            "form_snippet": "markdown.html", 
             "field_name": "odm_laws_source", 
+            "form_snippet": "markdown.html", 
             "label": {
                 "en": "Links to source", 
                 "lo": "\u0ea5\u0eb5\u0ec9\u0e87\u0ec0\u0e9e\u0eb7\u0ec8\u0ead\u0ec4\u0e9b\u0eab\u0eb2\u0ec1\u0eab\u0ebc\u0ec8\u0e87\u0e82\u0ecd\u0ec9\u0ea1\u0eb9\u0e99", 
