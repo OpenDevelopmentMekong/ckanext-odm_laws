@@ -5,8 +5,7 @@ import ckan.plugins.toolkit as toolkit
 from beaker.middleware import SessionMiddleware
 import sys
 import os
-sys.path.append(os.path.join(os.path.dirname(__file__), "lib"))
-import odm_laws_helper
+from ckanext.odm_laws.lib import odm_laws_helper
 from urlparse import urlparse
 import json
 from ckan.common import config
@@ -17,6 +16,14 @@ import requests
 import tempfile
 
 log = logging.getLogger(__name__)
+
+try:
+    toolkit.requires_ckan_version("2.9")
+except CkanVersionException:
+    from ckanext.odm_laws.plugin.pylons_plugin import OdmLawsMixinPlugin
+else:
+    from ckanext.odm_laws.plugin.flask_plugin import OdmLawsMixinPlugin
+
 
 def _create_or_update_pdf_thumbnail(context,pkg_dict_or_resource):
   pdf_url=pkg_dict_or_resource['url']
@@ -57,26 +64,13 @@ def _create_or_update_pdf_thumbnail(context,pkg_dict_or_resource):
       log.error("Could not generate PDF thumbnail", e)
 
 
-class OdmLawsPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
+class OdmLawsPlugin(OdmLawsMixinPlugin):
   '''OD Mekong laws plugin.'''
 
   plugins.implements(plugins.IConfigurer)
   plugins.implements(plugins.ITemplateHelpers)
-  plugins.implements(plugins.IRoutes, inherit=True)
   plugins.implements(plugins.IPackageController, inherit=True)
   plugins.implements(plugins.IResourceController, inherit=True)
-
-
-  def before_map(self, m):
-
-    m.connect('odm_laws_index','/laws_record',controller='package',type='laws_record',action='search')
-    m.connect('odm_laws_new','/laws_record/new',controller='package',type='laws_record',action='new')
-    m.connect('odm_laws_new_resource','/laws_record/new_resource/{id}',controller='package',type='laws_record',action='new_resource')
-    m.connect('odm_laws_read', '/laws_record/{id}',controller='package',type='laws_record', action='read', ckan_icon='book')
-    m.connect('odm_laws_edit', '/laws_record/edit/{id}',controller='package',type='laws_record', action='edit')
-    m.connect('odm_laws_delete', '/laws_record/delete/{id}',controller='package',type='laws_record', action='delete')
-
-    return m
 
   def update_config(self, config):
     '''Update plugin config'''
@@ -89,7 +83,7 @@ class OdmLawsPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
 
     return {
       'odm_laws_get_dataset_type': odm_laws_helper.get_dataset_type,
-      'odm_laws_validate_fields' : odm_laws_helper.validate_fields,
+      'odm_laws_validate_fields': odm_laws_helper.validate_fields,
     }
 
   def before_create(self, context, resource):
