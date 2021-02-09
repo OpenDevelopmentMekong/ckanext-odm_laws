@@ -8,6 +8,12 @@ class OdmLawsMixinPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
     '''OD Mekong laws plugin pylons.'''
     plugins.implements(plugins.IRoutes, inherit=True)
 
+    def update_config(self, config):
+        '''Update plugin config'''
+
+        toolkit.add_template_directory(config, '../templates')
+        toolkit.add_public_directory(config, '../public')
+
     def before_map(self, m):
         m.connect('odm_laws_index', '/laws_record', controller='package', type='laws_record', action='search')
         m.connect('odm_laws_new', '/laws_record/new', controller='package', type='laws_record', action='new')

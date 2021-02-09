@@ -1,0 +1,9 @@
+{% ckan_extends %}
+
+	{% if dataset_type == 'laws_record' %}
+		{% set placeholder = placeholder if placeholder else _('Search Laws...') %}
+	{% else %}
+		{{super()}}
+	{% endif%}
+
+{{super()}}

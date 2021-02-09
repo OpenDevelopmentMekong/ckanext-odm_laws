@@ -1,0 +1,13 @@
+{% ckan_extends %}
+
+{% block save_button_text %}
+  {% if form_style != 'edit' %}
+    {{ super() }}
+  {% else %}
+		{% if dataset_type == 'laws_record' %}
+			{{ _('Update Law') }}
+		{% else %}
+			{{ super() }}
+		{% endif %}
+  {% endif %}
+{% endblock %}

@@ -1,0 +1,20 @@
+{% ckan_extends %}
+
+{% block secondary_content %}
+  {% block info_module %}
+		{% if dataset_type == 'laws_record' %}
+			<section class="module module-narrow module-shallow">
+				<h2 class="module-heading"><i class="icon-info-sign"></i> {{ _('What are Laws?') }}</h2>
+				<div class="module-content">
+					<p>
+						{% trans %}
+						Laws provide all the bibliographical information or metadata needed to help users find the documents most appropriate to their needs. Certain fields on this form are mandatory. Your Law cannot be uploaded without providing information in those fields. Please provide as much information as possible, even when fields are not mandatory. If you need more guidance on how to do this please see <a href="https://wiki.opendevelopmentmekong.net/partners:creation_of_new_law_records" target="_blank">WIKI</a>. Once you have completed the form, plse check to make sure it is accurate and complete. Your recommended library item will be made available to the public once your Law has been vetted.
+						{% endtrans %}
+					</p>
+				</div>
+			</section>
+		{% else %}
+			{{super()}}
+		{% endif%}
+  {% endblock %}
+{% endblock %}

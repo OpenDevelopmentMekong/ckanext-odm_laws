@@ -1,0 +1,20 @@
+{% block package_metadata_fields_odm_laws_status %}
+	<div class="control-group">
+		<label class="control-label" for="field-{{ field.field_name }}">
+			{% if field.required == 'true' %}
+				<span title="This field is required" class="control-required">*</span>
+			{% endif %}
+			{{ h.scheming_language_text(field.label) }}
+		</label>
+		<div class="controls control-full">
+			<select id="field-{{ field.field_name }}"
+				name="{{ h.scheming_language_text(field.field_name) }}"
+				data-module="autocomplete"
+				placeholder="{{ _(h.scheming_language_text(field.form_placeholder)) }}">
+				{% for laws_status in h.odm_dataset_get_resource_for_field_for_form('odm_laws_status') %}
+					<option {{"selected " if laws_status['id'] == data[field.field_name] }} data-country-codes="{{ laws_status['country_codes'] }}" value="{{ laws_status['id'] }}">{{ _(laws_status['name']) }}</option>
+				{% endfor %}
+			</select>
+		</div>
+	</div>
+{% endblock %}

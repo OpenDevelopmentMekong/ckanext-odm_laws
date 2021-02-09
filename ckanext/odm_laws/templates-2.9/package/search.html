@@ -1,0 +1,29 @@
+{% ckan_extends %}
+
+{% block subtitle %}
+	{% if dataset_type == 'laws_record' %}
+		{{ _("Laws") }}
+	{% else %}
+		{{super()}}
+	{% endif %}
+{% endblock %}
+
+{% block breadcrumb_content %}
+	{% if dataset_type == 'laws_record' %}
+		<li class="active">{{ h.nav_link(_('Laws'), named_route='laws_record.search', highlight_actions = 'new index') }}</li>
+	{% else %}
+		{{super()}}
+	{% endif %}
+{% endblock %}
+
+{% block page_primary_action %}
+  {% if h.check_access('package_create') %}
+		<div class="page_primary_action">
+			{% if dataset_type == 'laws_record' %}
+				{% link_for _('Add Law'), named_route='laws_record.new', class_='btn btn-primary', icon='plus-square' %}
+			{% else %}
+				{{super()}}
+			{% endif %}
+		</div>
+  {% endif %}
+{% endblock %}

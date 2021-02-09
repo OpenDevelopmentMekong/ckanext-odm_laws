@@ -1,0 +1,24 @@
+
+{% block package_metadata_fields_odm_laws_issuing_agency_parties %}
+	<div class="control-group">
+		<label class="control-label" for="field-{{ field.field_name }}">
+			{% if field.required == 'true' %}
+				<span title="This field is required" class="control-required">*</span>
+			{% endif %}
+			{{ h.scheming_language_text(field.label) }}
+		</label>
+		<div class="controls control-full">
+			<select multiple id="field-{{ field.field_name }}"
+				name="{{ h.scheming_language_text(field.field_name) }}"
+				data-module="autocomplete"
+				placeholder="{{ _(h.scheming_language_text(field.form_placeholder)) }}"
+				class="odm_spatial_range-specific">
+				{% for issuing_agency in h.odm_dataset_get_resource_for_field_for_form('odm_laws_issuing_agency_parties') %}
+					<option {{"selected " if issuing_agency['id'] in data[field.field_name] }}
+                           data-country_codes="{{ issuing_agency['country_codes'] }}"
+                           value="{{ issuing_agency['id'] }}">{{ _(issuing_agency['name']) }}</option>
+				{% endfor %}
+			</select>
+		</div>
+	</div>
+{% endblock %}

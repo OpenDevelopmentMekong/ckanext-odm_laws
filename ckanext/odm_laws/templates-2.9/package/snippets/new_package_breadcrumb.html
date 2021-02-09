@@ -1,0 +1,8 @@
+{% ckan_extends %}
+
+{% if dataset_type == 'laws_record' %}
+	<li>{% link_for _('Law'), named_route='laws_record.search', highlight_actions = 'new index' %}</li>
+	<li class="active">{% link_for _('Create Law'), named_route='laws_record.new' %}</li>
+{% else %}
+	{{ super() }}
+{% endif %}

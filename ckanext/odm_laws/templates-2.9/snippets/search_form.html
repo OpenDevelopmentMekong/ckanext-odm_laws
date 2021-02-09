@@ -1,0 +1,8 @@
+{% ckan_extends %}
+
+{% block search_input %}
+    {% if c.type == 'laws_record' %}
+  	    {% set placeholder = _('Search laws...') %}
+    {% endif %}
+  	{{ super() }}
+{% endblock %}

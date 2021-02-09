@@ -17,12 +17,10 @@ import tempfile
 
 log = logging.getLogger(__name__)
 
-try:
-    toolkit.requires_ckan_version("2.9")
-except CkanVersionException:
-    from ckanext.odm_laws.plugin.pylons_plugin import OdmLawsMixinPlugin
+if toolkit.check_ckan_version(min_version='2.9.0'):
+  from ckanext.odm_laws.plugin.flask_plugin import OdmLawsMixinPlugin
 else:
-    from ckanext.odm_laws.plugin.flask_plugin import OdmLawsMixinPlugin
+  from ckanext.odm_laws.plugin.pylons_plugin import OdmLawsMixinPlugin
 
 
 def _create_or_update_pdf_thumbnail(context,pkg_dict_or_resource):
@@ -72,11 +70,6 @@ class OdmLawsPlugin(OdmLawsMixinPlugin):
   plugins.implements(plugins.IPackageController, inherit=True)
   plugins.implements(plugins.IResourceController, inherit=True)
 
-  def update_config(self, config):
-    '''Update plugin config'''
-
-    toolkit.add_template_directory(config, 'templates')
-    toolkit.add_public_directory(config, 'public')
 
   def get_helpers(self):
     '''Register the plugin's functions above as a template helper function.'''

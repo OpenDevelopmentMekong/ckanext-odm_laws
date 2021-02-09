@@ -1,0 +1,27 @@
+{% ckan_extends %}
+
+{% if dataset_type == 'laws_record' %}
+<ol class="stages {{ class }}">
+	<li class="first {{ s1 }}">
+		{% if s1 != 'complete' %}
+			<span class="highlight">{{ _('Create Law') }}</span>
+		{% else %}
+			<button class="highlight" name="save" value="go-dataset" type="submit">{{ _('Create Law') }}</button>
+		{% endif %}
+	</li>
+	<li class="last {{ s2 }}">
+		{% if s2 != 'complete' %}
+			<span class="highlight">{{ _('Add data') }}</span>
+		{% else %}
+			{% if s1 == 'active' %}
+				{# stage 1 #}
+				<button class="highlight" name="save" value="go-resources" type="submit">{{ _('Add data') }}</button>
+			{% else %}
+				{% link_for _('Add data'), named_route='laws_record.new', class_="highlight" %}
+			{% endif %}
+		{% endif %}
+	</li>
+</ol>
+{% else %}
+	{{super()}}
+{% endif %}

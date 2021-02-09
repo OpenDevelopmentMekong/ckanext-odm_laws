@@ -1,0 +1,6 @@
+{% ckan_extends %}
+
+{% block header_site_navigation_tabs %}
+ {{ super() }}
+ <li>{% link_for _('Laws'), named_route='laws_record.search' %}</li>
+{% endblock %}

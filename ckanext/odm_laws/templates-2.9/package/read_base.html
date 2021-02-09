@@ -1,0 +1,57 @@
+{% ckan_extends %}
+
+{% block content_action %}
+    {% if dataset_type == 'laws_record' %}
+        {% if h.check_access('package_update', {'id':pkg.id }) %}
+            <div class="actions">
+                {% link_for _('Manage'), named_route='laws_record.edit', id=pkg.name, class_='btn', icon='wrench' %}
+            </div>
+        {% endif%}
+    {% else %}
+        {{super()}}
+    {% endif %}
+{% endblock %}
+
+{% block content_primary_nav %}
+	{% if dataset_type == 'laws_record' %}
+		{{ h.build_nav_icon('laws_record.read', _('Law'), id=pkg.name) }}
+		{{ h.build_nav_icon('laws_record.activity', _('Activity Stream'), id=pkg.name) }}
+	{% else %}
+		{{super()}}
+	{% endif%}
+{% endblock %}
+
+{% block secondary_content %}
+
+{#
+	{% if dataset_type == 'laws_record' and c.userobj %}
+		{% set missing_laws = h.odm_laws_validate_fields(pkg) %}
+		{% if missing_laws["package"] or missing_laws["resources"] %}
+			{% block inconsistency_disclaimer_laws %}
+				<h2 class="module-heading"><i class="icon-alert"></i> {{ _("Record metadata not complete!!") }}</h2>
+				<div class="disclaimer">
+					<p>{{ _('This law record is missing some mandatory fields, please complete:') }}</p>
+					<p>{{ h.odm_laws_validate_fields(pkg) }}</p>
+				</div>
+			{% endblock %}
+		{% endif %}
+	{% endif %}
+#}
+odm_laws
+	{% if dataset_type == 'laws_record' %}
+		{% block odm_laws_pdf_thumbnail %}
+			{% set resources = c.pkg_dict.resources %}
+			{% for resource in resources%}
+				{% if resource.name == 'PDF Thumbnail' %}
+					<h2 class="module-heading"><i class="icon-building"></i> {{ _('Document preview') }}</h2>
+					<div class="pdf_thumbnail">
+						<img src='{{resource.url}}'>
+					</div>
+				{% endif %}
+			{% endfor %}
+		{% endblock%}
+	{% endif%}
+
+  {{super()}}
+
+{% endblock %}
