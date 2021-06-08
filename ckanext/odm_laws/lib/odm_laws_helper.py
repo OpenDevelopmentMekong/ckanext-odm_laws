@@ -20,16 +20,17 @@ def get_dataset_type():
 
 	return 'laws_record'
 
-def create_default_issue_laws_record(pkg_info):
+def create_default_issue_laws_record(pkg_info, context=None):
 	''' Uses CKAN API to add a default Issue as part of the vetting workflow for library records'''
 	try:
-
+		if not context:
+			context = {}
 		extra_vars = {}
 
 		issue_message = render('messages/default_issue_laws_record.txt',extra_vars=extra_vars)
 
 		params = {'title':'User Laws record Upload Checklist','description':issue_message,'dataset_id':pkg_info['id']}
-		toolkit.get_action('issue_create')(data_dict=params)
+		toolkit.get_action('issue_create')(context, params)
 
 	except KeyError:
 
