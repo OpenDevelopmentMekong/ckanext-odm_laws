@@ -15,6 +15,7 @@
 {% block content_primary_nav %}
 	{% if dataset_type == 'laws_record' %}
 		{{ h.build_nav_icon('odm_laws_read', _('Law'), id=pkg.name) }}
+		{{ h.build_nav_icon('dataset_groups', _('Groups'), id=pkg.name) }}
 		{{ h.build_nav_icon('dataset_activity', _('Activity Stream'), id=pkg.name) }}
 	{% else %}
 		{{super()}}
