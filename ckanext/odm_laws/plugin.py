@@ -1,35 +1,26 @@
-import ckan
 import logging
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
-from beaker.middleware import SessionMiddleware
-import sys
-import os
 from ckanext.odm_laws.lib import odm_laws_helper
-from urlparse import urlparse
-import json
 from ckan.common import config
-import collections
-from routes.mapper import SubMapper
-import ckan.lib.helpers as h
-import requests
-import tempfile
 
 log = logging.getLogger(__name__)
 
-if toolkit.check_ckan_version(min_version='2.9.0'):
-  from ckanext.odm_laws.plugin.flask_plugin import OdmLawsMixinPlugin
-else:
-  from ckanext.odm_laws.plugin.pylons_plugin import OdmLawsMixinPlugin
 
 
-class OdmLawsPlugin(OdmLawsMixinPlugin):
+class OdmLawsPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
   '''OD Mekong laws plugin.'''
 
   plugins.implements(plugins.IConfigurer)
   plugins.implements(plugins.ITemplateHelpers)
   plugins.implements(plugins.IPackageController, inherit=True)
   plugins.implements(plugins.IResourceController, inherit=True)
+  plugins.implements(plugins.IBlueprint)
+
+  def update_config(self, config):
+    '''Update plugin config'''
+    toolkit.add_template_directory(config, 'templates')
+    toolkit.add_public_directory(config, 'public')
 
 
   def get_helpers(self):

@@ -61,7 +61,7 @@ def validate_fields(package):
 			for resource_field in schema_json['resource_fields']:
 				for resource in package["resources"]:
 					if "validate" in resource_field and resource_field["validate"] == "true":
-					 	if resource_field["field_name"] not in resource or not resource[resource_field["field_name"]]:
+						if resource_field["field_name"] not in resource or not resource[resource_field["field_name"]]:
 							missing["resources"].append(resource_field["field_name"])
 						elif "multilingual" in resource_field and resource_field["multilingual"] == "true":
 							json_resource_field = resource[resource_field["field_name"]];
