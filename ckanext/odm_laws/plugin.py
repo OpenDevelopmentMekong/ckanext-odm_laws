@@ -15,7 +15,6 @@ class OdmLawsPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
   plugins.implements(plugins.ITemplateHelpers)
   plugins.implements(plugins.IPackageController, inherit=True)
   plugins.implements(plugins.IResourceController, inherit=True)
-  plugins.implements(plugins.IBlueprint)
 
   def update_config(self, config):
     '''Update plugin config'''
@@ -31,14 +30,7 @@ class OdmLawsPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
       'odm_laws_validate_fields': odm_laws_helper.validate_fields,
     }
 
-  def before_create(self, context, resource):
-
-    dataset_type = context['package'].type if 'package' in context else ''
-    if dataset_type == 'laws_record':
-      log.info('after_update')
-
-  def after_create(self, context, pkg_dict_or_resource):
-
+  def after_dataset_create(self, context, pkg_dict_or_resource):
     dataset_type = context['package'].type if 'package' in context else pkg_dict_or_resource['type']
     if dataset_type == 'laws_record':
       log.debug('after_create: %s', pkg_dict_or_resource['name'])
@@ -47,3 +39,7 @@ class OdmLawsPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
       if review_system:
         if 'type' in pkg_dict_or_resource:
           odm_laws_helper.create_default_issue_laws_record(pkg_dict_or_resource)
+
+  # It's unclear exactly what this is doing, so for now, just don't improve the situation
+  after_resource_create = after_dataset_create
+  after_create = after_dataset_create
