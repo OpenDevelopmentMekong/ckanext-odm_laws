@@ -28,6 +28,7 @@ class OdmLawsPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
     return {
       'odm_laws_get_dataset_type': odm_laws_helper.get_dataset_type,
       'odm_laws_validate_fields': odm_laws_helper.validate_fields,
+      'humanize_entity_type': odm_laws_helper.humanize_entity_type,
     }
 
   def after_dataset_create(self, context, pkg_dict_or_resource):

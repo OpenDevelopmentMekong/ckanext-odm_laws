@@ -74,3 +74,10 @@ def validate_fields(package):
 	return missing
 
 session = {}
+
+
+@toolkit.chained_helper
+def humanize_entity_type(next, entity_type, object_type, purpose):
+  if object_type == 'laws_record':
+    object_type = 'law'
+  return next(entity_type, object_type, purpose)
