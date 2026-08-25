@@ -1,0 +1,39 @@
+{#
+ODC Law Record Sidebar — related document panel.
+
+Shows documents sharing the same taxonomy topics as the current law.
+Hidden entirely (no aside) when there are no related documents.
+
+pkg - The law package being displayed.
+
+Usage:
+  {% snippet 'snippets/odc_law_record_sidebar.html', pkg=pkg %}
+#}
+{% set related = h.odm_laws_get_related_documents(pkg.id, limit=5) %}
+
+{% if related.results %}
+<aside class="odc-sidebar">
+  <h3 class="odc-sidebar-title">{{ _('Related Document') }}</h3>
+  <div class="odc-sidebar-cards">
+    {% for doc in related.results %}
+    <a href="{{ h.url_for('laws_record.read', id=doc.name) }}" class="odc-sidebar-card">
+      <h4 class="odc-sidebar-card-title">
+        {{ h.odm_dataset_get_currentlang_data('title_translated', doc) or doc.title or doc.name }}
+      </h4>
+      {% set desc = h.odm_dataset_get_currentlang_data('notes_translated', doc) or doc.notes %}
+      {% if desc %}
+      <p class="odc-sidebar-card-desc">{{ h.markdown_extract(desc, extract_length=180) }}</p>
+      {% endif %}
+    </a>
+    {% endfor %}
+  </div>
+
+  {% if related.count > 5 %}
+  <div class="odc-related-see-more">
+    <a href="{{ h.url_for('laws_record.search', dataset_type='laws_record', taxonomy=related.topic) }}" class="odc-see-more-link">
+      {{ _('See all {count} related documents') | format(count=related.count) }} &rarr;
+    </a>
+  </div>
+  {% endif %}
+</aside>
+{% endif %}

@@ -1,0 +1,81 @@
+{% extends "odc_page_law.html" %}
+
+{% block styles %}
+  {{ super() }}
+  {% asset 'odm_laws/odc_laws_search_css' %}
+  {% asset 'suggest/suggest-css' %}
+{% endblock %}
+
+{% block scripts %}
+  {{ super() }}
+  {% asset 'suggest/suggest-js' %}
+{% endblock %}
+
+{% block secondary_content %}
+  {% snippet 'snippets/odc_law_sidebar.html' %}
+{% endblock %}
+
+{% block primary_content %}
+
+{% snippet 'snippets/odc_breadcrumbs.html', items=[
+      {'label': _('Legal Documents')}
+    ] %}
+  <div class="odc-search-design">
+
+    {% snippet 'snippets/odc_law_header.html' %}
+
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+      {% block page_primary_action %}{% endblock %}
+    </div>
+
+    {% snippet 'snippets/odc_law_search_controls.html' %}
+
+    {% snippet 'snippets/odc_law_sorting.html' %}
+
+    <div class="odc-table">
+      <table>
+        <thead>
+          <tr>
+            <th class="column-title">{{ _('Title') }}</th>
+            <th class="column-type">{{ _('Document Type') }}</th>
+            <th class="column-reference">{{ _('Reference No.') }}</th>
+            <th class="column-signing">{{ _('Signing Date') }}</th>
+			<th class="column-effective">{{ _('Effective Date') }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% if c.page.items %}
+            {% for package in c.page.items %}
+              {% snippet 'snippets/odc_law_table_row.html', package=package %}
+            {% endfor %}
+          {% else %}
+            <tr>
+              <td colspan="5" class="no-results">
+                {% if c.q %}
+                  <p>{{ _('No laws found matching your search criteria.') }}</p>
+                {% else %}
+                  <p>{{ _('Use the search box above to find laws in the ODC database.') }}</p>
+                {% endif %}
+              </td>
+            </tr>
+          {% endif %}
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Mobile/Tablet Card Layout -->
+    <div class="odc-cards">
+      {% if c.page.items %}
+        {% for package in c.page.items %}
+          {% snippet 'snippets/odc_law_card_item.html', package=package %}
+        {% endfor %}
+      {% else %}
+        <div class="no-results-card">
+          <p>{{ _('No laws found matching your search criteria.') }}</p>
+        </div>
+      {% endif %}
+    </div>
+
+    {% snippet 'snippets/odc_law_pagination.html' %}
+  </div>
+{% endblock %}

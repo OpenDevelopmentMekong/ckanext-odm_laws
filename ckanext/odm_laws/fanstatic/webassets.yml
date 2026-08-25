@@ -1,0 +1,31 @@
+odc_laws_css:
+  output: ckanext-odm_laws/%(version)s_odc_laws.css
+  contents:
+    - odc_laws.css
+  extra:
+    preload:
+      - base/main
+
+odc_laws_search_css:
+  output: ckanext-odm_laws/%(version)s_odc_laws_search.css
+  contents:
+    - odc_laws_search.css
+  extra:
+    preload:
+      - base/main
+
+odc_laws_record_css:
+  output: ckanext-odm_laws/%(version)s_odc_laws_record.css
+  contents:
+    - odc_laws_record.css
+  extra:
+    preload:
+      - base/main
+
+odc_laws_js:
+  output: ckanext-odm_laws/%(version)s_odc_laws_js.js
+  contents:
+    - odc_laws.js
+  extra:
+    preload:
+      - base/main

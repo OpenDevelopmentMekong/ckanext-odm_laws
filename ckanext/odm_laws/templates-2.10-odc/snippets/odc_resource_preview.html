@@ -1,0 +1,43 @@
+{#
+ODC Resource Preview — resource view/preview section with fullscreen and embed buttons.
+
+res - The resource being displayed.
+pkg - The parent package/dataset.
+
+Usage:
+  {% snippet 'snippets/odc_resource_preview.html', res=res, pkg=pkg %}
+#}
+{% set resource_preview = h.resource_preview(res, pkg) %}
+{% set views_created = res.has_views or resource_preview %}
+
+{% if views_created %}
+<section class="odc-resource-section odc-resource-preview">
+  <div class="odc-resource-section__header">
+    <h2 class="odc-resource-section__title">{{ _('Preview') }}</h2>
+    <div class="odc-resource-actions">
+      <button class="btn btn-success btn-sm" title="{{ _('Full Screen') }}">
+        <i class="fa fa-arrows-alt"></i> {{ _('Full Screen') }}
+      </button>
+      <button class="btn btn-success btn-sm" title="{{ _('Embed') }}">
+        <i class="fa fa-code"></i> {{ _('Embed') }}
+      </button>
+    </div>
+  </div>
+
+  <div class="odc-resource-preview__body">
+    {% if resource_preview and not current_resource_view %}
+      {{ h.resource_preview(res, pkg) }}
+    {% else %}
+      {% for resource_view in c.resource_views %}
+        {% if resource_view == current_resource_view %}
+          {% snippet 'package/snippets/resource_view.html',
+            resource_view=resource_view,
+            resource=res,
+            package=pkg
+          %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+  </div>
+</section>
+{% endif %}

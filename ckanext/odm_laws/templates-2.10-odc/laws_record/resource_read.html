@@ -1,0 +1,115 @@
+{#
+ODC Law Record Resource Read — single resource display page.
+Breadcrumb: Home / Legal Documents / [Package] / [Resource]
+#}
+{% extends "odc_page_law.html" %}
+
+{% block secondary %}{% endblock %}
+
+{% set pkg = g.package or g.pkg_dict %}
+{% set res = g.resource %}
+
+{% block styles %}
+  {{ super() }}
+  {% asset 'odm_laws/odc_laws_record_css' %}
+{% endblock %}
+
+{% block primary_content %}
+<div class="odc-container">
+  {# Breadcrumb: Home / Legal Documents / Package / Resource #}
+  <nav class="odc-breadcrumb odc-resource-breadcrumb" aria-label="breadcrumb">
+    <a href="{{ h.url_for('home.index') }}" class="odc-breadcrumb-home">
+      <i class="fa fa-home"></i>
+    </a>
+    <span class="odc-breadcrumb-sep">/</span>
+    <a href="{{ h.url_for(pkg.type ~ '.search', dataset_type=pkg.type) }}" class="odc-breadcrumb-link">{{ _('Legal Documents') }}</a>
+    <span class="odc-breadcrumb-sep">/</span>
+    <a href="{{ h.url_for(pkg.type ~ '.read', id=pkg.name) }}" class="odc-breadcrumb-link">{{ h.odm_dataset_get_currentlang_data('title_translated', pkg) or pkg.title or pkg.name }}</a>
+    <span class="odc-breadcrumb-sep">/</span>
+    <span class="odc-breadcrumb-current">{{ h.resource_display_name(res) }}</span>
+  </nav>
+
+  {# Header #}
+  <header class="odc-record-header">
+    <div class="odc-record-header-content">
+      <div class="odc-record-header-text">
+        <h1 class="odc-record-title">{{ h.resource_display_name(res) }}</h1>
+        {% set res_desc = h.odm_dataset_get_currentlang_data('description_translated', res) or res.description %}
+        {% if res_desc %}
+        <p class="odc-record-description">{{ res_desc }}</p>
+        {% endif %}
+      </div>
+      <div class="odc-record-header-actions">
+        <button class="btn btn-success odc-header-share-btn">
+          <i class="fa fa-share-alt"></i> {{ _('Share') }}
+        </button>
+        {% if res.url and h.is_url(res.url) %}
+        <a class="btn btn-default" href="{{ res.url }}" target="_blank">
+          <i class="fa fa-download"></i> {{ _('DOWNLOAD') }}
+        </a>
+        {% endif %}
+        {% if h.check_access('package_update', {'id': pkg.id}) %}
+        <a href="{{ h.url_for('laws_record.edit', id=pkg.name) }}" class="btn btn-default">
+          <i class="fa fa-edit"></i> {{ _('Manage') }}
+        </a>
+        {% endif %}
+      </div>
+    </div>
+  </header>
+
+  {# Resource views (PDF.js, image viewer, etc.) #}
+  {% set views = resource_views or c.resource_views or [] %}
+  {% if views %}
+    {% for resource_view in views %}
+      {% snippet "package/snippets/resource_view.html", resource_view=resource_view, resource=res, package=pkg %}
+    {% endfor %}
+  {% else %}
+    {# Fallback: direct download link only #}
+    <div class="odc-card" style="text-align: center; padding: 3rem;">
+      <p style="color: #6b7280; margin-bottom: 1rem;">{{ _('No preview available.') }}</p>
+      {% if res.url and h.is_url(res.url) %}
+      <a class="btn btn-success" href="{{ res.url }}" target="_blank" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 2rem; font-size: 1.125rem;">
+        <i class="fa fa-download"></i> {{ _('Download %(format)s', format=res.format or 'file') }}
+      </a>
+      {% endif %}
+    </div>
+  {% endif %}
+
+  {# Resource Metadata — all rows always shown #}
+  <div class="odc-card">
+    <h3 class="odc-card-title">{{ _('Metadata') }}</h3>
+    <table class="odc-metadata-table">
+      <tbody>
+        <tr>
+          <th>{{ _('Last updated') }}</th>
+          <td>{{ h.render_datetime(res.last_modified, date_format='%B %d, %Y') if res.last_modified else '—' }}</td>
+        </tr>
+        <tr>
+          <th>{{ _('Created') }}</th>
+          <td>{{ h.render_datetime(res.created, date_format='%B %d, %Y') if res.created else '—' }}</td>
+        </tr>
+        <tr>
+          <th>{{ _('Format') }}</th>
+          <td>{{ res.format or '—' }}</td>
+        </tr>
+        <tr>
+          <th>{{ _('License') }}</th>
+          <td>{{ pkg.license_title or pkg.license_id or '—' }}</td>
+        </tr>
+        <tr>
+          <th>{{ _('Name') }}</th>
+          <td>{{ h.resource_display_name(res) or '—' }}</td>
+        </tr>
+        <tr>
+          <th>{{ _('Description') }}</th>
+          <td>{{ res_desc or '—' }}</td>
+        </tr>
+        <tr>
+          <th>{{ _("Resource's languages") }}</th>
+          <td>{{ res.odm_language or res.get('odm_language', '—') or '—' }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}

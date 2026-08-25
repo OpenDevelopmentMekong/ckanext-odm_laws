@@ -1,0 +1,28 @@
+{#
+ODC Law Search Sorting — dropdown for relevance / date sorting.
+
+Usage:
+  {% snippet 'snippets/odc_law_sorting.html' %}
+#}
+    <div class="odc-sorting">
+      <h2 class="sorting-label">{{ _('Sorted by') }}</h2>
+      <form method="get" action="{{ h.url_for('laws_record.search') }}" class="sorting-form">
+        {# Preserve existing query parameters #}
+        {% if c.q %}
+          <input type="hidden" name="q" value="{{ c.q }}" />
+        {% endif %}
+        {% for param, value in request.args.items() %}
+          {% if param != 'sort' %}
+            <input type="hidden" name="{{ param }}" value="{{ value }}" />
+          {% endif %}
+        {% endfor %}
+				<span id="width-tester" style="font-family: 'DM Serif Display', 'Khmer OS Kangrey'; font-size: 2rem; font-weight: 700; position: absolute; visibility: hidden; white-space: pre;"></span>
+
+    <select id="sorting-dropdown" class="sorting-dropdown" name="sort" onchange="this.form.submit()">
+       <option value="score desc" {% if request.args.sort == 'score desc' or not request.args.sort %}selected{% endif %}>
+  {{ _('Relevance') }} </option>
+       <option value="metadata_created desc" {% if request.args.sort == 'metadata_created desc' %}selected{% endif %}>{{ _('Date: Newest first') }}</option>
+       <option value="metadata_created asc" {% if request.args.sort == 'metadata_created asc' %}selected{% endif %}>{{ _('Date: Oldest first') }}</option>
+    </select>
+        </form>
+    </div>

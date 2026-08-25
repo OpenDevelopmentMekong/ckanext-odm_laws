@@ -1,0 +1,129 @@
+{# ODC Law Search Table Row — single row in the desktop table for a law package.
+package - The package/dataset to display. Usage: {% for package in page.items
+%} {% snippet 'snippets/odc_law_table_row.html', package=package %} {% endfor %}
+#}
+<tr class="item-row">
+  <td class="item-title-cell">
+    <div class="item">
+      {# Determine file type class based on resource format #} {% set
+      file_format = '' %} {% if package.resources and package.resources[0] %} {%
+      set file_format = package.resources[0].format|lower %} {% endif %} {# hide
+      for time being#}
+      <!-- <div class="item-thumbnail{% if file_format %} file-{{ file_format }}{% endif %}"> -->
+      <!-- <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"> -->
+      <!-- <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path> -->
+      <!-- </svg> -->
+      <!-- </div> -->
+      <div class="item-details">
+        <h3 class="item-name">
+          {% set is_private = package.get('private', False) if package.get else
+          package.private %} {% if is_private %}
+          <span class="dataset-private label label-inverse">
+            <i class="icon-lock"></i>
+            {{ _('Private') }}
+          </span>
+          {% endif %}
+          <a href="{{ h.url_for('laws_record.read', id=package.name) }}">
+            {% if "title_translated" in package and
+            h.odm_dataset_get_current_language() in package.title_translated %}
+            {{ package.title_translated[h.odm_dataset_get_current_language()] }}
+            {% else %} {{ package.title or package.name }} {% endif %}
+          </a>
+          {% set pkg_state = package.get('state', '') if package.get else
+          package.state %} {% if pkg_state and pkg_state.startswith('draft') %}
+          <span class="label label-info">{{ _('Draft') }}</span>
+          {% elif pkg_state and pkg_state.startswith('deleted') %}
+          <span class="label label-important">{{ _('Deleted') }}</span>
+          {% endif %}
+        </h3>
+        {% if "notes_translated" in package and
+        h.odm_dataset_get_current_language() in package.notes_translated %}
+        <p class="item-description">
+          {{
+          h.markdown_extract(package.notes_translated[h.odm_dataset_get_current_language()],
+          extract_length=180) }}
+        </p>
+        {% elif package.notes %}
+        <p class="item-description">
+          {{ h.markdown_extract(package.notes, extract_length=180) }}
+        </p>
+        {% endif %} {% if package.odm_spatial_range %}
+        <div class="item-sublist">
+          <span class="country-name">
+            {% if "odm_spatial_range_translated" in package and
+            h.odm_dataset_get_current_language() in
+            package.odm_spatial_range_translated %} {{
+            package.odm_spatial_range_translated[h.odm_dataset_get_current_language()]
+            }} {% else %} {{ package.odm_spatial_range }} {% endif %}
+          </span>
+          <ul class="dataset-resources unstyled">
+            {% endif %} {% block resources_inner %} {% for resource in
+            h.dict_list_reduce(package.resources, 'format') %}
+            <li class="item_resource">
+              {% if package.type == h.odm_library_get_dataset_type() %}
+              <a
+                href="{{ h.url_for('%s.read' % package.type, id=package.name) }}"
+                class="label"
+                data-format="{{ resource.lower() }}"
+                >{{ resource }}</a
+              >
+              {% else %}
+              <a
+                href="{{ h.url_for('%s.read' % package.type, id=package.name) }}"
+                class="label"
+                data-format="{{ resource.lower() }}"
+                >{{ resource }}</a
+              >
+              {% endif %}
+            </li>
+            {% endfor %} {% endblock %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </td>
+  <td class="item-type">
+    <span>
+      {% if "odm_document_type_translated" in package and
+      h.odm_dataset_get_current_language() in
+      package.odm_document_type_translated %} {{
+      package.odm_document_type_translated[h.odm_dataset_get_current_language()]
+      }} {% elif package.odm_document_type %} {{
+      h.odm_dataset_get_resource_name_for_field_value('odm_document_type',
+      package.odm_document_type) or package.odm_document_type }} {% else %} {{
+      package.type }} {% endif %}
+    </span>
+  </td>
+  <td class="item-reference">
+    <span>
+      {% if package.odm_document_number %} {% if package.odm_document_number is
+      mapping and h.odm_dataset_get_current_language() in
+      package.odm_document_number %} {{
+      package.odm_document_number[h.odm_dataset_get_current_language()] }} {%
+      elif package.odm_document_number is mapping and 'en' in
+      package.odm_document_number %} {{ package.odm_document_number.en }} {%
+      else %} {{ package.odm_document_number }} {% endif %} {% elif
+      package.odm_reference_number %} {{ package.odm_reference_number }} {% else
+      %} {{ package.id|truncate(10) }} {% endif %}
+    </span>
+  </td>
+  <td class="item-date">
+    <span>
+      {% if package.odm_date_signing %} {% snippet
+      'snippets/local_friendly_date_noicon.html',
+      datetime_obj=package.odm_date_signing %} {% elif package.metadata_created
+      %} {% snippet 'snippets/local_friendly_date_noicon.html',
+      datetime_obj=package.metadata_created %} {% endif %}
+    </span>
+  </td>
+  <td class="item-date">
+    <span>
+      {% if package.odm_date_effective %} {% snippet
+      'snippets/local_friendly_date_noicon.html',
+      datetime_obj=package.odm_date_effective %} {% elif
+      package.metadata_created %} {% snippet
+      'snippets/local_friendly_date_noicon.html',
+      datetime_obj=package.metadata_created %} {% endif %}
+    </span>
+  </td>
+</tr>

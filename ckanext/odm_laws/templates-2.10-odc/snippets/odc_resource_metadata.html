@@ -1,0 +1,76 @@
+{#
+ODC Resource Metadata — metadata table showing resource/package details.
+
+res - The resource being displayed.
+pkg - The parent package/dataset.
+
+Usage:
+  {% snippet 'snippets/odc_resource_metadata.html', res=res, pkg=pkg %}
+#}
+<section class="odc-resource-section odc-resource-metadata">
+  <div class="odc-resource-section__header">
+    <h2 class="odc-resource-section__title">{{ _('Metadata') }}</h2>
+  </div>
+
+  <div class="odc-resource-metadata-body">
+    <table class="odc-resource-metadata-table">
+      <tbody>
+        {% if pkg.odm_spatial_range %}
+        <tr>
+          <td>{{ _('Geographic area') }}</td>
+          <td>{{ pkg.odm_spatial_range }}</td>
+        </tr>
+        {% endif %}
+
+        {% if pkg.odm_reference_number %}
+        <tr>
+          <td>{{ _('Document reference #') }}</td>
+          <td>{{ pkg.odm_reference_number }}</td>
+        </tr>
+        {% endif %}
+
+        {% if pkg.odm_issuing_agency %}
+        <tr>
+          <td>{{ _('Issuing agency/parties') }}</td>
+          <td>{{ pkg.odm_issuing_agency }}</td>
+        </tr>
+        {% endif %}
+
+        {% if pkg.odm_language %}
+        <tr>
+          <td>{{ _('Language') }}</td>
+          <td>{{ pkg.odm_language }}</td>
+        </tr>
+        {% endif %}
+
+        {% if pkg.odm_document_type %}
+        <tr>
+          <td>{{ _('Document type') }}</td>
+          <td>{{ pkg.odm_document_type }}</td>
+        </tr>
+        {% endif %}
+
+        {% if pkg.odm_date_promulgation %}
+        <tr>
+          <td>{{ _('Promulgation date') }}</td>
+          <td>{{ h.render_datetime(pkg.odm_date_promulgation, date_format='%d %B %Y') }}</td>
+        </tr>
+        {% endif %}
+
+        {% if pkg.odm_laws_status %}
+        <tr>
+          <td>{{ _('Status') }}</td>
+          <td class="odc-status-{{ pkg.odm_laws_status|lower }}">{{ pkg.odm_laws_status }}</td>
+        </tr>
+        {% endif %}
+
+        {% if pkg.tags %}
+        <tr>
+          <td>{{ _('Tags') }}</td>
+          <td>{{ pkg.tags|join(', ') }}</td>
+        </tr>
+        {% endif %}
+      </tbody>
+    </table>
+  </div>
+</section>

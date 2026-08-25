@@ -20,6 +20,50 @@ def get_dataset_type():
 
 	return 'laws_record'
 
+def get_related_documents(package_id, limit=5):
+	'''Search for law records sharing at least one taxonomy topic with the
+	given package, excluding the package itself.
+
+	Returns a dict like package_search results:
+	    {results: [...], count: N, topic: <first shared topic>}
+	'''
+	try:
+		import ckan.logic as logic
+		context = {'ignore_auth': True}
+		pkg = logic.get_action('package_show')(context, {'id': package_id})
+	except Exception:
+		return {'results': [], 'count': 0, 'topic': None}
+
+	topics = pkg.get('taxonomy') or []
+	if isinstance(topics, str):
+		raw = topics.strip()
+		if raw.startswith('{') and raw.endswith('}'):
+			raw = raw[1:-1]
+		topics = [t.strip().strip('"') for t in raw.split(',')]
+		topics = [t for t in topics if t]
+	if not topics:
+		return {'results': [], 'count': 0, 'topic': None}
+
+	# Build fq: dataset_type + (topic OR topic ...) - current id
+	or_clause = ' OR '.join('taxonomy:"{0}"'.format(t.replace('"', '\\"')) for t in topics)
+	fq = '+dataset_type:laws_record +({0}) -id:{1}'.format(or_clause, pkg['id'])
+
+	try:
+		context = {'ignore_auth': True}
+		result = toolkit.get_action('package_search')(context, {
+			'fq': fq,
+			'rows': limit,
+			'sort': 'metadata_modified desc',
+		})
+		return {
+			'results': result.get('results', []),
+			'count': result.get('count', 0),
+			'topic': topics[0],
+		}
+	except Exception as e:
+		log.error('get_related_documents failed: %s', e)
+		return {'results': [], 'count': 0, 'topic': None}
+
 def create_default_issue_laws_record(pkg_info, context=None):
 	''' Uses CKAN API to add a default Issue as part of the vetting workflow for library records'''
 	try:

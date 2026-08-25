@@ -1,0 +1,140 @@
+{# ODC Law Card Item — card layout for mobile/tablet for a law package. package
+- The package/dataset to display. Usage: {% for package in page.items %} {%
+snippet 'snippets/odc_law_card_item.html', package=package %} {% endfor %} #}
+<article class="item-card">
+  <!-- Thumbnail / File Icon -->
+  {# {% set card_file_format = '' %} {% if package.resources and
+  package.resources[0] %} {% set card_file_format =
+  package.resources[0].format|lower %} {% endif %}
+  <div
+    class="item-card-thumbnail{% if card_file_format %} file-{{ card_file_format }}{% endif %}"
+  >
+    {% if package.thumbnail %}
+    <img
+      src="{{ package.thumbnail }}"
+      alt="{{ package.title or package.name }}"
+    />
+    {% else %}
+    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path
+        d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+      ></path>
+    </svg>
+    {% endif %}
+  </div>
+  #}
+
+  <!-- Content Area -->
+  <div class="odc-content-area">
+    <h3 class="odc-item-title">
+      {% set is_private = package.get('private', False) if package.get else
+      package.private %} {% if is_private %}
+      <span class="label label-inverse status-private">
+        <i class="icon-lock"></i> {{ _('Private') }}
+      </span>
+      {% endif %} {% set pkg_state = package.get('state', '') if package.get
+      else package.state %} {% if pkg_state and pkg_state.startswith('draft') %}
+      <span class="label label-info status-draft">{{ _('Draft') }}</span>
+      {% elif pkg_state and pkg_state.startswith('deleted') %}
+      <span class="label label-important status-deleted"
+        >{{ _('Deleted') }}</span
+      >
+      {% endif %}
+      <a href="{{ h.url_for('laws_record.read', id=package.name) }}">
+        {% if "title_translated" in package and
+        h.odm_dataset_get_current_language() in package.title_translated %} {{
+        package.title_translated[h.odm_dataset_get_current_language()] }} {%
+        else %} {{ package.title or package.name }} {% endif %}
+      </a>
+    </h3>
+
+    <!-- Metadata Row -->
+    <div class="odc-meta-row">
+      <span>
+        {% if package.odm_date_signing %} {% snippet
+        'snippets/local_friendly_date.html',
+        datetime_obj=package.odm_date_signing %} {% elif
+        package.metadata_created %} {% snippet
+        'snippets/local_friendly_date.html',
+        datetime_obj=package.metadata_created %} {% endif %}
+      </span>
+      <span class="meta-dot"></span>
+      <span>
+        {% if "odm_document_type_translated" in package and
+        h.odm_dataset_get_current_language() in
+        package.odm_document_type_translated %} {{
+        package.odm_document_type_translated[h.odm_dataset_get_current_language()]
+        }} {% elif package.odm_document_type %} {{
+        h.odm_dataset_get_resource_name_for_field_value('odm_document_type',
+        package.odm_document_type) or package.odm_document_type }} {% else %} {{
+        package.type }} {% endif %}
+      </span>
+    </div>
+
+    <!-- Description / Notes -->
+    {% if "notes_translated" in package and h.odm_dataset_get_current_language()
+    in package.notes_translated %}
+    <p class="item-description">
+      {{
+      h.markdown_extract(package.notes_translated[h.odm_dataset_get_current_language()],
+      extract_length=180) }}
+    </p>
+    {% elif package.notes %}
+    <p class="item-description">
+      {{ h.markdown_extract(package.notes, extract_length=180) }}
+    </p>
+    {% endif %}
+
+    <!-- Tags / Labels Section -->
+    <div class="odc-label-container">
+      {% if package.odm_spatial_range %}
+      <div class="item-card-country">
+        {% if "odm_spatial_range_translated" in package and
+        h.odm_dataset_get_current_language() in
+        package.odm_spatial_range_translated %} {{
+        package.odm_spatial_range_translated[h.odm_dataset_get_current_language()]
+        }} {% else %} {{ package.odm_spatial_range }} {% endif %}
+      </div>
+      {% endif %} {% if card_file_format %}
+      <div class="item-card-format">
+        <i class="icon-file-text"></i> {{ card_file_format.upper() }}
+      </div>
+      {% endif %} {% if package.odm_document_number %}
+      <div class="item-card-ref">
+        <span class="meta-label">{{ _('Reference No.') }}</span>
+        {% if package.odm_document_number is mapping and
+        h.odm_dataset_get_current_language() in package.odm_document_number %}
+        {{ package.odm_document_number[h.odm_dataset_get_current_language()] }}
+        {% elif package.odm_document_number is mapping and 'en' in
+        package.odm_document_number %} {{ package.odm_document_number.en }} {%
+        else %} {{ package.odm_document_number }} {% endif %}
+      </div>
+      {% endif %}
+      <ul class="dataset-resources unstyled">
+        {% block resources_inner %} {% for resource in
+        h.dict_list_reduce(package.resources, 'format') %}
+        <li class="item_resource">
+          {% if package.type == h.odm_library_get_dataset_type() %}
+          <a
+            href="{{ h.url_for('%s.read' % package.type, id=package.name) }}"
+            class="label"
+            data-format="{{ resource.lower() }}"
+            >{{ resource }}</a
+          >
+          {% else %}
+          <a
+            href="{{ h.url_for('%s.read' % package.type, id=package.name) }}"
+            class="label"
+            data-format="{{ resource.lower() }}"
+            >{{ resource }}</a
+          >
+          {% endif %}
+        </li>
+        {% endfor %} {% endblock %}
+      </ul>
+    </div>
+  </div>
+</article>

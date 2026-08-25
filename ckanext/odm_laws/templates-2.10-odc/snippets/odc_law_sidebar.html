@@ -1,0 +1,115 @@
+{#
+ODC Law Search Sidebar — filter facets for legal documents page.
+
+Usage:
+  {% snippet 'snippets/odc_law_sidebar.html' %}
+#}
+{# ODC-styled sidebar with dynamic filters #}
+  <div class="odc-sidebar-design" id="mobileSidebar">
+    <div class="sidebar-header">
+      <span class="sidebar-title">
+		 <svg width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.643555 1.29199C0.288086 1.29199 0.000976562 0.998047 0.000976562 0.642578C0.000976562 0.287109 0.28125 0 0.643555 0H13.3721C13.7275 0 14.0146 0.287109 14.0146 0.642578C14.0146 0.998047 13.7275 1.29199 13.3721 1.29199H0.643555ZM2.05859 4.82617C1.70312 4.82617 1.41602 4.52539 1.41602 4.17676C1.41602 3.82129 1.69629 3.52734 2.05859 3.52734H11.9844C12.3467 3.52734 12.627 3.81445 12.627 4.17676C12.627 4.53223 12.3398 4.82617 11.9844 4.82617H2.05859ZM3.44629 8.35352C3.08398 8.35352 2.80371 8.05957 2.80371 7.7041C2.80371 7.34863 3.08398 7.06152 3.44629 7.06152H10.5967C10.959 7.06152 11.2393 7.34863 11.2393 7.7041C11.2393 8.05957 10.959 8.35352 10.5967 8.35352H3.44629Z" fill="black"/>
+		  </svg>
+		  {{ _('Filters') }}</span>
+      <div class="sidebar-header-actions">
+        <a href="{{ h.url_for('laws_record.search') }}" class="sidebar-clear">{{ _('Clear') }}</a>
+        <button class="mobile-sidebar-close" id="closeSidebarBtn" aria-label="Close filters">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <nav class="sidebar-filters">
+      {# This sidebar only renders on the law search page (law_search), so
+         the facet sections always apply. #}
+      {# 8. Topics #}
+	  {% set topic_items = h.get_facet_items_dict('taxonomy', c.search_facets) %}
+	  {{ h.snippet('snippets/odc_facet_list.html',
+	               title=_('Topics'),
+	               name='taxonomy',
+	               items=topic_items,
+	               search_facets=c.search_facets,
+	               hide_empty=true) }}
+
+		{# 7. Document Type #}
+	  {% set doc_type_items = h.get_facet_items_dict('odm_document_type', c.search_facets) %}
+	  {{ h.snippet('snippets/odc_facet_list.html',
+	               title=_('Document Type'),
+	               name='odm_document_type',
+	               items=doc_type_items,
+	               search_facets=c.search_facets,
+	               hide_empty=true) }}
+
+		{# Issuing Agency Parties #}
+    {% set agency_items = h.get_facet_items_dict('odm_laws_issuing_agency_parties', c.search_facets) %}
+    {{ h.snippet('snippets/odc_facet_list.html',
+                     title=_('Issuing agency/parties'),
+                     name='odm_laws_issuing_agency_parties',
+                     items=agency_items,
+                     search_facets=c.search_facets,
+                     hide_empty=true) }}
+
+        {# Implementing Agencies #}
+        {% set impl_agency_items = h.get_facet_items_dict('odm_laws_implementing_agencies', c.search_facets) %}
+        {{ h.snippet('snippets/odc_facet_list.html',
+                     title=_('Implementing agencies'),
+                     name='odm_laws_implementing_agencies',
+                     items=impl_agency_items,
+                     search_facets=c.search_facets,
+                     hide_empty=true) }}
+			  	  	  {# 1. Country #}
+    	{#{% set country_items = h.get_facet_items_dict('odm_spatial_range_list') %}
+        {{ h.snippet('snippets/odc_facet_list.html',
+                     title=_('Country'),
+                     name='odm_spatial_range_list',
+                     items=country_items,
+                     search_facets=c.search_facets,
+                     hide_empty=true) }}
+#}
+        {# 2. Language #}
+        {% set language_items = h.get_facet_items_dict('odm_language_list', c.search_facets) %}
+        {{ h.snippet('snippets/odc_facet_list.html',
+                     title=_('Language'),
+                     name='odm_language_list',
+                     items=language_items,
+                     search_facets=c.search_facets,
+                     hide_empty=true) }}
+
+               {# 9. License #}
+      {#{% set license_items = h.get_facet_items_dict('license_id') %}
+       {{ h.snippet('snippets/odc_facet_list.html',
+                     title=_('License'),
+                     name='license_id',
+                     items=license_items,
+                     search_facets=c.search_facets,
+                     hide_empty=true) }}
+#}
+	  	{# Document Format/Type (PDF etc) #}
+{#      {% set format_items = h.get_facet_items_dict('res_format') %}
+        {{ h.snippet('snippets/odc_facet_list.html',
+                     title=_('Format'),
+                     name='res_format',
+                     items=format_items,
+                     search_facets=c.search_facets,
+                     hide_empty=true) }}
+#}
+
+ {# 6. Organizations #}
+	  {% set org_items = h.get_facet_items_dict('organization', c.search_facets) %}
+	  {{ h.snippet('snippets/odc_facet_list.html',
+	               title=_('Organizations'),
+	               name='organization',
+	               items=org_items,
+	               search_facets=c.search_facets,
+	               hide_empty=true) }}
+
+      {# Render dynamic facets using ODC design #}
+
+    </nav>
+  </div>
+
+  {# Mobile sidebar overlay #}
+  <div class="mobile-sidebar-overlay" id="sidebarOverlay"></div>

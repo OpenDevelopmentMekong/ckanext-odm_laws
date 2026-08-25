@@ -3,7 +3,7 @@
 {% block secondary_content %}
 	{% if dataset_type == 'laws_record' %}
 		{% block odm_laws_pdf_thumbnail %}
-			{% set resources = c.pkg_dict.resources %}
+			{% set resources = g.pkg_dict.resources %}
 			{% for resource in resources%}
 				{% if resource.name == 'PDF Thumbnail' %}
 					<h2 class="module-heading"><i class="icon-building"></i> {{ _('Document preview') }}</h2>

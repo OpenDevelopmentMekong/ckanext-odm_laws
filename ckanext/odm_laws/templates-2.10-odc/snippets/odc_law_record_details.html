@@ -1,0 +1,103 @@
+{#
+ODC Law Record Details — metadata table with ordered fields.
+pkg - The law package being displayed.
+
+Usage:
+  {% snippet 'snippets/odc_law_record_details.html', pkg=pkg %}
+#}
+<div class="odc-card">
+  <h3 class="odc-card-title">{{ _('Metadata') }}</h3>
+
+  <table class="odc-metadata-table">
+    <tbody>
+      {% if pkg.odm_document_number or pkg.odm_reference_document %}
+      <tr>
+        <th>{{ _('Document reference #') }}</th>
+        <td>{{ h.odm_dataset_get_currentlang_data('odm_document_number', pkg) or pkg.odm_reference_document }}</td>
+      </tr>
+      {% endif %}
+
+      {% if pkg.odm_document_type %}
+      <tr>
+        <th>{{ _('Formal type of document') }}</th>
+        <td>{{ h.odm_dataset_get_resource_name_for_field_value('odm_document_type', pkg.odm_document_type) or pkg.odm_document_type }}</td>
+      </tr>
+      {% endif %}
+
+      {% if pkg.odm_date_promulgation or pkg.odm_promulgation_date %}
+      <tr>
+        <th>{{ _('Adoption date/Promulgation date/Signing date') }}</th>
+        <td>{{ h.render_datetime(pkg.odm_date_promulgation or pkg.odm_promulgation_date, date_format='%d %B %Y') }}</td>
+      </tr>
+      {% endif %}
+
+      {% if pkg.odm_effective_date %}
+      <tr>
+        <th>{{ _('Effective/Enforced Date') }}</th>
+        <td>{{ h.render_datetime(pkg.odm_effective_date, date_format='%d %B %Y') }}</td>
+      </tr>
+      {% endif %}
+
+      {% if pkg.odm_laws_status %}
+      <tr>
+        <th>{{ _('Status') }}</th>
+        <td class="odc-status-{{ pkg.odm_laws_status|lower }}">{{ h.odm_dataset_get_resource_name_for_field_value('odm_laws_status', pkg.odm_laws_status) or pkg.odm_laws_status }}</td>
+      </tr>
+      {% endif %}
+
+      {% if pkg.odm_spatial_range %}
+      <tr>
+        <th>{{ _('Geographic area') }}</th>
+        <td>{{ pkg.odm_spatial_range }}</td>
+      </tr>
+      {% endif %}
+
+      {% if pkg.odm_laws_issuing_agency_parties %}
+      <tr>
+        <th>{{ _('Issuing agency/parties') }}</th>
+        <td>
+          {% if pkg.odm_laws_issuing_agency_parties is string %}
+            {{ h.odm_dataset_get_resource_name_for_field_value('odm_laws_issuing_agency_parties', pkg.odm_laws_issuing_agency_parties) or pkg.odm_laws_issuing_agency_parties }}
+          {% else %}
+            {% for v in pkg.odm_laws_issuing_agency_parties %}{{ h.odm_dataset_get_resource_name_for_field_value('odm_laws_issuing_agency_parties', v) or v }}{{ ', ' if not loop.last }}{% endfor %}
+          {% endif %}
+        </td>
+      </tr>
+      {% endif %}
+
+      {% if pkg.odm_laws_implementing_agencies %}
+      <tr>
+        <th>{{ _('Implementing agencies') }}</th>
+        <td>
+          {% if pkg.odm_laws_implementing_agencies is string %}
+            {{ h.odm_dataset_get_resource_name_for_field_value('odm_laws_implementing_agencies', pkg.odm_laws_implementing_agencies) or pkg.odm_laws_implementing_agencies }}
+          {% else %}
+            {% for v in pkg.odm_laws_implementing_agencies %}{{ h.odm_dataset_get_resource_name_for_field_value('odm_laws_implementing_agencies', v) or v }}{{ ', ' if not loop.last }}{% endfor %}
+          {% endif %}
+        </td>
+      </tr>
+      {% endif %}
+
+      {% if pkg.odm_laws_official_publication_reference %}
+      <tr>
+        <th>{{ _('Publication reference') }}</th>
+        <td>{{ pkg.odm_laws_official_publication_reference }}</td>
+      </tr>
+      {% endif %}
+
+      {% if pkg.odm_contact %}
+      <tr>
+        <th>{{ _('Contact') }}</th>
+        <td>{{ h.odm_dataset_get_currentlang_data('odm_contact', pkg) or pkg.odm_contact.get('en', '') }}</td>
+      </tr>
+      {% endif %}
+
+      {% if pkg.odm_access_and_use_constraints %}
+      <tr>
+        <th>{{ _('Access and use constraints') }}</th>
+        <td>{{ h.odm_dataset_get_currentlang_data('odm_access_and_use_constraints', pkg) or pkg.odm_access_and_use_constraints.get('en', '') }}</td>
+      </tr>
+      {% endif %}
+    </tbody>
+  </table>
+</div>

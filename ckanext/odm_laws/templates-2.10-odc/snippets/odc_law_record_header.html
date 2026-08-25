@@ -1,0 +1,79 @@
+{# ODC Law Record Header — breadcrumb, title, description, share button.
+pkg - The law package being displayed. Usage:
+{% snippet 'snippets/odc_law_record_header.html', pkg=pkg %} #}
+<header class="odc-record-header">
+	{# Breadcrumb #} {% snippet 'snippets/odc_breadcrumbs.html', items=[ {'label':
+	_('Legal Documents'), 'url': h.url_for(pkg.type ~ '.search',
+	dataset_type=pkg.type)}, {'label':
+	h.odm_dataset_get_currentlang_data('title_translated', pkg) or pkg.title or
+	pkg.name} ] %}
+
+	{# Record sub-nav: Law Record / Groups / Activity Stream / Issues #}
+	<nav class="odc-record-nav" aria-label="record sections">
+		<ul>
+			<li class="active">
+				<a href="{{ h.url_for(pkg.type ~ '.read', id=pkg.name) }}">
+					<i class="fa fa-book"></i> {{ _('Law Record') }}
+				</a>
+			</li>
+			<li>
+				<a href="{{ h.url_for(pkg.type ~ '.groups', id=pkg.name) }}">
+					<i class="fa fa-users"></i> {{ _('Groups') }}
+				</a>
+			</li>
+			<li>
+				<a href="{{ h.url_for('activity.package_activity', id=pkg.name) }}">
+					<i class="fa fa-clock-o"></i> {{ _('Activity Stream') }}
+				</a>
+			</li>
+			{% if h.issues_enabled(pkg) and h.check_access('issue_show',
+			{'dataset_id': pkg.id}) %}
+			<li>
+				<a href="{{ h.url_for('issues.home_view', package_id=pkg.name) }}">
+					<i class="fa fa-warning"></i> {{ _('Issues') }}
+				</a>
+			</li>
+			{% endif %}
+		</ul>
+	</nav>
+
+	<div class="odc-record-header-content">
+		<div class="odc-record-header-text">
+			{# Title #}
+			<h1 class="odc-record-title">
+				{{ h.odm_dataset_get_currentlang_data('title_translated', pkg) or
+				pkg.title or pkg.name }}
+			</h1>
+
+			{# Description #} {% if pkg.notes or pkg.notes_translated %}
+			<p class="odc-record-description">
+				{{ h.odm_dataset_get_currentlang_data('notes_translated', pkg) or
+				h.markdown_extract(pkg.notes, extract_length=300) }}
+			</p>
+			{% endif %} {# Meta bar: published date #}
+			<div class="odc-record-meta-bar">
+				<span class="odc-record-meta-item">
+					<strong>{{ _('Published date') }}:</strong>
+					{{ h.render_datetime(pkg.metadata_created) or
+					'' }}
+				</span>
+			</div>
+		</div>
+
+		<div class="odc-record-header-actions">
+			{# Share button #}
+			<button class="btn btn-success " >
+				<i class="fa fa-share-alt"></i> {{ _('Share') }}
+			</button>
+			{# Edit button (if permitted) #} {% if h.check_access('package_update',
+			{'id': pkg.id}) %}
+			<a
+				href="{{ h.url_for('laws_record.edit', id=pkg.name) }}"
+				class="btn btn-default"
+			>
+				<i class="fa fa-edit"></i> {{ _('Manage') }}
+			</a>
+			{% endif %}
+		</div>
+	</div>
+</header>

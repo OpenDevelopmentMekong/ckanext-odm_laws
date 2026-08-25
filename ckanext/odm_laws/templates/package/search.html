@@ -1,9 +1,13 @@
-{% ckan_extends %}
+{# Router: laws_record search renders the ODC law design (ported 2.10);
+   all other dataset types fall through to the shared search chain. #}
+{% if dataset_type == 'laws_record' %}
+  {% extends "law_search.html" %}
+{% else %}
+  {% ckan_extends %}
+{% endif %}
 
 {% block breadcrumb_content %}
-	{% if dataset_type == 'laws_record' %}
-		<li class="active">{{ h.nav_link(_('Laws'), named_route='laws_record.search', highlight_actions = 'new index') }}</li>
-	{% else %}
+	{% if dataset_type != 'laws_record' %}
 		{{super()}}
 	{% endif %}
 {% endblock %}
