@@ -9,6 +9,7 @@ import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
 from ckan.lib.base import render
 
+
 DEBUG = True
 
 log = logging.getLogger(__name__)
@@ -28,9 +29,7 @@ def get_related_documents(package_id, limit=5):
 	    {results: [...], count: N, topic: <first shared topic>}
 	'''
 	try:
-		import ckan.logic as logic
-		context = {'ignore_auth': True}
-		pkg = logic.get_action('package_show')(context, {'id': package_id})
+		pkg = toolkit.get_action('package_show')(None, {'id': package_id})
 	except Exception:
 		return {'results': [], 'count': 0, 'topic': None}
 
@@ -49,8 +48,7 @@ def get_related_documents(package_id, limit=5):
 	fq = '+dataset_type:laws_record +({0}) -id:{1}'.format(or_clause, pkg['id'])
 
 	try:
-		context = {'ignore_auth': True}
-		result = toolkit.get_action('package_search')(context, {
+		result = toolkit.get_action('package_search')(None, {
 			'fq': fq,
 			'rows': limit,
 			'sort': 'metadata_modified desc',
