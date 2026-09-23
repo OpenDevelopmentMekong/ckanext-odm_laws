@@ -101,7 +101,8 @@ a:hover {
 	gap: 0.5rem;
 	margin-bottom: 1.5rem;
 	font-size: 1.25rem;
-	flex-wrap: wrap;
+	/* One line always: the title (last crumb) absorbs any overflow. */
+	flex-wrap: nowrap;
 }
 .odc-breadcrumb-home {
 	color: #6b7280;
@@ -118,9 +119,9 @@ a:hover {
 	color: #6b7280;
 	text-decoration: none;
 	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	max-width: 200px;
+	/* Crumb links are short (e.g. "Legal Documents") — show in full,
+	   never truncate. Long overflow is absorbed by the current crumb. */
+	flex-shrink: 0;
 }
 .odc-breadcrumb-link:hover {
 	color: #65a30d;
@@ -131,6 +132,11 @@ a:hover {
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
+	/* Flex child: without min-width:0 it never shrinks. Fluid width:
+	   grows naturally when short, ellipsizes only at the row edge. */
+	min-width: 0;
+	max-width: 100%;
+	flex-shrink: 1;
 }
 
 /* Language-specific overrides */
@@ -144,6 +150,15 @@ body.odc:lang(km) {
 		BlinkMacSystemFont,
 		"Segoe UI",
 		sans-serif;
+	font-size: 1rem; /* 16px base for Khmer — Khmer glyphs need more room than Latin */
+}
+
+/* Headings render at 400: the display/Khmer faces only ship weight 400,
+   anything higher is synthetic fake-bold (smudged Khmer strokes) */
+body.odc:lang(km) h1,
+body.odc:lang(km) h2,
+body.odc:lang(km) h3 {
+	font-weight: 400;
 }
 
 /* Heading overrides for Khmer language */
@@ -173,6 +188,14 @@ body.odc:lang(en) {
 		BlinkMacSystemFont,
 		"Segoe UI",
 		sans-serif;
+	font-size: 0.875rem; /* 14px base for English (explicit; matches body.odc.odc-body) */
+}
+
+/* Same 400 cap for headings — DM Serif Display has no 600/700 face */
+body.odc:lang(en) h1,
+body.odc:lang(en) h2,
+body.odc:lang(en) h3 {
+	font-weight: 400;
 }
 
 /* Heading overrides for English language */
@@ -384,6 +407,20 @@ body.odc:lang(en) span {
 		BlinkMacSystemFont,
 		"Segoe UI",
 		sans-serif;
+	font-size: 1rem; /* 16px base for Khmer */
+}
+
+/* Read-page headings at 400 too (same fake-bold rationale) */
+.odc-page:lang(km) h1,
+.odc-page:lang(km) h2,
+.odc-page:lang(km) h3,
+.odc-resource-read:lang(km) h1,
+.odc-resource-read:lang(km) h2,
+.odc-resource-read:lang(km) h3,
+.odc-resource-container:lang(km) h1,
+.odc-resource-container:lang(km) h2,
+.odc-resource-container:lang(km) h3 {
+	font-weight: 400;
 }
 
 .odc-page:lang(km) h1,
@@ -417,6 +454,20 @@ body.odc:lang(en) span {
 		BlinkMacSystemFont,
 		"Segoe UI",
 		sans-serif;
+	font-size: 0.875rem; /* 14px base for English */
+}
+
+/* Read-page headings at 400 for English too */
+.odc-page:lang(en) h1,
+.odc-page:lang(en) h2,
+.odc-page:lang(en) h3,
+.odc-resource-read:lang(en) h1,
+.odc-resource-read:lang(en) h2,
+.odc-resource-read:lang(en) h3,
+.odc-resource-container:lang(en) h1,
+.odc-resource-container:lang(en) h2,
+.odc-resource-container:lang(en) h3 {
+	font-weight: 400;
 }
 
 .odc-page:lang(en) h1,

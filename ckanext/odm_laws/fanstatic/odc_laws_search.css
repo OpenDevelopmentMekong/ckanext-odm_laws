@@ -534,7 +534,8 @@
 	text-align: left;
 	padding: 0.5rem;
 	font-size: 0.75rem;
-	font-weight: 600;
+	font-weight: 400;
+	font-family: "DM Sans", "Hanuman", sans-serif;
 	color: #65a30d;
 	background: none;
 	border: none;
@@ -1185,6 +1186,23 @@
 	color: #6b7280;
 }
 
+/* Language flags (en/km PNGs from odm_nav_lang_flags helper) */
+.dataset-languages {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.25rem;
+	margin-right: 0.375rem;
+	vertical-align: middle;
+}
+
+.dataset-languages .lang_flag {
+	height: 0.875em;
+	width: auto;
+	display: inline-block;
+	vertical-align: middle;
+	border: 1px solid #e5e7eb;
+}
+
 /* Law Record Page Metadata */
 .item-metadata {
 	display: flex;
@@ -1338,7 +1356,8 @@
 	right: 0;
 	bottom: 0;
 	background-color: rgba(0, 0, 0, 0.5);
-	z-index: 998;
+	/* Just under the mobile sidebar (3000), above the site nav */
+	z-index: 2999;
 	opacity: 0;
 	transition: opacity 0.3s ease;
 }
@@ -1545,7 +1564,9 @@
 		left: 0;
 		transform: translateX(-100%);
 		transition: transform 0.3s ease;
-		z-index: 999;
+		/* Above the site nav's stacking context, else it slides UNDER the
+		   sticky navbar and blocks the menu when not scrolled */
+		z-index: 3000;
 		box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 		height: 100vh;
 		min-height: 100vh;
@@ -1876,10 +1897,10 @@
 	}
 
 	.mobile-filter-toggle {
-		background-color: #65a30d;
-		color: white;
+		background-color: #d7dcd0;
+		color: black;
 		font-size: 1rem;
-		flex: "" 1 1 0%;
+		flex: 1 1 0%;
 	}
 
 	/* Filter chips wrap better */
