@@ -54,12 +54,9 @@ snippet 'snippets/odc_law_card_item.html', package=package %} {% endfor %} #}
     <!-- Metadata Row -->
     <div class="odc-meta-row">
       <span>
-        {% if package.odm_date_signing %} {% snippet
+        {% if package.odm_promulgation_date %} {% snippet
         'snippets/local_friendly_date.html',
-        datetime_obj=package.odm_date_signing %} {% elif
-        package.metadata_created %} {% snippet
-        'snippets/local_friendly_date.html',
-        datetime_obj=package.metadata_created %} {% endif %}
+        datetime_obj=package.odm_promulgation_date %} {% endif %}
       </span>
       <span class="meta-dot"></span>
       <span>
@@ -92,11 +89,9 @@ snippet 'snippets/odc_law_card_item.html', package=package %} {% endfor %} #}
     <div class="odc-label-container">
       {% if package.odm_spatial_range %}
       <div class="item-card-country">
-        {% if "odm_spatial_range_translated" in package and
-        h.odm_dataset_get_current_language() in
-        package.odm_spatial_range_translated %} {{
-        package.odm_spatial_range_translated[h.odm_dataset_get_current_language()]
-        }} {% else %} {{ package.odm_spatial_range }} {% endif %}
+        {% if package.odm_language or package.MD_DataIdentification_language %}
+        <span class="dataset-languages">{{ h.odm_nav_lang_flags(package)|safe }}</span>
+        {% endif %} {{ h.odm_dataset_spatial_range_list(package) }}
       </div>
       {% endif %} {% if card_file_format %}
       <div class="item-card-format">

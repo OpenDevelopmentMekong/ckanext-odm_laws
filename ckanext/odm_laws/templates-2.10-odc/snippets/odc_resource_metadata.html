@@ -18,7 +18,7 @@ Usage:
         {% if pkg.odm_spatial_range %}
         <tr>
           <td>{{ _('Geographic area') }}</td>
-          <td>{{ pkg.odm_spatial_range }}</td>
+          <td>{{ h.odm_dataset_spatial_range_list(pkg) }}</td>
         </tr>
         {% endif %}
 

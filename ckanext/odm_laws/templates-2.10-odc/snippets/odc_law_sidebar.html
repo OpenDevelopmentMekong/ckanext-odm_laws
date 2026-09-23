@@ -13,12 +13,7 @@ Usage:
 		  </svg>
 		  {{ _('Filters') }}</span>
       <div class="sidebar-header-actions">
-        <a href="{{ h.url_for('laws_record.search') }}" class="sidebar-clear">{{ _('Clear') }}</a>
-        <button class="mobile-sidebar-close" id="closeSidebarBtn" aria-label="Close filters">
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-          </svg>
-        </button>
+        <a href="{{ h.url_for('laws_record.search') }}" class="sidebar-clear" aria-label="Clear filters">{{ _('Clear') }}</a>
       </div>
     </div>
 

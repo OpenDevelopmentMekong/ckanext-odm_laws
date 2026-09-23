@@ -13,7 +13,7 @@ Usage:
 
 {% if related.results %}
 <aside class="odc-sidebar">
-  <h3 class="odc-sidebar-title">{{ _('Related Document') }}</h3>
+  <h3 class="odc-sidebar-title">{{ _('Related Resources') }}</h3>
   <div class="odc-sidebar-cards">
     {% for doc in related.results %}
     <a href="{{ h.url_for('laws_record.read', id=doc.name) }}" class="odc-sidebar-card">
@@ -31,7 +31,7 @@ Usage:
   {% if related.count > 5 %}
   <div class="odc-related-see-more">
     <a href="{{ h.url_for('laws_record.search', dataset_type='laws_record', taxonomy=related.topic) }}" class="odc-see-more-link">
-      {{ _('See all {count} related documents') | format(count=related.count) }} &rarr;
+      {{ _('See all {count} related resources') | format(count=related.count) }} &rarr;
     </a>
   </div>
   {% endif %}

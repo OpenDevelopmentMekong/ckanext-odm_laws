@@ -1,0 +1,8 @@
+{# Router (ODC UI only — this tree registers solely when odc_ui is on):
+   laws_record search renders the ODC law design; all other dataset
+   types fall through to the shared chain. #}
+{% if dataset_type == 'laws_record' %}
+  {% extends "law_search.html" %}
+{% else %}
+  {% ckan_extends %}
+{% endif %}

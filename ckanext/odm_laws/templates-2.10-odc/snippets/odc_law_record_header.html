@@ -8,7 +8,10 @@ pkg - The law package being displayed. Usage:
 	h.odm_dataset_get_currentlang_data('title_translated', pkg) or pkg.title or
 	pkg.name} ] %}
 
-	{# Record sub-nav: Law Record / Groups / Activity Stream / Issues #}
+	{# Record sub-nav: Law Record / Groups / Activity Stream / Issues.
+	Only for authenticated users (user requirement 2026-08-28) — anonymous
+	users get no subnav; Activity Stream 403s and Issues 500s for them. #}
+	{% if c.userobj %}
 	<nav class="odc-record-nav" aria-label="record sections">
 		<ul>
 			<li class="active">
@@ -36,6 +39,7 @@ pkg - The law package being displayed. Usage:
 			{% endif %}
 		</ul>
 	</nav>
+	{% endif %}
 
 	<div class="odc-record-header-content">
 		<div class="odc-record-header-text">

@@ -7,7 +7,6 @@ from ckan.common import config
 log = logging.getLogger(__name__)
 
 
-
 class OdmLawsPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
   '''OD Mekong laws plugin.'''
 
@@ -20,8 +19,11 @@ class OdmLawsPlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
     '''Update plugin config'''
     toolkit.add_template_directory(config, 'templates')
     toolkit.add_public_directory(config, 'public')
-    toolkit.add_template_directory(config, 'templates-2.10-odc')
-    toolkit.add_resource('fanstatic', 'odm_laws')
+    # ODC law UI layer: opt-in per site via ckan.ini so the
+    # so the two UIs can coexist.
+    if toolkit.asbool(config.get('ckanext.odm_laws.odc_ui', False)):
+      toolkit.add_template_directory(config, 'templates-2.10-odc')
+      toolkit.add_resource('fanstatic', 'odm_laws')
 
 
   def get_helpers(self):

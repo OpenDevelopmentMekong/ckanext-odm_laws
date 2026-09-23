@@ -50,11 +50,9 @@ package - The package/dataset to display. Usage: {% for package in page.items
         {% endif %} {% if package.odm_spatial_range %}
         <div class="item-sublist">
           <span class="country-name">
-            {% if "odm_spatial_range_translated" in package and
-            h.odm_dataset_get_current_language() in
-            package.odm_spatial_range_translated %} {{
-            package.odm_spatial_range_translated[h.odm_dataset_get_current_language()]
-            }} {% else %} {{ package.odm_spatial_range }} {% endif %}
+            {% if package.odm_language or package.MD_DataIdentification_language %}
+            <span class="dataset-languages">{{ h.odm_nav_lang_flags(package)|safe }}</span>
+            {% endif %} {{ h.odm_dataset_spatial_range_list(package) }}
           </span>
           <ul class="dataset-resources unstyled">
             {% endif %} {% block resources_inner %} {% for resource in
@@ -95,35 +93,23 @@ package - The package/dataset to display. Usage: {% for package in page.items
     </span>
   </td>
   <td class="item-reference">
+    {% set ref_value = h.odm_dataset_get_currentlang_data('odm_document_number', package) or package.odm_reference_document %}
     <span>
-      {% if package.odm_document_number %} {% if package.odm_document_number is
-      mapping and h.odm_dataset_get_current_language() in
-      package.odm_document_number %} {{
-      package.odm_document_number[h.odm_dataset_get_current_language()] }} {%
-      elif package.odm_document_number is mapping and 'en' in
-      package.odm_document_number %} {{ package.odm_document_number.en }} {%
-      else %} {{ package.odm_document_number }} {% endif %} {% elif
-      package.odm_reference_number %} {{ package.odm_reference_number }} {% else
-      %} {{ package.id|truncate(10) }} {% endif %}
+      {% if ref_value %}{{ ref_value }}{% endif %}
     </span>
   </td>
   <td class="item-date">
     <span>
-      {% if package.odm_date_signing %} {% snippet
+      {% if package.odm_promulgation_date %} {% snippet
       'snippets/local_friendly_date_noicon.html',
-      datetime_obj=package.odm_date_signing %} {% elif package.metadata_created
-      %} {% snippet 'snippets/local_friendly_date_noicon.html',
-      datetime_obj=package.metadata_created %} {% endif %}
+      datetime_obj=package.odm_promulgation_date %} {% endif %}
     </span>
   </td>
   <td class="item-date">
     <span>
-      {% if package.odm_date_effective %} {% snippet
+      {% if package.odm_effective_date %} {% snippet
       'snippets/local_friendly_date_noicon.html',
-      datetime_obj=package.odm_date_effective %} {% elif
-      package.metadata_created %} {% snippet
-      'snippets/local_friendly_date_noicon.html',
-      datetime_obj=package.metadata_created %} {% endif %}
+      datetime_obj=package.odm_effective_date %} {% endif %}
     </span>
   </td>
 </tr>
