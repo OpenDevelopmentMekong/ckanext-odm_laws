@@ -1,0 +1,56 @@
+{#
+ODC Law Search Controls — search bar, submit button, mobile filter toggle.
+
+Usage:
+  {% snippet 'snippets/odc_law_search_controls.html' %}
+#}
+    <div class="odc-search-controls">
+      <div class="odc-search-bar">
+        <div class="search-input-wrapper search-input-group" data-package-type="laws_record" style="position: relative;">
+          <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+          </svg>
+          <form method="get" action="{{ h.url_for('laws_record.search') }}">
+            <input type="text" id="field-main-search" class="search-input" name="q" value="{{ c.q }}" placeholder="{{ _('Search legal documents...') }}" autocomplete="off" />
+          </form>
+        </div>
+        <button type="submit" class="search-button">
+          <span>{{ _('Search') }}</span>
+        </button>
+        {# Mobile Filter Button - only visible on tablet/mobile #}
+        <button type="button" class="mobile-filter-toggle" id="mobileFilterBtn" aria-label="Open filters">
+          <svg width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.643555 1.29199C0.288086 1.29199 0.000976562 0.998047 0.000976562 0.642578C0.000976562 0.287109 0.28125 0 0.643555 0H13.3721C13.7275 0 14.0146 0.287109 14.0146 0.642578C14.0146 0.998047 13.7275 1.29199 13.3721 1.29199H0.643555ZM2.05859 4.82617C1.70312 4.82617 1.41602 4.52539 1.41602 4.17676C1.41602 3.82129 1.69629 3.52734 2.05859 3.52734H11.9844C12.3467 3.52734 12.627 3.81445 12.627 4.17676C12.627 4.53223 12.3398 4.82617 11.9844 4.82617H2.05859ZM3.44629 8.35352C3.08398 8.35352 2.80371 8.05957 2.80371 7.7041C2.80371 7.34863 3.08398 7.06152 3.44629 7.06152H10.5967C10.959 7.06152 11.2393 7.34863 11.2393 7.7041C11.2393 8.05957 10.959 8.35352 10.5967 8.35352H3.44629Z" fill="black"/>
+		  </svg>
+          <span>{{ _('Filters') }}</span>
+        </button>
+      </div>
+
+      <!-- Filter Chips -->
+	  {# <div class="odc-filter-chips">
+        {% if c.q %}
+          <div class="filter-chip">
+            {{ c.q }}
+            <a href="{{ h.remove_url_param('q') }}" class="chip-remove">
+              <svg fill="currentColor" viewBox="0 0 20 20">
+                <path clip-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" fill-rule="evenodd"></path>
+              </svg>
+            </a>
+          </div>
+        {% endif %}
+        {% for facet in c.facet_titles %}
+          {% if facet in request.args %}
+            <div class="filter-chip">
+              {{ c.facet_titles[facet] }}: {{ request.args[facet] }}
+              <a href="{{ h.remove_url_param(facet) }}" class="chip-remove">
+                <svg fill="currentColor" viewBox="0 0 20 20">
+                  <path clip-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" fill-rule="evenodd"></path>
+              </svg>
+            </a>
+          </div>
+        {% endfor %}
+        {% if c.q or request.args %}
+          <button class="clear-all" onclick="location.href='{{ h.url_for('laws_record.search') }}'">{{ _('Clear all') }}</button>
+        {% endif %}
+	  </div> #}
+    </div>

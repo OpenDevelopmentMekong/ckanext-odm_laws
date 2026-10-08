@@ -1,0 +1,7 @@
+{# Router (ODC UI only): laws_record resource reads render the ODC law
+   design; all other types fall through to the shared chain. #}
+{% if g.package.type == 'laws_record' %}
+  {% extends "laws_record/resource_read.html" %}
+{% else %}
+  {% ckan_extends %}
+{% endif %}

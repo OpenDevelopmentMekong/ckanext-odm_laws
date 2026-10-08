@@ -1,0 +1,1160 @@
+/* ============================================
+   ODC LAW RECORD READ PAGE
+   Matching the law-design color scheme & layout.
+   Uses the same token palette as odc_laws_design.css.
+   ============================================
+   Color tokens:
+     - Background:    #f4f8f9 (body), #f9fafb (alt)
+     - White cards:   #ffffff
+     - Card border:   #e5e7eb
+     - Card shadow:   0 1px 3px rgba(0,0,0,0.08)
+     - Primary green: #65a30d (buttons, links, accents)
+     - Green hover:   #4d7c0f
+     - Title:         #111827
+     - Body text:     #374151 / #4b5563
+     - Muted:         #6b7280 / #9ca3af
+     - Separator:     #f3f4f6
+     - PDF red:       #dc2626 / bg #fee2e2 / border #fecaca
+   Fonts:
+     - Headings:      "DM Serif Display", "Khmer OS Kangrey", serif
+     - Body:          "DM Sans", "Hanuman", sans-serif
+   ============================================ */
+
+/* ============================================
+   LAYOUT
+   ============================================ */
+
+.odc-container {
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 1.5rem;
+	font-size: 1.125rem;
+}
+
+/* Main two‑column layout */
+.odc-main-grid {
+	display: grid;
+	grid-template-columns: 1fr 380px;
+	gap: 2rem;
+	align-items: start;
+}
+
+/* Two-column grid: main content + sidebar */
+.odc-main-grid {
+	display: grid;
+	grid-template-columns: 1fr 380px;
+	gap: 2rem;
+	align-items: start;
+}
+
+/* When the sidebar is absent (no related documents), let content span full width */
+.odc-main-grid > .odc-content-area:only-child {
+	grid-column: 1 / -1;
+}
+
+.odc-content-area {
+	min-width: 0;
+}
+
+/* ============================================
+   HEADER — Breadcrumb, Title, Description, Share
+   ============================================ */
+
+.odc-record-header {
+	margin-bottom: 2.5rem;
+}
+
+/* Record sub-nav — Library Record / Groups / Activity Stream / Issues */
+.odc-record-nav {
+	margin-bottom: 1.5rem;
+	border-bottom: 1px solid #e5e7eb;
+}
+.odc-record-nav ul {
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.25rem;
+	margin: 0;
+	padding: 0;
+}
+.odc-record-nav li {
+	margin: 0;
+}
+.odc-record-nav a {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.375rem;
+	padding: 0.625rem 1rem;
+	color: #6b7280;
+	text-decoration: none;
+	font-size: 1.25rem;
+	font-weight: 500;
+	border-bottom: 2px solid transparent;
+	margin-bottom: -1px;
+}
+.odc-record-nav a:hover {
+	color: #65a30d;
+}
+.odc-record-nav li.active a {
+	color: #111827;
+	font-weight: 600;
+	border-bottom-color: #65a30d;
+}
+@media (max-width: 768px) {
+	.odc-record-nav a {
+		padding: 0.5rem 0.75rem;
+		font-size: 0.875rem;
+	}
+}
+
+.odc-record-header-content {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	gap: 2rem;
+}
+
+.odc-record-header-text {
+	flex: 1;
+	min-width: 0;
+}
+
+/* Title — serif, large, matching search page title */
+.odc-record-title {
+	font-family: "DM Serif Display", "Khmer OS Kangrey", serif;
+	font-size: 2.5rem;
+	font-weight: 700;
+	color: #111827;
+	margin: 1rem 0 1rem 0;
+	line-height: 1.3;
+}
+
+/* Description — matching search page item-description */
+.odc-record-description {
+	font-family: "DM Sans", "Hanuman", sans-serif;
+	font-size: 1.25rem;
+	color: #4b5563;
+	line-height: 1.7;
+	margin: 0;
+}
+
+/* Header actions — Share button container */
+.odc-record-header-actions {
+	flex-shrink: 0;
+	padding-top: 0.375rem;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+/* Share button — same height/layout as sibling buttons, no truncation */
+.odc-record-header-actions .btn,
+.odc-resource-header-actions .btn {
+	font-family: "DM Sans", "Hanuman", sans-serif;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.375rem;
+	white-space: nowrap;
+	padding: 0.5rem 1rem;
+	font-size: 1.125rem;
+	line-height: 1.5;
+	height: auto;
+	min-height: 2.375rem;
+	width: auto;
+	flex-shrink: 0;
+}
+
+/* Meta bar — published date + download count */
+.odc-record-meta-bar {
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+	margin-top: 1rem;
+	flex-wrap: wrap;
+}
+
+.odc-record-meta-item {
+	font-family: "DM Sans", "Hanuman", sans-serif;
+	font-size: 1.25rem;
+	color: #6b7280;
+}
+
+.odc-record-meta-item strong {
+	font-weight: 600;
+	color: #374151;
+}
+
+.odc-record-meta-sep {
+	width: 4px;
+	height: 4px;
+	background: #d1d5db;
+	border-radius: 50%;
+	display: inline-block;
+	flex-shrink: 0;
+}
+
+/* ============================================
+   CARD — Generic white card container
+   ============================================ */
+
+.odc-card {
+	background: #ffffff;
+	border: 1px solid #e5e7eb;
+	border-radius: 0.75rem;
+	padding: 1.5rem;
+	margin-bottom: 1.5rem;
+	margin-top: 1.5rem;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.odc-card-title {
+	font-family: "DM Serif Display", "Khmer OS Kangrey", serif;
+	font-size: 1.5rem;
+	font-weight: 700;
+	color: #111827;
+	margin: 0 0 1.25rem 0;
+}
+
+/* ============================================
+   RESOURCE LIST — Downloadable documents
+   Each entry: [icon] [name + dates + desc] [actions]
+   ============================================ */
+
+.odc-resource-list {
+	display: flex;
+	flex-direction: column;
+}
+
+.odc-resource-item {
+	display: flex;
+	gap: 1rem;
+	padding: 1.25rem 0;
+	border-bottom: 1px solid #f3f4f6;
+	transition: background-color 0.2s;
+	/* Override old .odc-resource-item in odc_laws_design.css */
+	background: transparent;
+	border-radius: 0;
+	margin-bottom: 0;
+	border-style: none;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	box-shadow: none;
+}
+
+.odc-resource-item:first-child {
+	padding-top: 0;
+}
+
+.odc-resource-item:last-child {
+	border-bottom: none;
+	padding-bottom: 0;
+}
+
+/* (hover effect removed per design request) */
+
+/* Override design.css old hover on .odc-resource-item */
+.odc-resource-item:hover {
+	box-shadow: none !important;
+}
+
+/* Format icon — colored square with icon + label */
+.odc-format-icon {
+	width: 3.5rem;
+	height: 4.5rem;
+	border-radius: 0.5rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 0.125rem;
+	flex-shrink: 0;
+	font-size: 0.625rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	border: 1px solid;
+}
+
+.odc-format-icon i {
+	font-size: 1.25rem;
+}
+
+.odc-format-icon span {
+	line-height: 1;
+}
+
+/* PDF — red */
+.odc-format-icon.odc-format-pdf {
+	background-color: #fee2e2;
+	border-color: #fecaca;
+	color: #dc2626;
+}
+
+/* Word docs — blue */
+.odc-format-icon.odc-format-doc,
+.odc-format-icon.odc-format-docx {
+	background-color: #dbeafe;
+	border-color: #bfdbfe;
+	color: #2563eb;
+}
+
+/* Spreadsheets — green */
+.odc-format-icon.odc-format-xls,
+.odc-format-icon.odc-format-xlsx,
+.odc-format-icon.odc-format-csv,
+.odc-format-icon.odc-format-tsv {
+	background-color: #dcfce7;
+	border-color: #bbf7d0;
+	color: #16a34a;
+}
+
+/* Images — purple */
+.odc-format-icon.odc-format-jpg,
+.odc-format-icon.odc-format-jpeg,
+.odc-format-icon.odc-format-png,
+.odc-format-icon.odc-format-gif {
+	background-color: #f3e8ff;
+	border-color: #e9d5ff;
+	color: #9333ea;
+}
+
+/* WMS / geospatial — cyan */
+.odc-format-icon.odc-format-wms {
+	background-color: #cffafe;
+	border-color: #a5f3fc;
+	color: #0891b2;
+}
+
+/* Generic / unknown — gray */
+.odc-format-icon.odc-format-file {
+	background-color: #f3f4f6;
+	border-color: #e5e7eb;
+	color: #6b7280;
+}
+
+/* Resource details — middle column */
+.odc-resource-details {
+	display: flex;
+	flex: 1;
+	align-items: center;
+	justify-content: space-between;
+}
+
+/* Resource title — matching search page item-name */
+.odc-resource-name {
+	font-family: "DM Sans", "Hanuman", sans-serif;
+	font-size: 1.375rem;
+	font-weight: 600;
+	color: #111827;
+	margin: 0 0 0.5rem 0;
+	line-height: 1.3;
+}
+
+/* Resource description — matching search page item-description */
+.odc-resource-desc {
+	font-family: "DM Sans", "Hanuman", sans-serif;
+	font-size: 1.125rem;
+	color: #4b5563;
+	line-height: 1.5;
+	margin: 0;
+	display: -webkit-box;
+	line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+
+/* Resource action buttons */
+.odc-resource-actions {
+	margin-left: 15px;
+	flex-shrink: 0;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+/* Download button — green, uppercase, compact */
+.odc-resource-actions .btn-success {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.375rem;
+	padding: 0.5rem 1rem;
+	font-size: 0.8125rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.03em;
+	border-radius: 0.375rem;
+	border: 1px solid #65a30d;
+	color: #ffffff;
+	transition:
+		background-color 0.2s,
+		border-color 0.2s;
+}
+
+.odc-resource-actions .btn-success:hover {
+	background-color: #4d7c0f;
+	border-color: #4d7c0f;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+/* View button — outlined, icon-only */
+.odc-resource-actions .btn-default {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 2.25rem;
+	height: 2.25rem;
+	padding: 0;
+	border-radius: 0.375rem;
+	border: 1px solid #e5e7eb;
+	color: #6b7280;
+	background: #ffffff;
+	transition:
+		background-color 0.2s,
+		color 0.2s,
+		border-color 0.2s;
+}
+
+.odc-resource-actions .btn-default:hover {
+	background-color: #f3f4f6;
+	color: #374151;
+	border-color: #d1d5db;
+}
+
+/* ============================================
+   METADATA TABLE
+   (extends existing .odc-metadata-table in odc_laws_design.css)
+   ============================================ */
+
+/* Contextual adjustments inside a .odc-card */
+.odc-card .odc-metadata-table {
+	margin: -0.25rem 0;
+	border: 1px solid #e5e7eb;
+	border-radius: 0.5rem;
+	overflow: hidden;
+	border-collapse: separate;
+}
+
+.odc-card .odc-metadata-table th {
+	padding: 1.25rem 1.5rem;
+	width: 200px;
+	font-weight: 800;
+	color: #111827;
+	font-size: 1.125rem;
+	font-family: "DM Sans", "Hanuman", sans-serif;
+	border-bottom: 1px solid #e5e7eb;
+	border-right: 1px solid #d1d5db;
+	background-color: #f9fafb;
+}
+
+/* Khmer font in metadata table cells */
+.odc-card .odc-metadata-table td:lang(km) {
+	font-family: "DM Sans", "Hanuman";
+}
+.odc-card .odc-metadata-table td:lang(en) {
+	font-family: "DM Sans", "Hanuman";
+}
+
+.odc-card .odc-metadata-table td {
+	padding: 1.25rem 1.5rem;
+	color: #111827;
+	font-size: 1.125rem;
+	border-bottom: 1px solid #e5e7eb;
+}
+
+.odc-card .odc-metadata-table tr:last-child th,
+.odc-card .odc-metadata-table tr:last-child td {
+	border-bottom: none;
+}
+
+.odc-card .odc-metadata-table td a {
+	text-decoration: none;
+}
+
+.odc-card .odc-metadata-table td a:hover {
+	text-decoration: underline;
+}
+
+/* Status cell colors */
+.odc-status-active {
+	color: #16a34a;
+	font-weight: 500;
+}
+
+.odc-status-repealed,
+.odc-status-inactive {
+	color: #dc2626;
+	font-weight: 500;
+}
+
+.odc-status-amended {
+	color: #d97706;
+	font-weight: 500;
+}
+
+.odc-status-pending {
+	color: #ea580c;
+	font-weight: 500;
+}
+
+/* ============================================
+   SIDEBAR — Related Documents
+   ============================================ */
+
+.odc-sidebar {
+	display: flex;
+	flex-direction: column;
+	margin-top: 1.5rem;
+}
+
+.odc-sidebar-title {
+	font-family: "DM Serif Display", "Khmer OS Kangrey", serif;
+	font-size: 1.5rem;
+	font-weight: 700;
+	color: #111827;
+	margin: 0 0 1rem 0;
+}
+
+/* Container for sidebar cards */
+.odc-sidebar-cards {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+/* Individual related document card */
+.odc-sidebar-card {
+	background: #ffffff;
+	border: 1px solid #e5e7eb;
+	border-radius: 0.75rem;
+	padding: 1.25rem;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+	transition:
+		box-shadow 0.2s ease,
+		transform 0.2s ease;
+}
+
+.odc-sidebar-card:hover {
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+	transform: translateY(-2px);
+}
+
+/* Card title — clipped at 2 lines */
+.odc-sidebar-card-title {
+	font-family: "DM Sans", "Hanuman", sans-serif;
+	font-size: 1.25rem;
+	font-weight: 600;
+	color: #111827;
+	margin: 0 0 0.5rem 0;
+	line-height: 1.3;
+	display: -webkit-box;
+	line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+
+.odc-sidebar-card-title a {
+	color: #111827;
+	text-decoration: none;
+}
+
+/* Card description — clipped at 2 lines */
+.odc-sidebar-card-desc {
+	font-family: "DM Sans", "Hanuman", sans-serif;
+	font-size: 1.125rem;
+	color: #4b5563;
+	line-height: 1.5;
+	margin: 0 0 0.75rem 0;
+	display: -webkit-box;
+	line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+
+/* Card footer — flag icon + status badge */
+.odc-sidebar-card-footer {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+/* Flag icon for country / spatial range */
+.odc-flag {
+	display: inline-flex;
+	align-items: center;
+	font-size: 0.875rem;
+	color: #6b7280;
+}
+
+.odc-flag i {
+	font-size: 1rem;
+}
+
+/* Status badge — small, colored, uppercase */
+.odc-status-badge {
+	font-size: 0.6875rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	padding: 0.2rem 0.5rem;
+	border-radius: 0.25rem;
+	color: #ffffff;
+	letter-spacing: 0.03em;
+}
+
+.odc-status-badge.odc-status-active,
+.odc-sidebar-card .odc-status-active {
+	background-color: #16a34a;
+}
+
+.odc-status-badge.odc-status-repealed,
+.odc-sidebar-card .odc-status-repealed,
+.odc-status-badge.odc-status-inactive,
+.odc-sidebar-card .odc-status-inactive {
+	background-color: #dc2626;
+}
+
+.odc-status-badge.odc-status-amended,
+.odc-sidebar-card .odc-status-amended {
+	background-color: #d97706;
+}
+
+.odc-status-badge.odc-status-pending,
+.odc-sidebar-card .odc-status-pending {
+	background-color: #ea580c;
+}
+
+/* Additional info panel in sidebar */
+.odc-sidebar-card .additional-info {
+	margin-top: 0.75rem;
+}
+
+/* See more link — shown when >5 related docs exist */
+.odc-related-see-more {
+	margin-top: 0.75rem;
+	text-align: center;
+}
+
+.odc-see-more-link {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.375rem;
+	font-weight: 600;
+	font-size: 0.875rem;
+	text-decoration: none;
+	transition: color 0.2s;
+}
+
+.odc-see-more-link:hover {
+	color: #4d7c0f;
+	text-decoration: underline;
+}
+
+/* ============================================
+   RESPONSIVE — Tablet & Mobile
+   ============================================ */
+
+/* Tablet: single column, sidebar below content — aligned with the shared
+   odc-layout collapse at 1200px (design.css / search.css) */
+@media (max-width: 1200px) {
+	.odc-main-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.odc-sidebar {
+		order: 0;
+		margin-top: 1.5rem;
+	}
+
+	.odc-sidebar-cards {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+	.odc-sidebar-card {
+		flex: 1 1 calc(50% - 0.5rem);
+		min-width: 200px;
+	}
+
+	.odc-container {
+		padding: 1.25rem;
+	}
+}
+
+/* Mobile: stacked layout, compact sizing */
+@media (max-width: 768px) {
+	.odc-container {
+		padding: 1rem;
+	}
+
+	.odc-record-header {
+		margin-bottom: 1.5rem;
+	}
+
+	.odc-record-header-content {
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	.odc-record-header-actions {
+		width: 100%;
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	.odc-record-header-actions .btn-success {
+		width: 100%;
+		justify-content: center;
+	}
+
+	.odc-record-header-actions .btn-default {
+		width: 100%;
+		justify-content: center;
+		margin-top: 0.5rem;
+	}
+
+	.odc-record-title {
+		font-size: 1.5rem;
+	}
+
+	.odc-card {
+		padding: 1.25rem;
+	}
+
+	.odc-card-title {
+		font-size: 1.125rem;
+	}
+
+	/* Stack resource items vertically — keep icon + title same line */
+	.odc-resource-item {
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: 0.75rem;
+	}
+
+	.odc-format-icon {
+		width: 3rem;
+		height: 4rem;
+		align-self: flex-start;
+	}
+
+	.odc-resource-details {
+		flex: 1;
+		min-width: 0;
+	}
+
+	.odc-resource-info {
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+	}
+
+	.odc-resource-actions {
+		width: auto;
+		flex-shrink: 0;
+	}
+
+	.odc-resource-actions .btn-success {
+		width: auto;
+	}
+
+	.odc-resource-name {
+		font-size: 1rem;
+	}
+
+	/* Mobile: icon + title on same line */
+	.odc-resource-item {
+		align-items: flex-start;
+	}
+
+	.odc-format-icon {
+		flex-shrink: 0;
+		width: 2.75rem;
+		height: 3.5rem;
+		margin-top: 0;
+	}
+
+	.odc-resource-info {
+		flex-wrap: wrap;
+	}
+
+	.odc-resource-info > div:first-child {
+		flex: 1;
+		min-width: 0;
+	}
+
+	.odc-resource-actions {
+		width: auto;
+		flex-shrink: 0;
+	}
+
+	/* Sidebar cards stack on mobile */
+	.odc-sidebar-cards {
+		flex-direction: column;
+	}
+
+	.odc-sidebar-card {
+		flex: 1 1 auto;
+	}
+
+	/* Metadata table goes block layout on mobile */
+	.odc-card .odc-metadata-table th,
+	.odc-card .odc-metadata-table td {
+		display: block;
+		width: 100%;
+		padding: 0.5rem 0.75rem;
+	}
+
+	.odc-card .odc-metadata-table th {
+		padding-bottom: 0;
+		border-bottom: none;
+		border-right: none;
+		background-color: transparent;
+		font-weight: 800;
+		font-size: 0.875rem;
+		font-family: "DM Sans", "Hanuman", sans-serif;
+	}
+
+	.odc-card .odc-metadata-table td {
+		padding-top: 0.25rem;
+		padding-bottom: 0.75rem;
+		font-size: 1.15rem;
+	}
+
+	.odc-card .odc-metadata-table tr {
+		border-bottom: 1px solid #e5e7eb;
+		display: block;
+		padding: 0;
+	}
+
+	.odc-card .odc-metadata-table tr:last-child {
+		border-bottom: none;
+	}
+}
+
+/* Small mobile: extra compact */
+@media (max-width: 480px) {
+	.odc-record-title {
+		padding-top: 0.3125rem;
+		font-size: 1.375rem;
+	}
+
+	.odc-card {
+		padding: 1rem;
+		border-radius: 0.5rem;
+	}
+
+	.odc-resource-item {
+		padding: 1rem 0;
+	}
+}
+
+/* Desktop: title size (reduced 3rem -> 2.25rem) */
+@media (min-width: 1201px) {
+	.odc-record-title {
+		font-size: 2.25rem;
+		margin-bottom: 1.5rem;
+	}
+}
+
+/* ============================================
+   RESOURCE READ PAGE SPECIFIC STYLES
+   ============================================ */
+
+/* Resource read container - single column, no sidebar */
+.odc-resource-container {
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 1.5rem;
+	font-size: 1.125rem;
+}
+
+/* Resource main area - full width since no sidebar */
+.odc-resource-main {
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+/* Resource header section */
+.odc-resource-header {
+	margin-bottom: 2rem;
+}
+
+/* Breadcrumb for resource page */
+.odc-resource-header .odc-breadcrumb {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	margin-bottom: 1.5rem;
+	font-size: 0.9375rem;
+	flex-wrap: wrap;
+}
+
+.odc-resource-header .odc-breadcrumb-home {
+	color: #6b7280;
+	display: flex;
+	align-items: center;
+}
+
+.odc-resource-header .odc-breadcrumb-sep {
+	color: #d1d5db;
+}
+
+.odc-resource-header .odc-breadcrumb-link {
+	color: #6b7280;
+	text-decoration: none;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 200px;
+}
+
+.odc-resource-header .odc-breadcrumb-current {
+	color: #111827;
+	font-weight: 600;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 300px;
+}
+
+/* Resource breadcrumb (truncating) */
+.odc-resource-breadcrumb {
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.odc-resource-breadcrumb .odc-breadcrumb-current {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	min-width: 0;
+}
+
+/* Resource header content layout */
+.odc-resource-header-content {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	gap: 2rem;
+}
+
+.odc-resource-header-text {
+	flex: 1;
+	min-width: 0;
+}
+
+/* Resource title */
+.odc-resource-title {
+	font-family: "DM Serif Display", "Khmer OS Kangrey", serif;
+	font-size: 2.25rem;
+	font-weight: 700;
+	color: #111827;
+	margin: 0 0 1rem 0;
+	line-height: 1.3;
+}
+
+/* Resource description */
+.odc-resource-description {
+	font-family: "DM Sans", "Hanuman", sans-serif;
+	font-size: 1.25rem;
+	color: #4b5563;
+	line-height: 1.7;
+	margin: 0;
+	max-width: 800px;
+}
+
+/* Resource header actions */
+.odc-resource-header-actions {
+	flex-shrink: 0;
+	padding-top: 0.375rem;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+/* Resource sections (preview, metadata) */
+.odc-resource-section {
+	background: #ffffff;
+	border: 1px solid #e5e7eb;
+	border-radius: 0.75rem;
+	padding: 1.5rem;
+	margin-bottom: 1.5rem;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.odc-resource-section__header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 1.25rem;
+	padding-bottom: 0.75rem;
+	border-bottom: 1px solid #f3f4f6;
+}
+
+.odc-resource-section__title {
+	font-family: "DM Serif Display", "Khmer OS Kangrey", serif;
+	font-size: 1.25rem;
+	font-weight: 700;
+	color: #111827;
+	margin: 0;
+}
+
+/* Resource preview body */
+.odc-resource-preview__body {
+	min-height: 400px;
+	background: #f9fafb;
+	border-radius: 0.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 2rem;
+}
+
+.odc-resource-preview__body iframe,
+.odc-resource-preview__body img {
+	max-width: 100%;
+	border-radius: 0.5rem;
+}
+
+/* Resource metadata table - reusing existing table styles */
+.odc-resource-metadata-table {
+	padding-top: 0.3125rem;
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.odc-resource-metadata-table th {
+	padding: 1rem 1.25rem;
+	width: 200px;
+	font-weight: 800;
+	color: #111827;
+	font-size: 1rem;
+	font-family: "DM Sans", "Hanuman", sans-serif;
+	text-align: left;
+	background-color: #f9fafb;
+	border-bottom: 1px solid #e5e7eb;
+	border-right: 1px solid #d1d5db;
+}
+
+.odc-resource-metadata-table td {
+	padding: 1rem 1.25rem;
+	color: #111827;
+	font-size: 1rem;
+	font-family: "DM Sans", "Hanuman", sans-serif;
+	border-bottom: 1px solid #e5e7eb;
+}
+
+.odc-resource-metadata-table tr:last-child th,
+.odc-resource-metadata-table tr:last-child td {
+	border-bottom: none;
+}
+
+/* Resource actions buttons in sections */
+.odc-resource-actions {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.odc-resource-actions .btn-success {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.375rem;
+	padding: 0.5rem 1rem;
+	font-size: 0.8125rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.03em;
+	border-radius: 0.375rem;
+	border: 1px solid #65a30d;
+	color: #ffffff;
+	transition:
+		background-color 0.2s,
+		border-color 0.2s;
+}
+
+.odc-resource-actions .btn-success:hover {
+	background-color: #4d7c0f;
+	border-color: #4d7c0f;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+/* Responsive for resource read page */
+@media (max-width: 768px) {
+	.odc-resource-container {
+		padding: 1rem;
+	}
+
+	.odc-resource-header-content {
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	.odc-resource-header-actions {
+		width: 100%;
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	.odc-resource-header-actions .btn-success {
+		width: 100%;
+		justify-content: center;
+	}
+
+	.odc-resource-title {
+		font-size: 1.5rem;
+	}
+
+	.odc-resource-section {
+		padding: 1.25rem;
+	}
+
+	.odc-resource-section__header {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 0.75rem;
+	}
+
+	.odc-resource-actions {
+		width: auto;
+	}
+
+	.odc-resource-actions .btn-success {
+		width: auto;
+	}
+
+	/* Resource metadata table goes block layout on mobile */
+	.odc-resource-metadata-table th,
+	.odc-resource-metadata-table td {
+		display: block;
+		width: 100%;
+		padding: 0.5rem 0.75rem;
+	}
+
+	.odc-resource-metadata-table th {
+		padding-bottom: 0;
+		border-bottom: none;
+		border-right: none;
+		background-color: transparent;
+		font-weight: 800;
+		font-size: 0.875rem;
+	}
+
+	.odc-resource-metadata-table td {
+		padding-top: 0.25rem;
+		padding-bottom: 0.75rem;
+	}
+
+	.odc-resource-metadata-table tr {
+		border-bottom: 1px solid #e5e7eb;
+		display: block;
+		padding: 0;
+	}
+
+	.odc-resource-metadata-table tr:last-child {
+		border-bottom: none;
+	}
+}

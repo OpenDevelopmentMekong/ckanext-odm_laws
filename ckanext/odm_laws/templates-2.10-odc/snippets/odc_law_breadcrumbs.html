@@ -1,0 +1,29 @@
+{#
+ODC Law Search Breadcrumbs — mobile header + desktop breadcrumb nav.
+
+Usage:
+  {% snippet 'snippets/odc_law_breadcrumbs.html' %}
+#}
+    <!-- Mobile Header (visible only on mobile) -->
+    <nav class="mobile-header">
+      <div class="mobile-header-breadcrumb">
+        <a href="{{ h.url_for('home.index') }}">
+          <svg fill="currentColor" viewBox="0 0 20 20">
+            <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path>
+          </svg>
+        </a>
+        <span class="separator">›</span>
+        <span class="font-medium text-gray-800">{{ _('Legal Documents') }}</span>
+      </div>
+    </nav>
+
+    <!-- Desktop Breadcrumbs (hidden on mobile) -->
+    <nav class="odc-breadcrumb-design">
+      <a href="{{ h.url_for('home.index') }}">
+        <svg class="breadcrumb-home" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path>
+        </svg>
+      </a>
+       <span class="breadcrumb-separator">›</span>
+      <span class="font-medium text-gray-800">{{ _('Legal Documents') }}</span>
+    </nav>

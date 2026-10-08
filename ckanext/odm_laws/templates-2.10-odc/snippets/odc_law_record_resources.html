@@ -1,0 +1,72 @@
+{# ODC Law Record Resources — documents and resources listing with format icons.
+pkg - The law package (dict) being displayed. Usage: {% snippet
+'snippets/odc_law_record_resources.html', pkg=pkg %} #} {% set resources =
+pkg.get('resources', []) %} {% if resources %}
+<div class="odc-card">
+	<h3 class="odc-card-title">{{ _('Data Resources') }}</h3>
+
+	<div class="odc-resource-list">
+		{% for resource in resources %}
+		<div class="odc-resource-item">
+			{# Format icon #}
+			<div
+				class="odc-format-icon odc-format-{{ resource.get('format', 'file')|lower }}"
+			>
+				{% set fmt = resource.get('format', 'FILE')|upper %} {% if fmt == 'PDF'
+				%}
+				<i class="fa fa-file-pdf-o"></i>
+				<span>PDF</span>
+				{% elif fmt in ('XLS', 'XLSX', 'CSV', 'TSV') %}
+				<i class="fa fa-file-excel-o"></i>
+				<span>{{ fmt }}</span>
+				{% elif fmt in ('DOC', 'DOCX') %}
+				<i class="fa fa-file-word-o"></i>
+				<span>{{ fmt }}</span>
+				{% elif fmt in ('JPG', 'JPEG', 'PNG', 'GIF') %}
+				<i class="fa fa-file-image-o"></i>
+				<span>{{ fmt }}</span>
+				{% elif fmt == 'WMS' %}
+				<i class="fa fa-globe"></i>
+				<span>WMS</span>
+				{% else %}
+				<i class="fa fa-file-o"></i>
+				<span>{{ fmt or 'FILE' }}</span>
+				{% endif %}
+			</div>
+
+			{# Resource details #}
+			<div class="odc-resource-details">
+				<div>
+					<a
+						class="odc-resource-name"
+						href="{{ h.url_for(pkg.type ~ '_resource.read', id=pkg.name, resource_id=resource.id) }}"
+					>
+						{{ h.resource_display_name(resource) }}
+					</a>
+				</div>
+
+				<div class="odc-resource-actions">
+					{# Download button #} {% if resource.url and h.is_url(resource.url) %}
+					<a
+						class="btn btn-success btn-sm"
+						href="{{ resource.url }}"
+						target="_blank"
+					>
+						{{ _('DOWNLOAD') }}
+					</a>
+					{% endif %} {# View button (for resources with views) #} {% if
+					resource.has_views %}
+					<a
+						class="btn btn-default btn-sm"
+						href="{{ h.url_for(pkg.type ~ '_resource.read', id=pkg.name, resource_id=resource.id) }}"
+					>
+						<i class="fa fa-eye"></i>
+					</a>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+</div>
+{% endif %}

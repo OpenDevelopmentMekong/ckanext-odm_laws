@@ -1,0 +1,1912 @@
+/* ODC Law Search Design - Based on provided HTML design */
+
+/* Reset root font-size: CKAN/Bootstrap sets html { font-size: 10px },
+   which makes all rem values ~37% smaller than intended. */
+html {
+	font-size: 16px;
+}
+
+/* Fonts - Multi-script support: DM Serif Display for titles, DM Sans for text, Khmer OS Kangrey for Khmer primary, Hanuman for Khmer secondary */
+/* DM Serif Display - Primary Latin typeface */
+@font-face {
+	font-family: "DM Serif Display";
+	src: url("/fonts/newfont/DMSerifDisplay-Regular.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* DM Sans - Secondary Latin typeface */
+@font-face {
+	font-family: "DM Sans";
+	src: url("/fonts/newfont/DMSans_18pt-Regular.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "DM Sans";
+	src: url("/fonts/newfont/DMSans_18pt-Medium.woff") format("woff");
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "DM Sans";
+	src: url("/fonts/newfont/DMSans_18pt-SemiBold.woff") format("woff");
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "DM Sans";
+	src: url("/fonts/newfont/DMSans_18pt-Black.woff") format("woff");
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* Khmer OS Kangrey - Primary Khmer typeface */
+@font-face {
+	font-family: "Khmer OS Kangrey";
+	src: url("/fonts/newfont/KhmerOSKangrey.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* Hanuman - Secondary Khmer typeface */
+@font-face {
+	font-family: "Hanuman";
+	src: url("/fonts/newfont/Hanuman-Regular.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* ============================================
+   BASE STYLES (Desktop First)
+   ============================================ */
+
+/* Base styles */
+body.odc.odc-body {
+	font-family:
+		"DM Serif Display",
+		"DM Sans",
+		"Khmer OS Kangrey",
+		"Hanuman",
+		-apple-system,
+		BlinkMacSystemFont,
+		"Segoe UI",
+		sans-serif;
+	background-color: #f9fafb;
+	color: #1f2937;
+	font-size: 0.875rem;
+	line-height: normal !important;
+	min-height: 100vh;
+}
+
+/* Global link hover color */
+a:hover {
+	color: #65a30d;
+}
+
+/* Breadcrumb — shared across search, record, and resource pages */
+.odc-breadcrumb {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	margin-bottom: 1.5rem;
+	font-size: 1.25rem;
+	/* One line always: the title (last crumb) absorbs any overflow. */
+	flex-wrap: nowrap;
+}
+.odc-breadcrumb-home {
+	color: #6b7280;
+	display: flex;
+	align-items: center;
+}
+.odc-breadcrumb-home:hover {
+	color: #65a30d;
+}
+.odc-breadcrumb-sep {
+	color: #d1d5db;
+}
+.odc-breadcrumb-link {
+	color: #6b7280;
+	text-decoration: none;
+	white-space: nowrap;
+	/* Crumb links are short (e.g. "Legal Documents") — show in full,
+	   never truncate. Long overflow is absorbed by the current crumb. */
+	flex-shrink: 0;
+}
+.odc-breadcrumb-link:hover {
+	color: #65a30d;
+}
+.odc-breadcrumb-current {
+	color: #111827;
+	font-weight: 600;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	/* Flex child: without min-width:0 it never shrinks. Fluid width:
+	   grows naturally when short, ellipsizes only at the row edge. */
+	min-width: 0;
+	max-width: 100%;
+	flex-shrink: 1;
+}
+
+/* Language-specific overrides */
+body.odc:lang(km) {
+	font-family:
+		"DM Serif Display",
+		"DM Sans",
+		"Khmer OS Kangrey",
+		"Hanuman",
+		-apple-system,
+		BlinkMacSystemFont,
+		"Segoe UI",
+		sans-serif;
+	font-size: 1rem; /* 16px base for Khmer — Khmer glyphs need more room than Latin */
+}
+
+/* Headings render at 400: the display/Khmer faces only ship weight 400,
+   anything higher is synthetic fake-bold (smudged Khmer strokes) */
+body.odc:lang(km) h1,
+body.odc:lang(km) h2,
+body.odc:lang(km) h3 {
+	font-weight: 400;
+}
+
+/* Heading overrides for Khmer language */
+body.odc:lang(km) h1,
+body.odc:lang(km) h2 {
+	font-family: "DM Serif Display", "Khmer OS Kangrey";
+}
+
+body.odc:lang(km) h3,
+body.odc:lang(km) h4,
+body.odc:lang(km) h5,
+body.odc:lang(km) h6,
+body.odc:lang(km) a,
+body.odc:lang(km) input,
+body.odc:lang(km) strong,
+body.odc:lang(km) p,
+body.odc:lang(km) span {
+	font-family: "DM Sans", "Hanuman", serif;
+}
+
+/* Language-specific overrides — English */
+body.odc:lang(en) {
+	font-family:
+		"DM Serif Display",
+		"DM Sans",
+		-apple-system,
+		BlinkMacSystemFont,
+		"Segoe UI",
+		sans-serif;
+	font-size: 0.875rem; /* 14px base for English (explicit; matches body.odc.odc-body) */
+}
+
+/* Same 400 cap for headings — DM Serif Display has no 600/700 face */
+body.odc:lang(en) h1,
+body.odc:lang(en) h2,
+body.odc:lang(en) h3 {
+	font-weight: 400;
+}
+
+/* Heading overrides for English language */
+body.odc:lang(en) h1,
+body.odc:lang(en) h2 {
+	font-family: "DM Serif Display", sans-serif;
+}
+
+body.odc:lang(en) h3,
+body.odc:lang(en) h4,
+body.odc:lang(en) h5,
+body.odc:lang(en) h6,
+body.odc:lang(en) a,
+body.odc:lang(en) input,
+body.odc:lang(en) strong,
+body.odc:lang(en) p,
+body.odc:lang(en) span {
+	font-family: "DM Sans", sans-serif;
+}
+
+/* ============================================
+   LAYOUT (Desktop: row, Mobile: column)
+   ============================================ */
+
+/* Default/Desktop: sidebar on left, content on right */
+.odc-layout {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	min-height: 100vh;
+}
+
+/* ============================================
+   MAIN CONTENT AREA
+   ============================================ */
+
+.odc-primary {
+	flex: 1;
+	background-color: #f4f8f9;
+	padding: 1rem;
+	overflow-x: hidden;
+}
+
+/* Essential search page styles — full design in odc_laws_search.css */
+.odc-search-title {
+	font-size: 2.25rem;
+	font-weight: 700;
+	color: #111827;
+	line-height: 1.3;
+	margin: 0;
+}
+.odc-search-count {
+	color: #6b7280;
+	font-weight: 500;
+	font-size: 1.25rem;
+	margin-top: 1.5rem;
+}
+.odc-cards {
+	display: none;
+}
+.odc-table {
+	border: 1px solid #e5e7eb;
+	border-radius: 1rem;
+	overflow: hidden;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================
+   RESPONSIVE — Shared layout only
+   Search-specific responsive rules → odc_laws_search.css
+   ============================================ */
+
+/* Mobile/tablet: sidebar on top, content below */
+@media (max-width: 1200px) {
+	.odc-layout {
+		flex-direction: column;
+	}
+	.odc-primary {
+		padding: 1.5rem;
+	}
+	/* Essential search visibility — table hidden, cards shown */
+	.odc-table {
+		display: none;
+	}
+	.odc-cards {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+/* Tablet: restore table, hide cards */
+@media (min-width: 768px) and (max-width: 1200px) {
+	.odc-table {
+		display: table !important;
+	}
+	.odc-cards {
+		display: none !important;
+	}
+}
+
+/* Small mobile */
+@media (max-width: 640px) {
+	.odc-primary {
+		padding: 1rem;
+	}
+}
+
+/* ============================================
+   MERGED FROM ODC_LAWS.CSS
+   ============================================ */
+
+/* ODC-specific page styles */
+.odc-page {
+	background: #f8f9fa;
+	font-family:
+		"DM Sans",
+		"Khmer OS Kangrey",
+		"Hanuman",
+		-apple-system,
+		BlinkMacSystemFont,
+		"Segoe UI",
+		sans-serif;
+}
+
+.odc-header {
+	background: linear-gradient(135deg, #1a5f7a 0%, #2c8c99 100%);
+	color: white;
+	padding: 2rem 0;
+	margin-bottom: 2rem;
+}
+
+.odc-title {
+	font-size: 2.5rem;
+	font-weight: 300;
+	margin-bottom: 1rem;
+}
+
+.odc-meta .badge {
+	background: #ff6b6b;
+	font-size: 0.9375rem;
+	padding: 0.5rem 1rem;
+}
+
+.odc-content {
+	background: white;
+	padding: 2rem;
+	border-radius: 8px;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.odc-sidebar {
+	background: white;
+	padding: 1.5rem;
+	border-radius: 8px;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-odc {
+	background: #1a5f7a;
+	color: white;
+	border: none;
+	width: 100%;
+	padding: 0.75rem;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background 0.2s;
+}
+
+.btn-odc:hover {
+	background: #134a5e;
+}
+
+/* ============================================
+   SHARED TOKENS — badge, type, button, language
+   Moved here from odc_laws.css for clean separation.
+   ============================================ */
+
+/* Status badge — small colored label */
+.odc-status-badge {
+	background-color: #dc2626;
+}
+
+/* Type badge */
+.odc-type-badge {
+	background-color: #1f2937;
+}
+
+/* Primary action button — green */
+.btn-success {
+	background-color: #65a30d;
+	border-color: #65a30d;
+}
+
+.btn-success:hover {
+	background-color: #4d7c0f;
+	border-color: #4d7c0f;
+}
+
+/* Language-specific font overrides for read pages */
+.odc-page:lang(km),
+.odc-resource-read:lang(km),
+.odc-resource-container:lang(km) {
+	font-family:
+		"DM Serif Display",
+		"DM Sans",
+		"Khmer OS Kangrey",
+		"Hanuman",
+		-apple-system,
+		BlinkMacSystemFont,
+		"Segoe UI",
+		sans-serif;
+	font-size: 1rem; /* 16px base for Khmer */
+}
+
+/* Read-page headings at 400 too (same fake-bold rationale) */
+.odc-page:lang(km) h1,
+.odc-page:lang(km) h2,
+.odc-page:lang(km) h3,
+.odc-resource-read:lang(km) h1,
+.odc-resource-read:lang(km) h2,
+.odc-resource-read:lang(km) h3,
+.odc-resource-container:lang(km) h1,
+.odc-resource-container:lang(km) h2,
+.odc-resource-container:lang(km) h3 {
+	font-weight: 400;
+}
+
+.odc-page:lang(km) h1,
+.odc-page:lang(km) h2,
+.odc-resource-read:lang(km) h1,
+.odc-resource-read:lang(km) h2,
+.odc-resource-container:lang(km) h1,
+.odc-resource-container:lang(km) h2 {
+	font-family: "DM Serif Display", "Khmer OS Kangrey";
+}
+
+.odc-page:lang(km) h3,
+.odc-page:lang(km) h4,
+.odc-page:lang(km) h5,
+.odc-page:lang(km) h6,
+.odc-resource-read:lang(km) h3,
+.odc-resource-read:lang(km) h4,
+.odc-resource-container:lang(km) h3,
+.odc-resource-container:lang(km) h4 {
+	font-family: "DM Sans", "Hanuman", serif;
+}
+
+/* Language-specific font overrides for read pages — English */
+.odc-page:lang(en),
+.odc-resource-read:lang(en),
+.odc-resource-container:lang(en) {
+	font-family:
+		"DM Serif Display",
+		"DM Sans",
+		-apple-system,
+		BlinkMacSystemFont,
+		"Segoe UI",
+		sans-serif;
+	font-size: 0.875rem; /* 14px base for English */
+}
+
+/* Read-page headings at 400 for English too */
+.odc-page:lang(en) h1,
+.odc-page:lang(en) h2,
+.odc-page:lang(en) h3,
+.odc-resource-read:lang(en) h1,
+.odc-resource-read:lang(en) h2,
+.odc-resource-read:lang(en) h3,
+.odc-resource-container:lang(en) h1,
+.odc-resource-container:lang(en) h2,
+.odc-resource-container:lang(en) h3 {
+	font-weight: 400;
+}
+
+.odc-page:lang(en) h1,
+.odc-page:lang(en) h2,
+.odc-resource-read:lang(en) h1,
+.odc-resource-read:lang(en) h2,
+.odc-resource-container:lang(en) h1,
+.odc-resource-container:lang(en) h2 {
+	font-family: "DM Serif Display", sans-serif;
+}
+
+.odc-page:lang(en) h3,
+.odc-page:lang(en) h4,
+.odc-page:lang(en) h5,
+.odc-page:lang(en) h6,
+.odc-resource-read:lang(en) h3,
+.odc-resource-read:lang(en) h4,
+.odc-resource-container:lang(en) h3,
+.odc-resource-container:lang(en) h4 {
+	font-family: "DM Sans", sans-serif;
+}
+
+/* Resource item styles */
+.odc-resource-item {
+	background: white;
+	border: 1px solid #e5e7eb;
+	border-radius: 8px;
+	padding: 1.5rem;
+	margin-bottom: 1rem;
+	transition: box-shadow 0.2s;
+}
+
+.odc-resource-item:hover {
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.odc-resource-title {
+	font-size: 1.25rem;
+	font-weight: 600;
+	color: #1f2937;
+	margin-bottom: 0.5rem;
+}
+
+.odc-resource-meta {
+	color: #6b7280;
+	font-size: 0.875rem;
+	margin-bottom: 1rem;
+}
+
+.odc-resource-actions {
+	display: flex;
+	gap: 0.5rem;
+}
+
+/* Social share buttons */
+.odc-social-share {
+	display: flex;
+	gap: 0.5rem;
+	margin-top: 1rem;
+}
+
+.odc-social-btn {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	text-decoration: none;
+	transition: transform 0.2s;
+}
+
+.odc-social-btn:hover {
+	transform: scale(1.1);
+}
+
+.odc-social-btn.facebook {
+	background: #1877f2;
+}
+
+.odc-social-btn.twitter {
+	background: #1da1f2;
+}
+
+.odc-social-btn.linkedin {
+	background: #0077b5;
+}
+
+.odc-social-btn.email {
+	background: #6b7280;
+}
+
+/* Download button styles */
+.odc-download-btn {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+	background: #65a30d;
+	color: white;
+	padding: 0.75rem 1.5rem;
+	border-radius: 6px;
+	text-decoration: none;
+	font-weight: 500;
+	transition: background 0.2s;
+}
+
+.odc-download-btn:hover {
+	background: #4d7c0f;
+	color: white;
+}
+
+/* Tags */
+.odc-tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	margin-top: 1rem;
+}
+
+.odc-tag {
+	background: #f3f4f6;
+	color: #4b5563;
+	padding: 0.25rem 0.75rem;
+	border-radius: 9999px;
+	font-size: 0.875rem;
+}
+
+/* ============================================
+   CKAN COMPATIBILITY STYLES
+   ============================================ */
+
+/* Make sure the sidebar fits within the ODC layout */
+.secondary .odc-sidebar {
+	margin-top: 0;
+}
+
+/* ODC Layout Containers */
+.odc-header-container,
+.odc-main-container,
+.odc-search-container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 1rem;
+}
+
+.odc-main-container {
+	display: flex;
+	gap: 2rem;
+	margin-top: 2rem;
+}
+
+.odc-content {
+	flex: 1;
+	min-width: 0;
+}
+
+/* ============================================
+   ODC RESOURCE READ PAGE STYLES
+   ============================================ */
+
+.odc-resource-read {
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 1.5rem;
+}
+
+/* Resource Header */
+.odc-resource-header {
+	margin-bottom: 2rem;
+}
+
+.odc-resource-header-inner {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.odc-resource-header-text {
+	flex-grow: 1;
+}
+
+.odc-resource-header-actions {
+	display: flex;
+	gap: 1rem;
+	margin-top: 1rem;
+}
+
+.odc-resource-type-badge {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+	background: #dbeafe;
+	color: #1e40af;
+	padding: 0.375rem 0.75rem;
+	border-radius: 9999px;
+	font-size: 0.875rem;
+	font-weight: 500;
+	margin-bottom: 1rem;
+}
+
+.odc-resource-type-badge svg {
+	width: 1rem;
+	height: 1rem;
+}
+
+.odc-resource-title {
+	font-size: 2rem;
+	font-weight: 700;
+	color: #111827;
+	margin: 0 0 1rem 0;
+	line-height: 1.3;
+}
+
+.odc-resource-meta {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 1rem;
+	color: #6b7280;
+	font-size: 0.875rem;
+}
+
+.odc-resource-meta-item {
+	display: flex;
+	align-items: center;
+	gap: 0.375rem;
+}
+
+.odc-resource-meta-item svg {
+	width: 1rem;
+	height: 1rem;
+}
+
+/* Content Grid */
+.odc-resource-content {
+	display: grid;
+	grid-template-columns: 1fr 350px;
+	gap: 2rem;
+}
+
+@media (max-width: 1024px) {
+	.odc-resource-content {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* Main Content */
+.odc-resource-main {
+	min-width: 0;
+}
+
+/* PDF Viewer Container */
+.odc-pdf-viewer {
+	background: #f3f4f6;
+	border-radius: 0.75rem;
+	overflow: hidden;
+	margin-bottom: 2rem;
+	box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.odc-pdf-viewer-header {
+	background: #1f2937;
+	color: white;
+	padding: 0.75rem 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.odc-pdf-viewer-title {
+	font-size: 0.875rem;
+	font-weight: 500;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.odc-pdf-viewer-title svg {
+	width: 1.25rem;
+	height: 1.25rem;
+}
+
+.odc-pdf-viewer-actions {
+	display: flex;
+	gap: 0.5rem;
+}
+
+.odc-pdf-viewer-btn {
+	background: rgba(255, 255, 255, 0.1);
+	color: white;
+	border: none;
+	padding: 0.375rem 0.75rem;
+	border-radius: 0.375rem;
+	font-size: 0.875rem;
+	cursor: pointer;
+	transition: background 0.2s;
+}
+
+.odc-pdf-viewer-btn:hover {
+	background: rgba(255, 255, 255, 0.2);
+}
+
+.odc-pdf-viewer-frame {
+	width: 100%;
+	height: 600px;
+	border: none;
+}
+
+/* Resource Description */
+.odc-resource-description {
+	background: white;
+	border-radius: 0.75rem;
+	padding: 1.5rem;
+	margin-bottom: 2rem;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.odc-section-title {
+	font-size: 1.25rem;
+	font-weight: 600;
+	color: #111827;
+	margin: 0 0 1rem 0;
+}
+
+.odc-resource-description-text {
+	color: #4b5563;
+	line-height: 1.7;
+	font-size: 1rem;
+}
+
+/* Metadata Section */
+.odc-resource-metadata {
+	background: white;
+	border-radius: 0.75rem;
+	padding: 1.5rem;
+	margin-bottom: 2rem;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.odc-metadata-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 1rem;
+}
+
+.odc-metadata-item {
+	display: flex;
+	flex-direction: column;
+	gap: 0.25rem;
+}
+
+.odc-metadata-label {
+	font-size: 0.875rem;
+	color: #6b7280;
+	font-weight: 500;
+}
+
+.odc-metadata-value {
+	font-size: 1rem;
+	color: #111827;
+}
+
+.odc-metadata-value a {
+	color: #65a30d;
+	text-decoration: none;
+}
+
+.odc-metadata-value a:hover {
+	text-decoration: underline;
+}
+
+/* Sidebar */
+.odc-resource-sidebar {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+}
+
+.odc-sidebar-card {
+	background: white;
+	border-radius: 0.75rem;
+	padding: 1.5rem;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.odc-sidebar-card-title {
+	font-size: 1.125rem;
+	font-weight: 600;
+	color: #111827;
+	margin: 0 0 1rem 0;
+}
+
+/* Download Card */
+.odc-download-card {
+	background: linear-gradient(135deg, #65a30d 0%, #4d7c0f 100%);
+	color: white;
+	border-radius: 0.75rem;
+	padding: 1.5rem;
+}
+
+.odc-download-card-title {
+	font-size: 1.125rem;
+	font-weight: 600;
+	margin: 0 0 0.5rem 0;
+}
+
+.odc-download-card-meta {
+	font-size: 0.875rem;
+	opacity: 0.9;
+	margin-bottom: 1rem;
+}
+
+.odc-download-btn-primary {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+	background: white;
+	color: #65a30d;
+	padding: 0.875rem 1.5rem;
+	border-radius: 0.5rem;
+	text-decoration: none;
+	font-weight: 600;
+	transition:
+		transform 0.2s,
+		box-shadow 0.2s;
+	width: 100%;
+}
+
+.odc-download-btn-primary:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.odc-download-btn-primary svg {
+	width: 1.25rem;
+	height: 1.25rem;
+}
+
+/* Related Resources */
+.odc-related-list {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.odc-related-item {
+	display: flex;
+	gap: 0.75rem;
+	padding: 0.75rem;
+	border-radius: 0.5rem;
+	transition: background 0.2s;
+	text-decoration: none;
+}
+
+.odc-related-item:hover {
+	background: #f9fafb;
+}
+
+.odc-related-thumb {
+	width: 3rem;
+	height: 4rem;
+	background: #f3f4f6;
+	border-radius: 0.25rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+}
+
+.odc-related-thumb svg {
+	width: 1.5rem;
+	height: 1.5rem;
+	stroke: #9ca3af;
+}
+
+.odc-related-info {
+	flex: 1;
+	min-width: 0;
+}
+
+.odc-related-title {
+	font-size: 0.9375rem;
+	font-weight: 500;
+	color: #111827;
+	margin: 0 0 0.25rem 0;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.odc-related-meta {
+	font-size: 0.8125rem;
+	color: #6b7280;
+}
+
+/* Citation Box */
+.odc-citation-box {
+	background: #f9fafb;
+	border: 1px solid #e5e7eb;
+	border-radius: 0.5rem;
+	padding: 1rem;
+	font-size: 0.875rem;
+	color: #4b5563;
+	line-height: 1.6;
+}
+
+.odc-citation-copy {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	margin-top: 0.75rem;
+	background: white;
+	border: 1px solid #e5e7eb;
+	padding: 0.5rem 0.75rem;
+	border-radius: 0.375rem;
+	font-size: 0.875rem;
+	cursor: pointer;
+	transition: background 0.2s;
+}
+
+.odc-citation-copy:hover {
+	background: #f3f4f6;
+}
+
+.odc-citation-copy svg {
+	width: 1rem;
+	height: 1rem;
+}
+
+/* ============================================
+   RESPONSIVE STYLES FOR RESOURCE PAGE
+   ============================================ */
+
+@media (max-width: 768px) {
+	.odc-resource-read {
+		padding: 1rem;
+	}
+
+	.odc-resource-title {
+		font-size: 1.5rem;
+	}
+
+	.odc-resource-header-actions {
+		flex-direction: column;
+		width: 100%;
+	}
+
+	.odc-pdf-viewer-frame {
+		height: 400px;
+	}
+
+	.odc-metadata-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.odc-resource-sidebar {
+		order: -1;
+	}
+
+	.odc-download-card {
+		margin-bottom: 1rem;
+	}
+}
+
+/* ============================================
+   ODC DATASET READ PAGE STYLES
+   ============================================ */
+
+.odc-dataset-read {
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 1.5rem;
+}
+
+/* Dataset Header */
+.odc-dataset-header {
+	margin-bottom: 2rem;
+}
+
+.odc-dataset-header-top {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.75rem;
+	margin-bottom: 1rem;
+}
+
+.odc-dataset-type-badge {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.375rem;
+	background: #dbeafe;
+	color: #1e40af;
+	padding: 0.375rem 0.875rem;
+	border-radius: 9999px;
+	font-size: 0.875rem;
+	font-weight: 500;
+}
+
+.odc-dataset-type-badge svg {
+	width: 1rem;
+	height: 1rem;
+}
+
+.odc-dataset-status {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.375rem;
+	padding: 0.375rem 0.875rem;
+	border-radius: 9999px;
+	font-size: 0.875rem;
+	font-weight: 500;
+}
+
+.odc-dataset-status.active {
+	background: #d1fae5;
+	color: #065f46;
+}
+
+.odc-dataset-status.repealed {
+	background: #fee2e2;
+	color: #991b1b;
+}
+
+.odc-dataset-status.amended {
+	background: #fef3c7;
+	color: #92400e;
+}
+
+.odc-dataset-status svg {
+	width: 0.875rem;
+	height: 0.875rem;
+}
+
+.odc-dataset-title {
+	font-size: 2.25rem;
+	font-weight: 700;
+	color: #111827;
+	margin: 0 0 1rem 0;
+	line-height: 1.3;
+}
+
+.odc-dataset-meta {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 1.5rem;
+	color: #6b7280;
+	font-size: 0.9375rem;
+}
+
+.odc-dataset-meta-item {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.odc-dataset-meta-item svg {
+	width: 1.125rem;
+	height: 1.125rem;
+	stroke: #9ca3af;
+}
+
+/* Content Grid */
+.odc-dataset-content {
+	display: grid;
+	grid-template-columns: 1fr 380px;
+	gap: 2rem;
+}
+
+@media (max-width: 1024px) {
+	.odc-dataset-content {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* Main Content */
+.odc-dataset-main {
+	min-width: 0;
+}
+
+/* Tabs */
+.odc-tabs {
+	display: flex;
+	border-bottom: 2px solid #e5e7eb;
+	margin-bottom: 1.5rem;
+	gap: 0.25rem;
+}
+
+.odc-tab {
+	padding: 0.875rem 1.25rem;
+	font-size: 0.9375rem;
+	font-weight: 500;
+	color: #6b7280;
+	background: none;
+	border: none;
+	border-bottom: 2px solid transparent;
+	margin-bottom: -2px;
+	cursor: pointer;
+	transition: all 0.2s;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.odc-tab:hover {
+	color: #374151;
+	background: #f9fafb;
+}
+
+.odc-tab.active {
+	color: #65a30d;
+	border-bottom-color: #65a30d;
+	background: white;
+}
+
+.odc-tab svg {
+	width: 1.125rem;
+	height: 1.125rem;
+}
+
+/* Tab Content */
+.odc-tab-content {
+	display: none;
+}
+
+.odc-tab-content.active {
+	display: block;
+}
+
+/* Content Sections */
+.odc-content-section {
+	background: white;
+	border-radius: 0.75rem;
+	padding: 1.5rem;
+	margin-bottom: 1.5rem;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.odc-section-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 1.25rem;
+}
+
+.odc-section-header-title {
+	font-size: 1.125rem;
+	font-weight: 600;
+	color: #111827;
+	margin: 0;
+}
+
+/* Document Viewer */
+.odc-document-viewer {
+	background: #f3f4f6;
+	border-radius: 0.5rem;
+	overflow: hidden;
+	border: 1px solid #e5e7eb;
+}
+
+.odc-document-viewer-header {
+	background: #1f2937;
+	color: white;
+	padding: 0.75rem 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.odc-document-viewer-title {
+	font-size: 0.9375rem;
+	font-weight: 500;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.odc-document-viewer-title svg {
+	width: 1.25rem;
+	height: 1.25rem;
+}
+
+.odc-document-viewer-actions {
+	display: flex;
+	gap: 0.5rem;
+}
+
+.odc-document-viewer-btn {
+	background: rgba(255, 255, 255, 0.1);
+	color: white;
+	border: none;
+	padding: 0.375rem 0.75rem;
+	border-radius: 0.375rem;
+	font-size: 0.875rem;
+	cursor: pointer;
+	transition: background 0.2s;
+	display: flex;
+	align-items: center;
+	gap: 0.375rem;
+}
+
+.odc-document-viewer-btn:hover {
+	background: rgba(255, 255, 255, 0.2);
+}
+
+.odc-document-viewer-btn svg {
+	width: 1rem;
+	height: 1rem;
+}
+
+.odc-document-viewer-frame {
+	width: 100%;
+	height: 600px;
+	border: none;
+	background: #f3f4f6;
+}
+
+/* Resources List */
+.odc-resources-list {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.odc-resource-card {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	padding: 1rem;
+	background: #f9fafb;
+	border: 1px solid #e5e7eb;
+	border-radius: 0.5rem;
+	transition: all 0.2s;
+}
+
+.odc-resource-card:hover {
+	border-color: #d1d5db;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.odc-resource-card-icon {
+	width: 3rem;
+	height: 4rem;
+	background: white;
+	border-radius: 0.375rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+	border: 1px solid #e5e7eb;
+}
+
+.odc-resource-card-icon svg {
+	width: 1.75rem;
+	height: 1.75rem;
+}
+
+.odc-resource-card-icon.pdf {
+	background: #fef2f2;
+	border-color: #fee2e2;
+}
+
+.odc-resource-card-icon.pdf svg {
+	stroke: #dc2626;
+}
+
+.odc-resource-card-icon.doc {
+	background: #eff6ff;
+	border-color: #dbeafe;
+}
+
+.odc-resource-card-icon.doc svg {
+	stroke: #2563eb;
+}
+
+.odc-resource-card-info {
+	flex: 1;
+	min-width: 0;
+}
+
+.odc-resource-card-title {
+	font-size: 1rem;
+	font-weight: 600;
+	color: #111827;
+	margin: 0 0 0.375rem 0;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.odc-resource-card-title a {
+	color: #111827;
+	text-decoration: none;
+}
+
+.odc-resource-card-title a:hover {
+
+	text-decoration: underline;
+}
+
+.odc-resource-card-meta {
+	font-size: 0.875rem;
+	color: #6b7280;
+}
+
+.odc-resource-card-actions {
+	display: flex;
+	gap: 0.5rem;
+	flex-shrink: 0;
+}
+
+.odc-resource-card-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 2.5rem;
+	height: 2.5rem;
+	border-radius: 0.375rem;
+	border: 1px solid #e5e7eb;
+	background: white;
+	color: #6b7280;
+	cursor: pointer;
+	transition: all 0.2s;
+}
+
+.odc-resource-card-btn:hover {
+	background: #f3f4f6;
+	color: #374151;
+}
+
+.odc-resource-card-btn svg {
+	width: 1.25rem;
+	height: 1.25rem;
+}
+
+.odc-resource-card-btn.primary {
+	background: #65a30d;
+	border-color: #65a30d;
+	color: white;
+	width: auto;
+	padding: 0 1rem;
+	gap: 0.5rem;
+	font-weight: 500;
+}
+
+.odc-resource-card-btn.primary:hover {
+	background: #4d7c0f;
+	border-color: #4d7c0f;
+}
+
+/* Metadata Table */
+.odc-metadata-table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.odc-metadata-table tr {
+	border-bottom: 1px solid #f3f4f6;
+}
+
+.odc-metadata-table tr:last-child {
+	border-bottom: none;
+}
+
+.odc-metadata-table th,
+.odc-metadata-table td {
+	padding: 1rem;
+	text-align: left;
+	vertical-align: top;
+}
+
+.odc-metadata-table th {
+	width: 180px;
+	font-weight: 500;
+	color: #6b7280;
+	font-size: 0.9375rem;
+}
+
+.odc-metadata-table td {
+	color: #111827;
+}
+
+.odc-metadata-table td a {
+	color: #65a30d;
+	text-decoration: none;
+}
+
+.odc-metadata-table td a:hover {
+	text-decoration: underline;
+}
+
+/* Relationships Timeline */
+.odc-timeline {
+	position: relative;
+	padding-left: 1.5rem;
+}
+
+.odc-timeline::before {
+	content: "";
+	position: absolute;
+	left: 0.25rem;
+	top: 0;
+	bottom: 0;
+	width: 2px;
+	background: #e5e7eb;
+}
+
+.odc-timeline-item {
+	position: relative;
+	padding-bottom: 1.5rem;
+}
+
+.odc-timeline-item:last-child {
+	padding-bottom: 0;
+}
+
+.odc-timeline-dot {
+	position: absolute;
+	left: -1.375rem;
+	top: 0.25rem;
+	width: 0.75rem;
+	height: 0.75rem;
+	border-radius: 50%;
+	background: #d1d5db;
+	border: 2px solid white;
+	box-shadow: 0 0 0 2px #d1d5db;
+}
+
+.odc-timeline-item.active .odc-timeline-dot {
+	background: #65a30d;
+	box-shadow: 0 0 0 2px #65a30d;
+}
+
+.odc-timeline-item.amended .odc-timeline-dot {
+	background: #f59e0b;
+	box-shadow: 0 0 0 2px #f59e0b;
+}
+
+.odc-timeline-item.repealed .odc-timeline-dot {
+	background: #ef4444;
+	box-shadow: 0 0 0 2px #ef4444;
+}
+
+.odc-timeline-content {
+	background: #f9fafb;
+	padding: 1rem;
+	border-radius: 0.5rem;
+}
+
+.odc-timeline-title {
+	font-weight: 600;
+	color: #111827;
+	margin: 0 0 0.25rem 0;
+}
+
+.odc-timeline-title a {
+	color: #111827;
+	text-decoration: none;
+}
+
+.odc-timeline-title a:hover {
+
+	text-decoration: underline;
+}
+
+.odc-timeline-meta {
+	font-size: 0.875rem;
+	color: #6b7280;
+}
+
+/* Sidebar */
+.odc-dataset-sidebar {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+}
+
+.odc-dataset-sidebar-card {
+	background: white;
+	border-radius: 0.75rem;
+	padding: 1.5rem;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.odc-sidebar-card-header {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	margin-bottom: 1rem;
+	padding-bottom: 0.75rem;
+	border-bottom: 1px solid #f3f4f6;
+}
+
+.odc-sidebar-card-header svg {
+	width: 1.25rem;
+	height: 1.25rem;
+	stroke: #6b7280;
+}
+
+
+/* Contact Card */
+.odc-contact-item {
+	display: flex;
+	align-items: flex-start;
+	gap: 0.75rem;
+	margin-bottom: 1rem;
+}
+
+.odc-contact-item:last-child {
+	margin-bottom: 0;
+}
+
+.odc-contact-item svg {
+	width: 1.125rem;
+	height: 1.125rem;
+	stroke: #6b7280;
+	flex-shrink: 0;
+	margin-top: 0.125rem;
+}
+
+.odc-contact-label {
+	font-size: 0.8125rem;
+	color: #6b7280;
+	margin-bottom: 0.125rem;
+}
+
+.odc-contact-value {
+	font-size: 0.9375rem;
+	color: #111827;
+	font-weight: 500;
+}
+
+.odc-contact-value a {
+	color: #65a30d;
+	text-decoration: none;
+}
+
+.odc-contact-value a:hover {
+	text-decoration: underline;
+}
+
+/* Share Card */
+.odc-share-buttons {
+	display: flex;
+	gap: 0.5rem;
+	flex-wrap: wrap;
+}
+
+.odc-share-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 2.5rem;
+	height: 2.5rem;
+	border-radius: 0.375rem;
+	border: none;
+	cursor: pointer;
+	transition: all 0.2s;
+}
+
+.odc-share-btn svg {
+	width: 1.25rem;
+	height: 1.25rem;
+}
+
+.odc-share-btn.facebook {
+	background: #1877f2;
+	color: white;
+}
+
+.odc-share-btn.facebook:hover {
+	background: #166fe5;
+}
+
+.odc-share-btn.twitter {
+	background: #0f1419;
+	color: white;
+}
+
+.odc-share-btn.twitter:hover {
+	background: #000;
+}
+
+.odc-share-btn.linkedin {
+	background: #0077b5;
+	color: white;
+}
+
+.odc-share-btn.linkedin:hover {
+	background: #006396;
+}
+
+.odc-share-btn.email {
+	background: #f3f4f6;
+	color: #6b7280;
+}
+
+.odc-share-btn.email:hover {
+	background: #e5e7eb;
+}
+
+/* Related Laws */
+.odc-related-laws-list {
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+}
+
+.odc-related-law-item {
+	display: flex;
+	gap: 0.75rem;
+	padding: 0.75rem;
+	border-radius: 0.5rem;
+	transition: background 0.2s;
+	text-decoration: none;
+}
+
+.odc-related-law-item:hover {
+	background: #f9fafb;
+}
+
+.odc-related-law-number {
+	width: 2rem;
+	height: 2rem;
+	background: #f3f4f6;
+	border-radius: 0.375rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 0.875rem;
+	font-weight: 600;
+	color: #6b7280;
+	flex-shrink: 0;
+}
+
+.odc-related-law-info {
+	flex: 1;
+	min-width: 0;
+}
+
+.odc-related-law-title {
+	font-size: 0.9375rem;
+	font-weight: 500;
+	color: #111827;
+	margin: 0 0 0.25rem 0;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.odc-related-law-meta {
+	font-size: 0.8125rem;
+	color: #6b7280;
+}
+
+/* See more link */
+.odc-related-see-more {
+	margin-top: 0.75rem;
+	text-align: center;
+}
+
+.odc-related-see-more a {
+	color: #65a30d;
+	font-weight: 600;
+	text-decoration: none;
+	font-size: 0.875rem;
+}
+
+.odc-related-see-more a:hover {
+	text-decoration: underline;
+}
+
+/* Citation Card */
+.odc-citation-text {
+	background: #f9fafb;
+	border: 1px solid #e5e7eb;
+	border-radius: 0.5rem;
+	padding: 1rem;
+	font-size: 0.875rem;
+	color: #4b5563;
+	line-height: 1.6;
+	margin-bottom: 0.75rem;
+}
+
+.odc-citation-actions {
+	display: flex;
+	gap: 0.5rem;
+}
+
+.odc-citation-btn {
+	display: flex;
+	align-items: center;
+	gap: 0.375rem;
+	padding: 0.5rem 0.875rem;
+	border-radius: 0.375rem;
+	font-size: 0.875rem;
+	font-weight: 500;
+	cursor: pointer;
+	transition: all 0.2s;
+}
+
+.odc-citation-btn svg {
+	width: 1rem;
+	height: 1rem;
+}
+
+.odc-citation-btn.primary {
+	background: #65a30d;
+	color: white;
+	border: none;
+}
+
+.odc-citation-btn.primary:hover {
+	background: #4d7c0f;
+}
+
+.odc-citation-btn.secondary {
+	background: white;
+	color: #6b7280;
+	border: 1px solid #e5e7eb;
+}
+
+.odc-citation-btn.secondary:hover {
+	background: #f9fafb;
+	border-color: #d1d5db;
+}
+
+/* ============================================
+   RESPONSIVE STYLES FOR DATASET PAGE
+   ============================================ */
+
+@media (max-width: 768px) {
+	.odc-dataset-read {
+		padding: 1rem;
+	}
+
+	.odc-dataset-title {
+		font-size: 1.75rem;
+	}
+
+	.odc-dataset-meta {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 0.75rem;
+	}
+
+	.odc-tabs {
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+		flex-wrap: nowrap;
+	}
+
+	.odc-tab {
+		white-space: nowrap;
+		padding: 0.75rem 1rem;
+	}
+
+	.odc-tab span {
+		display: none;
+	}
+
+	.odc-document-viewer-frame {
+		height: 400px;
+	}
+
+	.odc-resource-card {
+		flex-wrap: wrap;
+	}
+
+	.odc-resource-card-actions {
+		width: 100%;
+		justify-content: flex-end;
+		margin-top: 0.75rem;
+		padding-top: 0.75rem;
+		border-top: 1px solid #e5e7eb;
+	}
+
+	.odc-metadata-table th,
+	.odc-metadata-table td {
+		display: block;
+		width: 100%;
+	}
+
+	.odc-metadata-table th {
+		background-color: #f9fafb;
+		border-bottom: none;
+	}
+
+	.odc-metadata-table td {
+		border-top: none;
+	}
+}
+
+/* ============================================
+   CKAN OVERRIDES
+   ============================================ */
+
+/* Override odm_nav.css float for ODC layout */
+.odc-layout .odc-primary {
+	float: none !important;
+	margin-left: 0 !important;
+}
+
+.odc-layout .odc-secondary {
+	float: none !important;
+	margin-right: 0 !important;
+	padding-right: 0 !important;
+}
+
+/* Remove CKAN container-fluid wrapper for ODC layout */
+.odc-body #content.container-fluid {
+	max-width: none;
+	padding: 0;
+	margin: 0;
+}
+
+.odc-body .container-fluid.container-header {
+	max-width: none;
+	padding: 0;
+	margin: 0;
+}
+
+/* Sidebar container width */
+.odc-secondary {
+	width: 320px;
+	flex-shrink: 0;
+}
+
+/* Gap between sidebar and content */
+.odc-layout {
+	gap: 0;
+}
+
+/* Content area */
+.odc-primary {
+	flex: 1;
+	min-width: 0;
+}

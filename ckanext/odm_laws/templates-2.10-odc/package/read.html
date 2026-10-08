@@ -1,0 +1,8 @@
+{# Router (ODC UI only): laws_record read renders the ODC law record
+   design; all other dataset types fall through to the shared chain. #}
+{% set _pkg_type = g.pkg_dict.type if g.pkg_dict else dataset_type %}
+{% if _pkg_type == 'laws_record' %}
+  {% extends "law_record.html" %}
+{% else %}
+  {% ckan_extends %}
+{% endif %}

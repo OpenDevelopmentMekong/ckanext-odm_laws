@@ -1,0 +1,52 @@
+{#
+ODC Resource Header — breadcrumb, title, description, download button.
+
+res - The resource being displayed.
+pkg - The parent package/dataset.
+
+Breadcrumb: Home / Legal Documents / [Package Title] / [Resource Title]
+
+Usage:
+  {% snippet 'snippets/odc_resource_header.html', res=res, pkg=pkg %}
+#}
+<header class="odc-resource-header">
+  {# Breadcrumb — 4 levels: Home / Legal Documents / Package / Resource #}
+  <nav class="odc-breadcrumb" aria-label="breadcrumb">
+    <a href="{{ h.url_for('home.index') }}" class="odc-breadcrumb-home">
+      <i class="fa fa-home"></i>
+    </a>
+    <span class="odc-breadcrumb-sep">/</span>
+    <a href="{{ h.url_for(pkg.type ~ '.search', dataset_type=pkg.type) }}" class="odc-breadcrumb-link">{{ _('Legal Documents') }}</a>
+    <span class="odc-breadcrumb-sep">/</span>
+    <a href="{{ h.url_for(pkg.type ~ '.read', id=pkg.name) }}" class="odc-breadcrumb-link">{{ h.odm_dataset_get_currentlang_data('title_translated', pkg) or pkg.title or pkg.name }}</a>
+    <span class="odc-breadcrumb-sep">/</span>
+    <span class="odc-breadcrumb-current">{{ h.resource_display_name(res) }}</span>
+  </nav>
+
+  <div class="odc-resource-header-content">
+    <div class="odc-resource-header-text">
+      {# Title #}
+      <h1 class="odc-resource-title">{{ h.resource_display_name(res) }}</h1>
+
+      {# Description #}
+      {% if res.description_translated or res.description %}
+      <p class="odc-resource-description">
+        {{ h.odm_dataset_get_currentlang_data('description_translated', res) or res.description }}
+      </p>
+      {% elif pkg.notes or pkg.notes_translated %}
+      <p class="odc-resource-description">
+        {{ h.odm_dataset_get_currentlang_data('notes_translated', pkg) or h.markdown_extract(pkg.notes, extract_length=300) }}
+      </p>
+      {% endif %}
+    </div>
+
+    <div class="odc-resource-header-actions">
+      {# Download button #}
+      {% if res.url and h.is_url(res.url) %}
+      <a class="btn btn-success" href="{{ res.url }}" target="_blank">
+        <i class="fa fa-download"></i> {{ _('Download') }}
+      </a>
+      {% endif %}
+    </div>
+  </div>
+</header>

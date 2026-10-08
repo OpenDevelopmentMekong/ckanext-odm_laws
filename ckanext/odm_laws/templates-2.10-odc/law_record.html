@@ -1,0 +1,25 @@
+{% extends "odc_page_law.html" %}
+
+{% block secondary %}{% endblock %}
+
+{% set pkg = g.pkg_dict %}
+
+{% block styles %}
+  {{ super() }}
+  {% asset 'odm_laws/odc_laws_record_css' %}
+{% endblock %}
+
+{% block primary_content %}
+<div class="odc-container">
+  {% snippet 'snippets/odc_law_record_header.html', pkg=pkg %}
+
+  <main class="odc-main-grid">
+    <section class="odc-content-area">
+      {% snippet 'snippets/odc_law_record_resources.html', pkg=pkg %}
+      {% snippet 'snippets/odc_law_record_details.html', pkg=pkg %}
+    </section>
+
+    {% snippet 'snippets/odc_law_record_sidebar.html', pkg=pkg %}
+  </main>
+</div>
+{% endblock %}

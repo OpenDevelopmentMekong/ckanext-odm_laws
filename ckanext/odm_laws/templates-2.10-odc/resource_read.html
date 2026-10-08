@@ -1,0 +1,14 @@
+{% extends "odc_page_law.html" %}
+
+{% block secondary %}{% endblock %}
+
+{% set res = g.resource %}
+{% set pkg = g.package %}
+
+{% block primary_content %}
+<div class="odc-resource-container">
+  {% snippet 'snippets/odc_resource_header.html', res=res, pkg=pkg %}
+  {% snippet 'snippets/odc_resource_preview.html', res=res, pkg=pkg %}
+  {% snippet 'snippets/odc_resource_metadata.html', res=res, pkg=pkg %}
+</div>
+{% endblock %}

@@ -1,0 +1,14 @@
+{#
+ODC Law Search Header — page title + result count.
+
+Usage:
+  {% snippet 'snippets/odc_law_header.html' %}
+#}
+    <header class="odc-search-header">
+       <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+		   <h1 class="odc-search-title" style="margin: 0;">{{ _('Legal Documents') }}</h1>
+	 </div>
+      <p class="odc-search-count">
+        {% snippet 'snippets/search_result_text.html', query=c.q, count=c.page.item_count, type='laws_records' %}
+      </p>
+    </header>

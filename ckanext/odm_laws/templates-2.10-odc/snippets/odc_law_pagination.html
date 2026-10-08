@@ -1,0 +1,11 @@
+{#
+ODC Law Search Pagination — page navigation at bottom of search.
+
+Usage:
+  {% snippet 'snippets/odc_law_pagination.html' %}
+#}
+    {% if c.page.pager() %}
+      <div class="odc-pagination">
+        {{ c.page.pager(q=c.q) }}
+      </div>
+    {% endif %}
